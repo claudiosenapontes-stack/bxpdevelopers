@@ -7,10 +7,10 @@ export default function Home() {
         {/* BXP Logo - Centered, white background blended via mix-blend-screen */}
         <div className="relative w-80 h-48 mx-auto mb-8">
           <Image
-            src="/bxp-logo.jpg"
+            src="/bxp-logo.png"
             alt="BXP Developers"
             fill
-            className="object-contain mix-blend-screen"
+            className="object-contain"
             priority
           />
         </div>
