@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-[#1a1a1a]">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black">
       <div className="text-center px-8">
-        {/* BXP Logo - Centered, white background blended via mix-blend-screen */}
+        {/* BXP Logo - Centered */}
         <div className="relative w-80 h-48 mx-auto mb-8">
           <Image
             src="/bxp-logo.png"
