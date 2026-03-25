@@ -47,19 +47,18 @@ export default function Home() {
 
       {/* Hero Section — Full Width with Miami Pool Home */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image — Miami Luxury Pool Home */}
+        {/* Background Video — Luxury Villa Sunset to Night */}
         <div className="absolute inset-0 bg-[#0a0a0a]">
-          <Image
-            src="/hero-facade.jpg"
-            sizes="100vw"
-            alt="Miami luxury pool home"
-            fill
-            className="object-cover w-full h-full"
-            style={{ objectPosition: 'center center' }}
-            quality={100}
-            priority
-            unoptimized
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/hero-facade.jpg"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
           {/* White gradient overlay - stronger */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/30 to-transparent" />
         </div>
