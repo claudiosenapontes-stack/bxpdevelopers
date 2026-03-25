@@ -54,10 +54,11 @@ export default function Home() {
             sizes="100vw"
             alt="Miami luxury pool home"
             fill
-            className="object-contain w-full h-full"
-            style={{ objectPosition: 'center center' }}
+            className="object-cover w-full h-full"
+            style={{ objectPosition: 'center top' }}
             quality={100}
             priority
+            unoptimized
           />
         </div>
 
@@ -74,23 +75,23 @@ export default function Home() {
               <span className="bg-[#faf9f7]/90 px-4 py-2 text-gray-700">MIAMI LUXURY DEVELOPMENT</span>
             </p>
 
-            {/* CTA - Main Actions */}
+            {/* CTA - Main Actions - BLUE fixed, BROWN hover */}
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="#about"
-                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#7D6B58] text-white border border-[#7D6B58] hover:bg-gray-800 hover:text-white hover:border-transparent transition-all duration-500 min-w-[180px] text-center"
+                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#4A5568] text-white border border-[#4A5568] hover:bg-[#7D6B58] hover:border-[#7D6B58] transition-all duration-500 min-w-[180px] text-center"
               >
                 Invest
               </Link>
               <Link 
                 href="#about"
-                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#7D6B58] text-white border border-[#7D6B58] hover:bg-gray-800 hover:text-white hover:border-transparent transition-all duration-500 min-w-[180px] text-center"
+                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#4A5568] text-white border border-[#4A5568] hover:bg-[#7D6B58] hover:border-[#7D6B58] transition-all duration-500 min-w-[180px] text-center"
               >
                 Build
               </Link>
               <Link 
                 href="#about"
-                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#7D6B58] text-white border border-[#7D6B58] hover:bg-gray-800 hover:text-white hover:border-transparent transition-all duration-500 min-w-[180px] text-center"
+                className="inline-block px-12 py-4 text-[11px] uppercase tracking-[0.3em] bg-[#4A5568] text-white border border-[#4A5568] hover:bg-[#7D6B58] hover:border-[#7D6B58] transition-all duration-500 min-w-[180px] text-center"
               >
                 Remodel
               </Link>
