@@ -60,8 +60,8 @@ export default function Home() {
             priority
             unoptimized
           />
-          {/* Subtle white gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent" />
+          {/* White gradient overlay - stronger */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/10 to-transparent" />
         </div>
 
         {/* Hero Content */}
