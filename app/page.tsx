@@ -61,7 +61,7 @@ export default function Home() {
             unoptimized
           />
           {/* White gradient overlay - stronger */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/30 to-transparent" />
         </div>
 
         {/* Hero Content */}
@@ -74,7 +74,7 @@ export default function Home() {
             </h1>
             
             <p className="mt-8 text-sm md:text-base font-medium tracking-[0.2em] max-w-xl mx-auto leading-relaxed">
-              <span className="bg-[#faf9f7]/90 px-4 py-2 text-gray-700">MIAMI LUXURY DEVELOPMENT</span>
+              <span className="bg-[#faf9f7]/90 px-4 py-2 text-gray-700">RESIDENTIAL LUXURY DEVELOPMENTS</span>
             </p>
 
             {/* CTA - Main Actions - BLUE fixed, BROWN hover */}
@@ -102,7 +102,7 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-3">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-gray-600">Scroll</span>
+            <span className="text-[9px] uppercase tracking-[0.4em] 	ext-gray-800 font-semibold">Scroll</span>
             <div className="w-px h-16 bg-gray-500" />
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="text-lg font-light text-gray-800 group-hover:text-gray-600 transition-colors">
+                <h3 className="text-lg font-light text-gray-800 group-hover:	ext-gray-800 font-semibold transition-colors">
                   {prop.name}
                 </h3>
                 <p className="text-xs text-gray-400 uppercase tracking-[0.15em] mt-1">{prop.loc}</p>
