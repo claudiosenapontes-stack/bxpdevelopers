@@ -47,19 +47,21 @@ export default function Home() {
 
       {/* Hero Section — Full Width with Miami Pool Home */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image — Miami Luxury Pool Home - NO GRADIENT */}
+        {/* Background Image — Miami Luxury Pool Home */}
         <div className="absolute inset-0 bg-[#0a0a0a]">
           <Image
             src="/hero-facade.jpg"
             sizes="100vw"
             alt="Miami luxury pool home"
             fill
-            className="object-cover w-full h-full scale-110"
+            className="object-cover w-full h-full"
             style={{ objectPosition: 'center center' }}
             quality={100}
             priority
             unoptimized
           />
+          {/* Subtle white gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent" />
         </div>
 
         {/* Hero Content */}
