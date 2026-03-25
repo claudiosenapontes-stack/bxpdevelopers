@@ -46,33 +46,32 @@ export default function Home() {
       </nav>
 
       {/* Hero Section — Full Width with Miami Pool Home */}
-      <section className="relative min-h-screen w-full overflow-hidden">
-        {/* Background Image — Miami Luxury Pool Home */}
-        <div className="absolute inset-0">
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image — Miami Luxury Pool Home - NO GRADIENT */}
+        <div className="absolute inset-0 bg-[#d4cfc8]">
           <Image
             src="/hero-facade.jpg"
             sizes="100vw"
             alt="Miami luxury pool home"
             fill
-            className="object-cover w-full h-full"
-            style={{ objectPosition: 'center 30%' }}
+            className="object-contain w-full h-full"
+            style={{ objectPosition: 'center center' }}
+            quality={100}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#faf9f7]/15 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#faf9f7]/20 via-transparent to-transparent" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-8">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-8">
           <div className="text-center w-full max-w-5xl mx-auto">
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-gray-800 leading-[1.1] tracking-tight drop-shadow-sm">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-gray-800 leading-[1.1] tracking-tight">
               Timeless by Design.
               <span className="block font-light mt-2">Exceptional by Execution.</span>
             </h1>
             
             <p className="mt-8 text-sm md:text-base font-medium tracking-[0.2em] max-w-xl mx-auto leading-relaxed">
-              <span className="bg-[#faf9f7]/80 px-4 py-2 text-gray-700">MIAMI LUXURY DEVELOPMENT</span>
+              <span className="bg-[#faf9f7]/90 px-4 py-2 text-gray-700">MIAMI LUXURY DEVELOPMENT</span>
             </p>
 
             {/* CTA - Main Actions */}
@@ -100,8 +99,8 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-3">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-gray-500">Scroll</span>
-            <div className="w-px h-16 bg-gradient-to-b from-gray-500 to-transparent" />
+            <span className="text-[9px] uppercase tracking-[0.4em] text-gray-600">Scroll</span>
+            <div className="w-px h-16 bg-gray-500" />
           </div>
         </div>
       </section>
