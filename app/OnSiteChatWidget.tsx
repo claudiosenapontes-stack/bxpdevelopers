@@ -108,7 +108,7 @@ export default function OnSiteChatWidget() {
                 <img src="/favicon.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
               </span>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-gray-400">BXP</p>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-gray-400">SENA Enterprises</p>
                 <p className="text-sm font-medium text-gray-700">Chat</p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function OnSiteChatWidget() {
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         className="group flex items-center gap-2 rounded-full bg-gradient-to-br from-gray-500 to-gray-600 py-2 pl-2 pr-4 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-        aria-label="Open BXP chat"
+        aria-label="Open SENA Enterprises chat"
       >
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow-sm">
           <img src="/favicon.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
