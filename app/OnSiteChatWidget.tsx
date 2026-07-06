@@ -188,7 +188,7 @@ export default function OnSiteChatWidget() {
                             Text Us
                           </a>
                           <a
-                            href="mailto:info@bxpdevelopers.com"
+                            href="mailto:info@senaenterprises.com"
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-gray-200 bg-white px-2 py-2.5 text-[9px] uppercase tracking-[0.08em] text-gray-600 transition hover:border-gray-400 hover:text-gray-900"
                           >
                             Email Us
