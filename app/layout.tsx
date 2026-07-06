@@ -16,8 +16,16 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://senaenterprises.com"),
   title: "BXP Developers | Luxury Real Estate Development",
   description: "Residential luxury developments",
+  openGraph: {
+    type: "website",
+    url: "https://senaenterprises.com",
+    siteName: "BXP Developers",
+    title: "BXP Developers | Luxury Real Estate Development",
+    description: "Residential luxury developments",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
