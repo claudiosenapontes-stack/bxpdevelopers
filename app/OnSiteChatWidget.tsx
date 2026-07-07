@@ -105,7 +105,7 @@ export default function OnSiteChatWidget() {
           <div className="flex items-center justify-between border-b border-black/5 bg-white px-4 py-3">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4f1ec]">
-                <img src="/favicon.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
+                <img src="/sena-logo.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
               </span>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.22em] text-gray-400">SENA Enterprises</p>
@@ -244,7 +244,7 @@ export default function OnSiteChatWidget() {
         aria-label="Open SENA Enterprises chat"
       >
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow-sm">
-          <img src="/favicon.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
+          <img src="/sena-logo.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
         </span>
         <span className="text-sm font-medium tracking-[0.08em]">Chat</span>
       </button>
