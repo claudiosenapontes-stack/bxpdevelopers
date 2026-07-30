@@ -1,4 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    { "source": "/villatulumen", "destination": "/villatulum", "permanent": false },
+    { "source": "/villatulumEN", "destination": "/villatulum", "permanent": false },
+    { "source": "/villatulumpt", "destination": "/villatulumPT", "permanent": false },
+    { "source": "/villatulumes", "destination": "/villatulumES", "permanent": false }
+  ]
 }
