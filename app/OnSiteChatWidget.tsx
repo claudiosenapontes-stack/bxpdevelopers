@@ -105,10 +105,10 @@ export default function OnSiteChatWidget() {
           <div className="flex items-center justify-between border-b border-black/5 bg-white px-4 py-3">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4f1ec]">
-                <img src="/favicon.png" alt="BXP" className="h-6 w-6 object-contain" />
+                <img src="/sena-logo.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
               </span>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-gray-400">BXP</p>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-gray-400">SENA Enterprises</p>
                 <p className="text-sm font-medium text-gray-700">Chat</p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function OnSiteChatWidget() {
                             Text Us
                           </a>
                           <a
-                            href="mailto:info@bxpdevelopers.com"
+                            href="mailto:info@senaenterprises.com"
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-gray-200 bg-white px-2 py-2.5 text-[9px] uppercase tracking-[0.08em] text-gray-600 transition hover:border-gray-400 hover:text-gray-900"
                           >
                             Email Us
@@ -241,10 +241,10 @@ export default function OnSiteChatWidget() {
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         className="group flex items-center gap-2 rounded-full bg-gradient-to-br from-gray-500 to-gray-600 py-2 pl-2 pr-4 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-        aria-label="Open BXP chat"
+        aria-label="Open SENA Enterprises chat"
       >
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow-sm">
-          <img src="/favicon.png" alt="BXP" className="h-6 w-6 object-contain" />
+          <img src="/sena-logo.png" alt="SENA Enterprises" className="h-6 w-6 object-contain" />
         </span>
         <span className="text-sm font-medium tracking-[0.08em]">Chat</span>
       </button>
