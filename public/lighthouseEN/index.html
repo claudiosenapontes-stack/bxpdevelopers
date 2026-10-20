@@ -656,6 +656,54 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 .nc tr.me th,.nc tr.me td{color:var(--paper)}
 .nc tr.me th::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red-hi);margin-right:10px;vertical-align:middle}
 
+/* ---------- phone layout ---------- */
+.spm,.rtm{display:none}
+.spm-ship .hull{fill:var(--ink)}.spm-ship .ct1{fill:var(--red)}.spm-ship .ct2{fill:var(--silver)}.spm-ship .bridge{fill:var(--ink)}
+.rtm .spm-ship .hull,.rtm .spm-ship .bridge{fill:var(--paper)}.rtm .spm-ship .ct1{fill:var(--red-hi)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(3px) rotate(1.5deg)}}
+@keyframes sail{0%{transform:translateX(-18px)}100%{transform:translateX(18px)}}
+@media (max-width:700px){
+  .sp-wrap{display:none}
+  .diagram-wrap{display:none}
+  .spm{display:flex;flex-direction:column;gap:22px}
+  .spm-lane{display:flex;flex-direction:column;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+  .spm-lane .label.red{color:var(--red)}
+  .spm-chain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+  .spm-chain li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .spm-chain li.e{font-weight:400}
+  .spm-chain li.mm s{color:var(--mute-l);text-decoration-color:var(--red);text-decoration-thickness:2px}
+  .spm-chain li.mm em{font-style:normal;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+  .spm-note{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-l)}
+  .spm-flow{display:flex;flex-direction:column;gap:0;padding-left:20px;border-left:1px solid var(--ink);margin-left:6px}
+  .spm-node{display:flex;align-items:center;gap:12px;padding:10px 0;position:relative}
+  .spm-node i{font-style:normal;width:34px;height:34px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:15px;background:var(--paper);margin-left:-38px}
+  .spm-node.q i{border-color:var(--red);color:var(--red)}
+  .spm-node.hi i{background:var(--ink);color:var(--paper)}
+  .spm-node b{font-weight:400;font-size:15px}
+  .spm-sea{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+  .spm-sea span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-l)}
+  .spm-ship{width:64px;height:auto;flex:0 0 64px;animation:bob 2.6s ease-in-out infinite;overflow:visible}
+  .rtm{display:flex;flex-direction:column;gap:14px}
+  .rtm-line{height:56px;border-left:1px dashed var(--silver);margin-left:24px;display:flex;align-items:center;padding-left:16px}
+  .rtm-line .spm-ship{width:60px;flex-basis:60px}
+  .rtm-hub{display:flex;align-items:center;gap:12px}
+  .rtm-hub i{width:14px;height:14px;border-radius:50%;background:var(--red-hi);box-shadow:0 0 0 6px rgba(194,26,34,.18);margin-left:18px}
+  .rtm-hub b{font-family:var(--f-display);font-weight:300;font-size:26px;letter-spacing:-.02em}
+  .top > span:last-child{display:none}
+  .chrome{grid-template-columns:1fr auto!important}
+  .cmp2 thead{display:none}
+  .cmp2,.cmp2 tbody{display:block;width:100%}
+  .cmp2 tr{display:grid;grid-template-columns:1fr 1fr;column-gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .cmp2 th,.cmp2 td{display:block;border:0!important;padding:0!important;text-align:left!important;white-space:normal!important}
+  .cmp2 tbody th{grid-column:1 / -1;margin-bottom:6px;font-size:15px}
+  .cmp2 td::before{content:attr(data-l);display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+  .cmp2 td.us::before{color:var(--red)}
+  .cmp2.dk td.us::before{color:var(--red-hi)}
+  .cmp2 tr.hl{border-top:1px solid currentColor}
+  .cmp2 tr.hl th,.cmp2 tr.hl td{font-size:22px}
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){.spm-ship{animation:none}}
+
 /* ---------- Lighthouse deal ---------- */
 .inv{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1.2fr);gap:clamp(12px,2vw,28px);align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:clamp(20px,3vh,36px)}
 .inv > div{display:flex;flex-direction:column;gap:10px;min-width:0}
@@ -845,6 +893,23 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
       <circle class="pulse" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" path="M952,360 H1084"/></circle>
       <g class="end hi"><circle cx="1110" cy="360" r="26"/><path class="ico" transform="translate(1100,350) scale(.84)" d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5"/><text x="1110" y="410" text-anchor="middle" class="sp-n">Site</text></g>
     </svg></div>
+    <div class="spm rise">
+      <div class="spm-lane">
+        <span class="label">Traditional chain</span>
+        <ol class="spm-chain"><li class="e">Factory</li><li class="mm"><s>Exporter</s><em>+ markup</em></li><li class="mm"><s>Importer</s><em>+ markup</em></li><li class="mm"><s>Distributor</s><em>+ markup</em></li><li class="mm"><s>Showroom</s><em>+ markup</em></li><li class="e">Site</li></ol>
+        <p class="spm-note">4 middlemen · 4 markups · longer lead times</p>
+      </div>
+      <div class="spm-lane sena">
+        <span class="label red">Sena · XGROUP</span>
+        <div class="chips"><span>China</span><span>Vietnam</span><span>India</span><span>Thailand</span><span>Europe</span><span>Brazil</span><span>Colombia</span></div>
+        <div class="spm-flow">
+          <div class="spm-node q"><i>✓</i><b>QC inspection at the factory</b></div>
+          <div class="spm-sea"><svg class="spm-ship" viewBox="-34 -24 68 42" aria-hidden="true"><path class="hull" d="M-30,2 L30,2 L22,14 L-24,14 Z"/><rect class="ct1" x="-22" y="-10" width="11" height="11"/><rect class="ct2" x="-10" y="-10" width="11" height="11"/><rect class="ct1" x="2" y="-10" width="11" height="11"/><rect class="ct2" x="-16" y="-20" width="11" height="9"/><rect class="ct1" x="-4" y="-20" width="11" height="9"/><rect class="bridge" x="16" y="-18" width="8" height="19"/></svg><span>Consolidated container · direct shipping</span></div>
+          <div class="spm-node"><i>⚓</i><b>Port</b></div>
+          <div class="spm-node hi"><i>⌂</i><b>Site</b></div>
+        </div>
+      </div>
+    </div>
     <div class="stats rise">
       <div><strong>150+</strong><span class="small">Partner factories</span></div>
       <div><strong>7</strong><span class="small">Countries of origin</span></div>
@@ -912,6 +977,11 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
         <text class="big" x="1048" y="178">South</text>
         <text class="big" x="1048" y="216">Florida</text>
       </svg>
+    </div>
+    <div class="rtm rise">
+      <div class="chips"><span>China</span><span>Vietnam</span><span>India</span><span>Thailand</span><span>Europe</span><span>Brazil</span><span>Colombia</span></div>
+      <div class="rtm-line"><svg class="spm-ship" viewBox="-34 -24 68 42" aria-hidden="true"><path class="hull" d="M-30,2 L30,2 L22,14 L-24,14 Z"/><rect class="ct1" x="-22" y="-10" width="11" height="11"/><rect class="ct2" x="-10" y="-10" width="11" height="11"/><rect class="ct1" x="2" y="-10" width="11" height="11"/><rect class="ct2" x="-16" y="-20" width="11" height="9"/><rect class="ct1" x="-4" y="-20" width="11" height="9"/><rect class="bridge" x="16" y="-18" width="8" height="19"/></svg></div>
+      <div class="rtm-hub"><i></i><b>South Florida</b></div>
     </div>
     <div class="grid c3 rise">
       <div class="cell"><h3>Diversified supply</h3><p class="small">Seven origins reduce the risk of disruption and keep supply steady.</p></div>
@@ -1352,11 +1422,11 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
       <table class="cmp2 dk">
         <thead><tr><th>Metric</th><th class="num">All-cash</th><th class="num us">Financed</th></tr></thead>
         <tbody>
-          <tr><th>Investor capital</th><td class="num">$4,712,500</td><td class="num us">$1,750,000</td></tr>
-          <tr><th>Financing, interest and carrying</th><td class="num">—</td><td class="num us">−$500,000</td></tr>
-          <tr><th>Project profit</th><td class="num">$1,842,500</td><td class="num us">$1,342,500</td></tr>
-          <tr><th>Investor share (50%)</th><td class="num">$921,250</td><td class="num us">$671,250</td></tr>
-          <tr class="hl"><th>Return on capital</th><td class="num">19.5%</td><td class="num us">38.4%</td></tr>
+          <tr><th>Investor capital</th><td data-l="All-cash" class="num">$4,712,500</td><td data-l="Financed" class="num us">$1,750,000</td></tr>
+          <tr><th>Financing, interest and carrying</th><td data-l="All-cash" class="num">—</td><td data-l="Financed" class="num us">−$500,000</td></tr>
+          <tr><th>Project profit</th><td data-l="All-cash" class="num">$1,842,500</td><td data-l="Financed" class="num us">$1,342,500</td></tr>
+          <tr><th>Investor share (50%)</th><td data-l="All-cash" class="num">$921,250</td><td data-l="Financed" class="num us">$671,250</td></tr>
+          <tr class="hl"><th>Return on capital</th><td data-l="All-cash" class="num">19.5%</td><td data-l="Financed" class="num us">38.4%</td></tr>
         </tbody>
       </table>
     </div>
