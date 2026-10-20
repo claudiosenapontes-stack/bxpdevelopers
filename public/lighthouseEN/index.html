@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sena Enterprises · Lighthouse Point</title>
+<meta name="description" content="3850 NE 24th Avenue, Lighthouse Point. Waterfront development opportunity. Investor presentation.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Sena Enterprises · Lighthouse Point">
+<meta property="og:description" content="3850 NE 24th Avenue, Lighthouse Point. Waterfront development opportunity. Investor presentation.">
+<meta property="og:image" content="https://www.senaenterprises.com/victoriapark/img/v-water.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<style>
+/* Layout: full-bleed slides alternating ink and paper; portrait video panels at native ratio; mono index label top-left; one red rule per slide, nothing louder. */
+:root{
+  --ink:#0B0B0C; --ink-2:#131416; --ink-3:#1B1D1F; --paper:#F3F3F0; --paper-2:#E6E6E2;
+  --silver:#BDBFC4; --mute-d:#8C8E92; --mute-l:#66686C;
+  --line-d:rgba(255,255,255,.12); --line-l:rgba(11,11,12,.14);
+  --red:#8B0E14; --red-hi:#C21A22;
+  --f-display:"Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-body:"Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --pad:clamp(20px, 5vw, 88px);
+  --ease:cubic-bezier(.2,.7,.1,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{background:var(--ink);color:var(--paper);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* ---------- slide shell ---------- */
+.slide{position:relative;scroll-snap-align:start;min-height:100svh;display:flex;flex-direction:column;
+  padding-left:max(var(--pad), env(safe-area-inset-left, 0px));padding-right:max(var(--pad), env(safe-area-inset-right, 0px));
+  padding-block:clamp(76px, 10vh, 124px) clamp(56px, 8vh, 96px);background:var(--ink);color:var(--paper);--line:var(--line-d);--mute:var(--mute-d);--soft:#B4B6BA;overflow:hidden}
+.slide.paper{background:var(--paper);color:var(--ink);--line:var(--line-l);--mute:var(--mute-l);--soft:var(--mute-l)}
+.slide.deep{background:var(--ink-2)}
+.inner{position:relative;z-index:1;width:100%;max-width:1360px;margin-inline:auto;display:flex;flex-direction:column;gap:clamp(32px,5vh,60px);flex:1;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.top .idx{display:flex;gap:14px;align-items:center}
+.top .idx::before{content:"";width:28px;height:1px;background:var(--red-hi)}
+.slide.paper .top .idx::before{background:var(--red)}
+
+h1,h2,h3{font-family:var(--f-display);font-weight:300;margin:0;text-wrap:balance;letter-spacing:-.03em}
+h2{font-size:clamp(36px,5.4vw,80px);line-height:1.08;max-width:15ch}
+.nw{white-space:nowrap}
+h2 em{font-style:normal;color:var(--mute);display:inline-block;margin-top:.12em}
+h3{font-size:clamp(19px,1.6vw,23px);line-height:1.2;letter-spacing:-.015em;font-weight:400}
+p{margin:0}
+.lede{font-size:clamp(16px,1.35vw,19px);line-height:1.6;max-width:56ch;color:var(--soft)}
+.label{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.small{font-size:14.5px;line-height:1.6;color:var(--soft)}
+.slide:not(.paper) .small{color:#A3A5A9}
+.out{font-size:13.5px;line-height:1.5;padding-top:12px;border-top:1px solid var(--line);margin-top:auto}
+.head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:end}
+.head > *{min-width:0}
+@media (max-width:860px){.head{grid-template-columns:1fr}}
+
+.grid{display:grid;gap:0;border-top:1px solid var(--line)}
+.grid > *{min-width:0}
+.cell{padding:clamp(20px,2.2vw,32px) clamp(16px,2vw,28px) clamp(20px,2.2vw,32px) 0;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--line);transition:background .4s}
+.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.c3 > .cell:not(:nth-child(3n+1)), .c4 > .cell:not(:nth-child(4n+1)), .c5 > .cell:not(:nth-child(5n+1)){padding-left:clamp(16px,2vw,28px);border-left:1px solid var(--line)}
+@media (max-width:1100px){
+  .c5{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .c5 > .cell{padding-left:clamp(16px,2vw,28px)!important;border-left:1px solid var(--line)!important}
+  .c5 > .cell:nth-child(3n+1){padding-left:0!important;border-left:0!important}
+}
+@media (max-width:860px){
+  .c3,.c4,.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .c3 > .cell,.c4 > .cell,.c5 > .cell{padding-left:16px!important;border-left:1px solid var(--line)!important}
+  .c3 > .cell:nth-child(2n+1),.c4 > .cell:nth-child(2n+1),.c5 > .cell:nth-child(2n+1){padding-left:0!important;border-left:0!important}
+}
+@media (max-width:520px){
+  .c3,.c4,.c5{grid-template-columns:1fr}
+  .grid > .cell{padding-left:0!important;border-left:0!important}
+}
+.num{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--mute)}
+.who{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--red-hi)}
+.slide.paper .who{color:var(--red)}
+
+blockquote{margin:0;font-family:var(--f-display);font-weight:300;font-size:clamp(20px,2.1vw,30px);line-height:1.3;letter-spacing:-.02em;max-width:34ch;text-wrap:balance}
+blockquote::before{content:"";display:block;width:28px;height:1px;background:var(--red-hi);margin-bottom:20px}
+.slide.paper blockquote::before{background:var(--red)}
+
+.fig{font-family:var(--f-display);font-weight:200;font-size:clamp(56px,8vw,132px);line-height:1.08;white-space:nowrap;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.fig small{font-size:.36em;letter-spacing:-.02em;font-weight:300;margin-left:.2em}
+
+.img{position:relative;overflow:hidden;background:var(--ink-3);max-width:100%}
+.img img,.img video{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s var(--ease), filter .8s}
+.img:hover img{transform:scale(1.04)}
+.vid video{filter:grayscale(1) contrast(1.06)}
+.vid:hover video{filter:none}
+.tagl{position:absolute;left:14px;top:14px;z-index:2;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;mix-blend-mode:difference}
+
+/* reveal: elements rest fully visible; JS only adds a short rise as each slide enters */
+.js .rise{transition:transform 1s var(--ease)}
+.js .slide:not(.seen) .rise{transform:translateY(18px)}
+
+/* ---------- fixed chrome ---------- */
+.chrome{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  padding-top:calc(16px + env(safe-area-inset-top, 0px));padding-left:max(var(--pad), env(safe-area-inset-left, 0px));padding-right:max(var(--pad), env(safe-area-inset-right, 0px));padding-bottom:14px;
+  mix-blend-mode:difference;color:#fff;pointer-events:none;transition:opacity .4s}
+.chrome{display:grid!important;grid-template-columns:1fr auto 1fr}
+.chrome img{height:15px;width:auto;justify-self:start}
+.chrome .mid{text-align:center}
+.chrome .nav{justify-content:flex-end;justify-self:end}
+.chrome .mid{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.chrome .ct{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.on-cover .chrome img,.on-cover .chrome .mid{opacity:0}
+.chrome img,.chrome .mid{transition:opacity .4s}
+@media (max-width:640px){.chrome .mid{display:none}}
+.nav{display:flex;align-items:center;gap:6px;pointer-events:auto}
+.nav .ct{margin-right:10px}
+.nav button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.45);color:#fff;border-radius:50%;font-family:var(--f-mono);font-size:14px;transition:background .2s}
+.nav button:hover{background:rgba(255,255,255,.15)}
+.nav button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.bar{position:fixed;z-index:21;left:0;top:0;height:2px;background:var(--red-hi);width:0;transition:width .5s var(--ease)}
+@media (max-width:640px){.nav button{display:none}}
+
+/* ---------- 01 cover: four portrait films ---------- */
+.cover{padding:0;min-height:100svh}
+.films{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;background:var(--ink)}
+.film{position:relative;overflow:hidden;background:var(--ink-3)}
+.film video,.film img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.82);transition:filter 1s, transform 2s var(--ease)}
+.film:hover video{filter:grayscale(0) brightness(.95);transform:scale(1.03)}
+.film span{position:absolute;left:16px;top:calc(64px + env(safe-area-inset-top, 0px));z-index:2;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.film span b{font-weight:400;color:var(--red-hi);margin-right:8px}
+.js .film{animation:filmIn 1.6s var(--ease) both}
+.js .film:nth-child(2){animation-delay:.12s}.js .film:nth-child(3){animation-delay:.24s}.js .film:nth-child(4){animation-delay:.36s}
+@keyframes filmIn{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (max-width:700px){.films{grid-template-columns:repeat(2,minmax(0,1fr))}.film:nth-child(n+3){display:none}}
+.cover::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(11,11,12,.15) 0%,rgba(11,11,12,0) 35%,rgba(11,11,12,.55) 62%,rgba(11,11,12,.96) 100%)}
+.cover .inner{position:absolute;z-index:3;left:0;right:0;bottom:0;max-width:none;flex:0 0 auto;pointer-events:none;
+  padding-left:max(var(--pad), env(safe-area-inset-left, 0px));padding-right:max(var(--pad), env(safe-area-inset-right, 0px));padding-block:0 clamp(40px,8vh,88px);gap:clamp(22px,3.5vh,36px)}
+.cover .inner *{pointer-events:auto}
+.cover .logo{width:min(620px,80vw);height:auto}
+.cover .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+@media (max-width:760px){.cover .row{grid-template-columns:1fr}}
+.cover .sub{font-size:clamp(18px,1.8vw,25px);font-weight:300;letter-spacing:-.012em;color:#ECECE9;max-width:36ch;text-wrap:balance}
+.cover .tag{display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C9CBCF}
+.cover .tag span{display:flex;gap:10px;align-items:center}
+.cover .tag span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--red-hi)}
+.cover .rule{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.22);padding-top:16px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9A9CA0}
+.cover .rule .scroll{display:flex;gap:10px;align-items:center}
+.cover .rule .scroll::after{content:"";width:1px;height:28px;background:#9A9CA0;animation:drip 2s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- 02 partners ---------- */
+.partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.partners > *{min-width:0}
+@media (max-width:980px){.partners{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.partners{grid-template-columns:1fr}}
+.partner{display:flex;flex-direction:column;gap:14px}
+.partner .img{aspect-ratio:4/5}
+.partner .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0) 55%,rgba(11,11,12,.7))}
+.partner .on{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;color:#fff;font-family:var(--f-display);font-size:clamp(20px,1.7vw,26px);letter-spacing:-.02em;line-height:1.1}
+.partner .who{display:block}
+
+/* ---------- 03 process rail ---------- */
+.rail{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)}
+.rail > *{min-width:0}
+.rail::before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:var(--line)}
+.stp{display:flex;flex-direction:column;gap:14px;position:relative}
+.stp .dot{width:15px;height:15px;border-radius:50%;border:1px solid var(--silver);background:var(--ink);position:relative;z-index:1}
+.stp:first-child .dot,.stp:last-child .dot{background:var(--red-hi);border-color:var(--red-hi)}
+.stp .img{aspect-ratio:3/4;margin-top:6px}
+.stp h3{font-size:clamp(20px,1.7vw,26px)}
+@media (max-width:980px){.rail{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:36px}.rail::before{display:none}}
+@media (max-width:520px){.rail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- splits ---------- */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,72px);align-items:stretch;flex:1}
+.split.rev{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.split > *{min-width:0}
+@media (max-width:860px){.split,.split.rev{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;gap:clamp(24px,4vh,40px)}
+.counties{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.counties div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:clamp(14px,2vh,22px);border-bottom:1px solid var(--line);transition:padding .5s var(--ease)}
+.counties div:hover{padding-left:12px}
+.counties strong{font-family:var(--f-display);font-weight:300;font-size:clamp(30px,4vw,62px);letter-spacing:-.04em;line-height:1}
+.market{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);gap:clamp(24px,4vw,64px);flex:1}
+.market > *{min-width:0}
+.market .vid{height:100%;min-height:420px}
+@media (max-width:860px){.market{grid-template-columns:1fr}.market .vid{aspect-ratio:9/12;min-height:0}}
+
+.flow{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.flow > div{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;padding-block:15px;border-bottom:1px solid var(--line)}
+.flow > div > *{min-width:0}
+.flow h3{font-size:18px;margin-bottom:4px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.stats > div{padding:20px 18px 20px 0;border-bottom:1px solid var(--line);min-width:0}
+.stats > div + div{padding-left:18px;border-left:1px solid var(--line)}
+.stats strong{display:block;font-family:var(--f-display);font-weight:300;font-size:clamp(28px,2.8vw,42px);letter-spacing:-.04em;line-height:1;margin-bottom:8px}
+@media (max-width:640px){.stats{grid-template-columns:1fr 1fr}.stats > div:nth-child(3){padding-left:0;border-left:0}}
+
+/* ---------- 07 routes ---------- */
+.routes{width:100%;height:auto;display:block;overflow:visible}
+.routes text{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;fill:#C9CBCF}
+.routes .path{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1}
+.routes .pulse{fill:none;stroke:var(--red-hi);stroke-width:1.4;stroke-dasharray:6 220;animation:flow 4.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-226}}
+.routes .o{fill:var(--ink);stroke:var(--silver);stroke-width:1}
+.routes .hub{fill:var(--red-hi)}
+.routes .hubring{fill:none;stroke:var(--red-hi);stroke-width:1;opacity:.5}
+.routes .big{font-family:var(--f-display);font-size:26px;letter-spacing:-.02em;text-transform:none;fill:#F3F3F0}
+.diagram-wrap{overflow-x:auto;min-width:0}
+@media (max-width:760px){.routes{min-width:720px}}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:14px;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee div{display:inline-flex;gap:40px;animation:mq 40s linear infinite;font-family:var(--f-display);font-weight:300;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;color:#C9CBCF}
+.marquee span::after{content:"·";margin-left:40px;color:var(--red-hi)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- 08 LSF ---------- */
+.lsf-photos{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;min-height:clamp(320px,46vh,540px)}
+.lsf-photos .img:first-child{grid-row:span 2}
+@media (max-width:640px){.lsf-photos{grid-template-columns:1fr 1fr;grid-template-rows:auto}.lsf-photos .img{aspect-ratio:4/3}.lsf-photos .img:first-child{grid-column:span 2;grid-row:auto}}
+
+/* ---------- 09 portfolio ---------- */
+.pf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);flex:1}
+.pf > *{min-width:0}
+.pf figure{margin:0;display:flex;flex-direction:column;gap:14px}
+.pf .img{flex:1;min-height:clamp(280px,46vh,560px)}
+.pf figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:12px;border-top:1px solid var(--line)}
+.pf figcaption b{font-weight:300;font-family:var(--f-display);font-size:clamp(18px,1.6vw,24px);letter-spacing:-.02em}
+@media (max-width:860px){.pf{grid-template-columns:1fr}.pf .img{min-height:0;aspect-ratio:16/10}}
+
+/* ---------- 10 comparison ---------- */
+.table-wrap{overflow-x:auto;min-width:0}
+table.cmp{width:100%;border-collapse:collapse;color:var(--ink);font-size:16px}
+
+.cmp th,.cmp td{text-align:left;padding:18px 18px 18px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp thead th{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:400;border-bottom-color:currentColor}
+.cmp tbody th{color:var(--ink);font-family:var(--f-display);font-weight:400;font-size:clamp(17px,1.4vw,21px);letter-spacing:-.015em;width:24%}
+.cmp td{font-size:15px;color:var(--soft);width:38%}
+.cmp td.us{color:var(--ink);position:relative;padding-left:22px}
+.cmp td.us::before{content:"";position:absolute;left:0;top:26px;width:10px;height:1px;background:var(--red)}
+.cmp thead th.us{color:var(--red);padding-left:22px}
+.cmp tbody tr{transition:background .3s}
+.cmp tbody tr:hover{background:var(--paper-2)}
+@media (max-width:640px){
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto!important}
+  .cmp tr{padding-block:14px;border-bottom:1px solid var(--line)}
+  .cmp tbody th,.cmp td{border:0;padding:4px 0}
+  .cmp td::before{content:attr(data-l);display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+  .cmp td.us{padding-left:0;margin-top:8px}
+  .cmp td.us::before{position:static;width:auto;height:auto;background:none;color:var(--red)}
+}
+
+/* ---------- 11 structure diagram ---------- */
+.deal{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.deal > *{min-width:0}
+.node{border:1px solid var(--line);padding:16px 18px;display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);column-gap:20px;row-gap:4px;align-items:baseline;background:var(--ink)}
+.node > *{min-width:0}
+.node .label{grid-column:1}
+.node h3{font-size:19px;grid-column:1}
+.node p{grid-column:2;grid-row:1 / span 2}
+.node.core{border-color:var(--red-hi);background:var(--ink-3)}
+.arrow{display:flex;align-items:center;gap:12px;padding:8px 0 8px 26px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.arrow::before{content:"↓";font-size:14px;color:var(--silver)}
+.arrow.up::before{content:"↑"}
+@media (max-width:520px){.node{grid-template-columns:minmax(0,1fr)}.node p{grid-column:1;grid-row:auto}}
+
+/* ---------- 12 capital stack ---------- */
+.stack{display:flex;flex-direction:column;gap:4px;min-height:clamp(300px,44vh,460px)}
+.stack div{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:16px 18px;color:var(--paper)}
+.stack .s1{flex:5.8;background:var(--ink)}
+.stack .s2{flex:4.2;background:var(--ink-3)}
+.stack .s3{flex:1.3;background:var(--red)}
+.stack b{font-family:var(--f-display);font-weight:300;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em}
+.stack span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);text-align:right}
+
+/* ---------- 15 risk layers ---------- */
+.layers{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.layer{display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,2fr);gap:clamp(16px,2vw,32px);align-items:baseline;padding-block:clamp(16px,2.4vh,26px);border-bottom:1px solid var(--line);transition:padding .5s var(--ease),background .4s}
+.layer > *{min-width:0}
+.layer:hover{padding-left:14px;background:var(--ink-3)}
+.layer .k{font-family:var(--f-display);font-weight:200;font-size:clamp(30px,3vw,44px);letter-spacing:-.05em;line-height:1;color:var(--silver)}
+.layer:first-child .k{color:var(--red-hi)}
+@media (max-width:640px){.layer{grid-template-columns:52px minmax(0,1fr)}.layer p{grid-column:2}}
+
+/* ---------- 14 offer ---------- */
+.words{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.words > div{padding:22px 20px 22px 0;border-bottom:1px solid var(--line);min-width:0}
+.words > div + div{padding-left:20px;border-left:1px solid var(--line)}
+.words strong{display:block;font-family:var(--f-display);font-weight:300;font-size:clamp(26px,2.6vw,40px);letter-spacing:-.035em;line-height:1.05;margin-bottom:8px}
+@media (max-width:860px){.words{grid-template-columns:1fr 1fr}.words > div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:420px){.words{grid-template-columns:1fr}.words > div{padding-left:0!important;border-left:0!important}}
+
+/* ---------- 16 slot ---------- */
+.slot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.slot > div{padding:24px 20px 24px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:14px;min-width:0}
+.slot > div:not(:nth-child(3n+1)){padding-left:20px;border-left:1px solid var(--line)}
+.slot .dash{display:block;height:clamp(34px,3.6vw,52px);background:repeating-linear-gradient(90deg,var(--paper-2) 0 10px,transparent 10px 16px);opacity:.9;max-width:70%}
+@media (max-width:640px){.slot{grid-template-columns:1fr 1fr}.slot > div{padding-left:16px!important;border-left:1px solid var(--line)!important}.slot > div:nth-child(2n+1){padding-left:0!important;border-left:0!important}}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+.ghost{position:absolute;right:max(var(--pad), env(safe-area-inset-right, 0px));bottom:-.12em;font-family:var(--f-display);font-weight:200;font-size:clamp(160px,26vw,420px);line-height:1;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:1px var(--line);pointer-events:none;z-index:0;user-select:none}
+
+/* ---------- 17 contact ---------- */
+.contact-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.5fr);gap:clamp(24px,4vw,64px);flex:1}
+.contact-wrap > *{min-width:0}
+.contact-wrap .vid{min-height:420px}
+@media (max-width:860px){.contact-wrap{grid-template-columns:1fr}.contact-wrap .vid{aspect-ratio:4/5;min-height:0}}
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+.contact > div{padding:22px 20px 22px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line);min-width:0}
+.contact > div:nth-child(2n){padding-left:20px;border-left:1px solid var(--line)}
+.contact .v{font-size:clamp(16px,1.4vw,20px);font-weight:300;user-select:all;overflow-wrap:anywhere}
+.contact a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+.contact a:hover{border-color:currentColor}
+@media (max-width:420px){.contact{grid-template-columns:1fr}.contact > div{padding-left:0!important;border-left:0!important}}
+@media (max-width:640px){.slide{min-height:auto}.cover{min-height:92svh}}
+
+/* ---------- Victoria Park numbers ---------- */
+[data-tip]{position:relative}
+[data-tip]:hover::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;background:var(--paper);color:var(--ink);font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;padding:7px 10px;z-index:5;pointer-events:none;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.slide.paper [data-tip]:hover::after{background:var(--ink);color:var(--paper)}
+.src{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:1.6;max-width:110ch}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.kpis > div{padding:20px 18px 20px 0;border-bottom:1px solid var(--line);min-width:0;display:flex;flex-direction:column;gap:8px}
+.kpis > div + div{padding-left:18px;border-left:1px solid var(--line)}
+.kpis strong{font-family:var(--f-display);font-weight:300;font-size:clamp(28px,3vw,46px);letter-spacing:-.04em;line-height:1.05;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpis strong.hi{color:var(--red-hi)}
+.slide.paper .kpis strong.hi{color:var(--red)}
+@media (max-width:860px){.kpis{grid-template-columns:1fr 1fr}.kpis > div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:420px){.kpis{grid-template-columns:1fr}.kpis > div{padding-left:0!important;border-left:0!important}}
+
+.cb{display:flex;flex-direction:column;gap:2px;position:relative}
+.cb-row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 120px;column-gap:20px;row-gap:2px;align-items:center;padding-block:12px;border-bottom:1px solid var(--line)}
+.cb-row > *{min-width:0}
+.cb-a{font-size:16px;font-weight:400;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.cb-a em{font-style:normal;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.cb-track{position:relative;height:14px}
+.cb-bar{position:absolute;left:0;top:0;bottom:0;background:var(--silver);border-radius:0 4px 4px 0}
+.cb-row.out .cb-bar{background:repeating-linear-gradient(135deg,var(--silver) 0 2px,transparent 2px 7px);outline:1px solid var(--silver);outline-offset:-1px}
+.cb-v{font-variant-numeric:tabular-nums;text-align:right;font-size:16px}
+.cb-v small{color:var(--mute);font-size:12px}
+.cb-m{grid-column:2 / span 2;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--mute);text-transform:uppercase}
+.cb-ours{position:absolute;top:-30px;bottom:0;width:2px;margin-left:-1px;background:var(--red-hi);z-index:2;pointer-events:none}
+.cb-ours span{position:absolute;top:0;left:10px;white-space:nowrap;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--red-hi)}
+.cb-wrap{position:relative;padding-top:30px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 120px;column-gap:20px}
+.cb-wrap > .cb{grid-column:1 / -1;grid-row:1}
+.cb-overlay{grid-column:2;grid-row:1;position:relative;pointer-events:none}
+.cb-axis span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.cb-axis span:first-child{transform:none}
+.cb-axis span:last-child{transform:translateX(-100%)}
+.cb-axis{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 120px;column-gap:20px;margin-top:8px}
+.cb-axis div{grid-column:2;position:relative;height:14px;font-family:var(--f-mono);font-size:10.5px;color:var(--mute);font-variant-numeric:tabular-nums}
+@media (max-width:640px){.cb-row,.cb-wrap,.cb-axis{grid-template-columns:minmax(0,1fr) 92px}.cb-a{grid-column:1 / -1}.cb-track{grid-column:1}.cb-m{grid-column:1 / -1}.cb-overlay{grid-column:1}.cb-axis div{grid-column:1}}
+
+.nc{width:100%;border-collapse:collapse;color:var(--paper);font-size:15px}
+.nc th,.nc td{text-align:left;padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.nc thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.nc tbody th{font-weight:400;font-size:17px;letter-spacing:-.01em;color:var(--paper)}
+.nc td{color:#B4B6BA;font-variant-numeric:tabular-nums}
+.nc td.num{text-align:right;color:var(--paper)}
+.nc thead th.num{text-align:right}
+.st{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:var(--paper)}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--silver)}
+.st.sold::before,.st.uc::before{background:var(--red-hi)}
+.st.off::before{background:transparent;border:1px solid var(--silver)}
+@media (max-width:760px){
+  .nc thead{display:none}.nc,.nc tbody,.nc tr,.nc th,.nc td{display:block}
+  .nc tr{padding-block:14px;border-bottom:1px solid var(--line)}.nc th,.nc td{border:0;padding:3px 0}.nc td.num{text-align:left}
+  .nc td[data-l]::before{content:attr(data-l) " · ";font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+}
+
+.spec{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line)}
+.spec > div{padding:22px 18px 22px 0;border-bottom:1px solid var(--line);min-width:0;display:flex;flex-direction:column;gap:10px}
+.spec > div + div{padding-left:18px;border-left:1px solid var(--line)}
+.spec strong{font-family:var(--f-display);font-weight:200;font-size:clamp(30px,3.4vw,54px);letter-spacing:-.05em;line-height:1.05;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:1100px){.spec{grid-template-columns:repeat(3,minmax(0,1fr))}.spec > div:nth-child(4){padding-left:0;border-left:0}}
+@media (max-width:640px){.spec{grid-template-columns:1fr 1fr}.spec > div{padding-left:16px!important;border-left:1px solid var(--line)!important}.spec > div:nth-child(2n+1){padding-left:0!important;border-left:0!important}}
+.psf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.psf > div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);min-width:0;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.psf > div + div{padding-left:16px;border-left:1px solid var(--line)}
+.psf b{font-weight:400;font-variant-numeric:tabular-nums;font-size:17px;white-space:nowrap}
+@media (max-width:860px){.psf{grid-template-columns:1fr 1fr}.psf > div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:420px){.psf{grid-template-columns:1fr}.psf > div{padding-left:0!important;border-left:0!important}}
+
+.us{display:flex;flex-direction:column;gap:26px}
+.us-row{display:flex;flex-direction:column;gap:10px}
+.us-bar{display:flex;gap:2px;height:44px}
+.us-seg{display:block;min-width:2px}
+.us-seg:first-child{border-radius:4px 0 0 4px}.us-seg:last-child{border-radius:0 4px 4px 0}
+.u1{background:#E6E6E2}.u2{background:var(--silver)}.u3{background:#8C8E92}.u4{background:#5F6165}.u5{background:#45474B}
+.s1{background:#5F6165}.s2{background:var(--red-hi)}.s3{background:#9E3A3F}
+.us-leg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 24px}
+.us-leg li{display:grid;grid-template-columns:12px minmax(0,1fr) auto auto;gap:10px;align-items:baseline;padding-block:9px;border-bottom:1px solid var(--line);font-size:14px}
+.us-leg i{width:10px;height:10px;display:block;border-radius:2px;align-self:center}
+.us-leg span{color:#B4B6BA;min-width:0}
+.us-leg b{font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap}
+.us-leg em{font-style:normal;font-family:var(--f-mono);font-size:10.5px;color:var(--mute);min-width:44px;text-align:right}
+.us-tot{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.us-tot b{font-weight:400;font-variant-numeric:tabular-nums}
+.note{border:1px solid var(--line);border-left:2px solid var(--red-hi);padding:14px 16px;font-size:14px;line-height:1.55;color:#B4B6BA}
+.note b{color:var(--paper);font-weight:400}
+.slide.paper .note{border-left-color:var(--red);color:var(--mute-l)}
+.slide.paper .note b{color:var(--ink)}
+
+.ds{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px}
+.ds > *{min-width:0}
+.ds-y{position:relative;height:clamp(260px,40vh,400px)}
+.ds-y span{position:absolute;right:0;transform:translateY(50%);font-family:var(--f-mono);font-size:10.5px;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ds-y b{font-weight:400}
+.ds-plot{position:relative;height:clamp(260px,40vh,400px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(4px,.8vw,12px);align-items:end;background:linear-gradient(to top,var(--line) 1px,transparent 1px) 0 0/100% 25%;border-bottom:1px solid var(--ink)}
+.ds-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.ds-stack{height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:2px}
+.ds-draw{display:block;background:var(--silver);border-radius:4px 4px 0 0}
+.ds-d1{display:block;background:var(--ink)}
+.ds-col.last .ds-draw{background:var(--red)}
+.ds-m{position:absolute;top:calc(100% + 8px);left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:10.5px;color:var(--mute)}
+.ds-end{position:absolute;right:0;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--red);white-space:nowrap;transform:translateY(-130%)}
+.ds-leg{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;font-size:13.5px;color:var(--mute-l)}
+.ds-leg span{display:flex;align-items:center;gap:8px}
+.ds-leg i{width:10px;height:10px;border-radius:2px;display:block}
+
+.wf{display:flex;flex-direction:column}
+.wf-row{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) 150px;gap:20px;align-items:center;padding-block:11px;border-bottom:1px solid var(--line)}
+.wf-row > *{min-width:0}
+.wf-l{font-size:15px;color:#B4B6BA}
+.wf-t{position:relative;height:22px}
+.wf-b{position:absolute;top:0;bottom:0;background:#5F6165;border-radius:2px}
+.wf-row.start .wf-b{background:var(--silver)}
+.wf-row.end .wf-b{background:var(--red-hi)}
+.wf-row.end .wf-l,.wf-row.start .wf-l{color:var(--paper)}
+.wf-row.end{border-bottom:0;border-top:1px solid var(--silver)}
+.wf-v{text-align:right;font-variant-numeric:tabular-nums;font-size:15px;white-space:nowrap}
+.wf-row.end .wf-v{color:var(--red-hi);font-size:18px}
+@media (max-width:640px){.wf-row{grid-template-columns:minmax(0,1fr) auto}.wf-t{grid-column:1 / -1;grid-row:2}}
+
+.sens{width:100%;border-collapse:collapse;color:var(--ink)}
+.sens th,.sens td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.sens thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.sens tbody th{font-family:var(--f-display);font-weight:400;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
+.sens tbody th small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--mute);margin-top:4px}
+.sens td b{display:block;font-family:var(--f-display);font-weight:300;font-size:clamp(22px,2vw,30px);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sens td span{display:block;font-size:13px;color:var(--mute-l);margin-top:4px}
+.sens td.base{background:var(--ink);color:var(--paper);padding-left:16px}
+.sens td.base span{color:#B4B6BA}
+.sens td.base b{color:var(--paper)}
+.rl{position:relative;height:150px;margin-top:8px}
+.rl-line{position:absolute;left:0;right:0;top:75px;height:1px;background:var(--ink)}
+.rl-band{position:absolute;top:63px;height:24px;background:var(--paper-2);border:1px solid var(--line)}
+.rl-band span{position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);white-space:nowrap;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.rl-mk{position:absolute;top:0;bottom:0;width:0}
+.rl-mk i{position:absolute;left:-5px;top:70px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:1px solid var(--ink)}
+.rl-mk b,.rl-mk em{position:absolute;white-space:nowrap;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.rl-mk b{font-weight:400;font-size:14px}
+.rl-mk em{font-style:normal;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.rl-mk.a b{top:22px}.rl-mk.a em{top:4px}
+.rl-mk.b b{top:94px}.rl-mk.b em{top:114px}
+.rl-mk.ours i{background:var(--red);border-color:var(--red)}
+.rl-mk.ours b{color:var(--red)}
+.rl-mk.be i{background:var(--ink)}
+.rl-mk.cost i{border-style:dashed}
+.rl-tk{position:absolute;top:140px;transform:translateX(-50%);font-family:var(--f-mono);font-size:10px;color:var(--mute);font-variant-numeric:tabular-nums}
+.rl-wrap{overflow-x:auto;min-width:0;padding-inline:40px}
+.rl{min-width:640px}
+
+.cmpb{display:flex;flex-direction:column;gap:18px}
+.cmpb-row{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:20px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.cmpb-row > *{min-width:0}
+.cmpb-bars{display:flex;flex-direction:column;gap:8px}
+.cmpb-bars > div{display:grid;grid-template-columns:150px minmax(0,1fr) 140px;gap:16px;align-items:center}
+.cmpb-bars > div > *{min-width:0}
+.cmpb-n{font-size:14px;color:var(--mute-l)}
+.cmpb-t{position:relative;height:18px}
+.cmpb-b{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0}
+.cmpb-b.nf{background:var(--silver)}
+.cmpb-b.f{background:var(--red)}
+.cmpb-bars b{font-weight:400;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+@media (max-width:760px){.cmpb-row{grid-template-columns:1fr}.cmpb-bars > div{grid-template-columns:minmax(0,1fr) auto}.cmpb-t{grid-column:1 / -1;grid-row:2}}
+.cmp2{width:100%;border-collapse:collapse;color:var(--ink);font-size:15px}
+.cmp2 th,.cmp2 td{text-align:left;padding:11px 16px 11px 0;border-bottom:1px solid var(--line)}
+.cmp2 thead th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.cmp2 thead th.us{color:var(--red)}
+.cmp2 tbody th{font-weight:400}
+.cmp2 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cmp2 td{color:var(--mute-l)}
+.cmp2 td.us{color:var(--ink)}
+.cmp2 tr.hl th,.cmp2 tr.hl td{font-family:var(--f-display);font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em;border-bottom:0;border-top:1px solid var(--ink);padding-top:16px}
+.cmp2 tr.hl td.us{color:var(--red)}
+
+/* ---------- ARQIA projects ---------- */
+.pidx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.pidx > *{min-width:0}
+.pcard{display:flex;flex-direction:column;gap:10px;color:inherit;text-decoration:none}
+.pcard .img{aspect-ratio:16/10}
+.pc-t{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:10px;border-top:1px solid var(--line)}
+.pc-t b{font-weight:300;font-family:var(--f-display);font-size:clamp(17px,1.4vw,21px);letter-spacing:-.02em}
+.pc-go{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-hi)}
+a.pcard:hover .pc-t b{text-decoration:underline;text-underline-offset:4px}
+a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
+@media (max-width:860px){.pidx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pidx{grid-template-columns:1fr}}
+.pj{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);flex:1;align-items:stretch}
+.pj > *{min-width:0}
+.pj h2{font-size:clamp(32px,4.2vw,62px)}
+@media (max-width:960px){.pj{grid-template-columns:1fr}}
+.pj-spec{margin:0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.pj-spec > div{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:16px;padding-block:10px;border-bottom:1px solid var(--line)}
+.pj-spec dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.pj-spec dd{margin:0;font-size:15px;line-height:1.45;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:13px;padding:6px 12px;white-space:nowrap}
+.pj .vid video,.fx .vid video{filter:none}
+.mos{display:grid;gap:6px;min-height:clamp(420px,62vh,720px)}
+.mos .img{min-height:0}
+.mos.m6{grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr .8fr;grid-template-areas:"a a b" "a a c" "d e f"}
+.mos.m5{grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr .9fr;grid-template-areas:"a a a" "a a a" "b c d"}
+.mos.mt{grid-template-columns:.78fr 1fr 1fr;grid-template-rows:1fr 1fr;grid-template-areas:"a b b" "a c d"}
+.mos > :nth-child(1){grid-area:a}.mos > :nth-child(2){grid-area:b}.mos > :nth-child(3){grid-area:c}
+.mos > :nth-child(4){grid-area:d}.mos > :nth-child(5){grid-area:e}.mos > :nth-child(6){grid-area:f}
+.mos.m6 > :nth-child(5) img,.mos.m6 > :nth-child(6) img{object-fit:cover;object-position:center top;background:#fff}
+@media (max-width:640px){
+  .mos,.mos.m6,.mos.m5,.mos.mt{min-height:0;grid-template-columns:1fr 1fr;grid-template-rows:none;grid-template-areas:none}
+  .mos > *{grid-area:auto!important;aspect-ratio:4/3}
+  .mos > :first-child{grid-column:1 / -1;aspect-ratio:16/10}
+  .mos.mt > :first-child{aspect-ratio:4/5}
+}
+.fx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,3vw,48px);align-items:start}
+.fx > *{min-width:0}
+.fx-media{display:grid;grid-template-columns:.9fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:6px;height:clamp(420px,58vh,640px)}
+.fx-media > :nth-child(1){grid-row:1 / -1}
+.fx-media .img{min-height:0}
+.fx-media > :nth-child(3) img{object-fit:contain;background:#fff}
+.c2x{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c2x > .cell:nth-child(2n){padding-left:clamp(16px,2vw,28px);border-left:1px solid var(--line)}
+.c2x ul.plain li{font-size:14.5px;padding-block:8px}
+@media (max-width:960px){.fx{grid-template-columns:1fr}.fx-media{height:auto;grid-template-rows:none;grid-template-columns:1fr 1fr}.fx-media > *{aspect-ratio:4/3}.fx-media > :nth-child(1){grid-row:auto;grid-column:1 / -1;aspect-ratio:4/5}}
+@media (max-width:520px){.c2x{grid-template-columns:1fr}.c2x > .cell:nth-child(2n){padding-left:0;border-left:0}}
+
+/* ---------- process cycle ---------- */
+.pt .cell h3{font-size:clamp(22px,2vw,30px)}
+.pt-ic{display:flex;gap:8px;margin-bottom:14px}
+.pt .cy-ic.sm{width:48px;height:48px;flex:0 0 48px;background:transparent;border-color:var(--line-l)}
+.pt .cy-ic svg{stroke:var(--ink)}
+.cy-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center;flex:1}
+.cy-wrap > *{min-width:0}
+.cy{position:relative;width:min(100% - 250px,540px);aspect-ratio:1/1;margin-inline:auto}
+.cy-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cy-arc{fill:none;stroke:#8C8E92;stroke-width:.35}
+.cy-arc.loop{stroke:var(--red-hi);stroke-dasharray:1.2 1}
+.cy-c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42%;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center}
+.cy-c b{font-family:var(--f-display);font-weight:300;font-size:clamp(20px,2vw,30px);letter-spacing:-.03em;line-height:1.1}
+.cy-nodes{list-style:none;margin:0;padding:0}
+.cy-n{position:absolute;width:0;height:0}
+.cy-ic{display:grid;place-items:center;width:clamp(48px,5vw,64px);height:clamp(48px,5vw,64px);border-radius:50%;border:1px solid var(--silver);background:var(--ink);position:absolute;left:0;top:0;transform:translate(-50%,-50%);transition:background .3s,border-color .3s}
+.cy-ic svg{width:44%;height:44%;fill:none;stroke:var(--paper);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.cy-n:first-child .cy-ic,.cy-n:last-child .cy-ic{border-color:var(--red-hi)}
+.cy-n:hover .cy-ic{background:var(--ink-3);border-color:var(--paper)}
+.cy-t{position:absolute;display:flex;flex-direction:column;gap:3px;width:max-content;max-width:140px}
+.cy-t b{font-family:var(--f-display);font-weight:400;font-size:clamp(17px,1.5vw,21px);letter-spacing:-.015em}
+.cy-t em{font-style:normal;font-size:13px;color:#A3A5A9;line-height:1.4}
+.cy-t .num{white-space:nowrap}
+.cy-n.c.t .cy-t{left:0;bottom:calc(clamp(48px,5vw,64px)/2 + 12px);transform:translateX(-50%);text-align:center;align-items:center}
+.cy-n.c.b .cy-t{left:0;top:calc(clamp(48px,5vw,64px)/2 + 12px);transform:translateX(-50%);text-align:center;align-items:center}
+.cy-n.r .cy-t{left:calc(clamp(48px,5vw,64px)/2 + 14px);top:0;transform:translateY(-50%)}
+.cy-n.l .cy-t{right:calc(clamp(48px,5vw,64px)/2 + 14px);top:0;transform:translateY(-50%);text-align:right;align-items:flex-end}
+.cy-list{display:none;list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.cy-list li{display:flex;align-items:center;gap:14px;padding-block:10px;border-bottom:1px solid var(--line);font-size:15px}
+.cy-list b{font-weight:400}
+.cy-ic.sm{position:static;transform:none;width:36px;height:36px;flex:0 0 36px}
+@media (max-width:1180px){.cy-wrap{grid-template-columns:1fr}.cy{width:min(100% - 300px,500px)}}
+@media (max-width:760px){.cy{display:none}.cy-list{display:block}}
+
+/* ---------- project bands: the cover's film strips, turned horizontal ---------- */
+.bands{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:3px;min-height:clamp(440px,64vh,740px);background:var(--ink)}
+.bd{position:relative;overflow:hidden;background:var(--ink-3);min-height:0}
+.bd img,.bd video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 2s var(--ease),filter .8s}
+.bd:hover img,.bd:hover video{transform:scale(1.03)}
+.bd::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.45) 0%,rgba(11,11,12,0) 38%);pointer-events:none}
+.bd-l{position:absolute;left:16px;top:14px;z-index:2;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.bd-l b{font-weight:400;color:var(--red-hi);margin-right:8px}
+.js .slide.seen .bd{animation:bandIn 1.4s var(--ease) both}
+.js .slide.seen .bd:nth-child(2){animation-delay:.12s}.js .slide.seen .bd:nth-child(3){animation-delay:.24s}
+@keyframes bandIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (max-width:640px){.bands{min-height:0;grid-template-rows:none}.bd{aspect-ratio:16/9}}
+
+/* ---------- sourcing: middlemen vs direct ---------- */
+.sp-wrap{overflow-x:auto;min-width:0;padding-block:8px}
+.sp{width:100%;height:auto;display:block;overflow:visible}
+@media (max-width:860px){.sp{min-width:860px}}
+.sp text{font-family:var(--f-body)}
+.sp-lane{font-family:var(--f-mono)!important;font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:var(--ink)}
+.sp-lane.mute{fill:var(--mute-l)}
+.sp-lane.red{fill:var(--red)}
+.sp-n{font-size:15px;fill:var(--ink)}
+.sp-c{font-family:var(--f-mono)!important;font-size:11px;letter-spacing:.08em;fill:var(--mute-l)}
+.sp-m{font-family:var(--f-mono)!important;font-size:11px;letter-spacing:.1em;fill:var(--red)}
+.sp .la{stroke:var(--line-l);stroke-width:1.5;stroke-dasharray:4 5}
+.sp .sep{stroke:var(--line-l);stroke-width:1}
+.sp .mm rect{fill:var(--paper-2);stroke:var(--line-l)}
+.sp .mm .sp-n{fill:var(--mute-l)}
+.sp .strike{stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.js .slide.seen .sp .strike{animation:strike 6s var(--ease) infinite}
+.js .slide.seen .sp .mm:nth-of-type(2) .strike{animation-delay:.3s}
+@keyframes strike{0%{stroke-dashoffset:1}18%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.sp .end circle{fill:var(--paper);stroke:var(--ink);stroke-width:1.2}
+.sp .end.hi circle{fill:var(--ink)}
+.sp .end.hi .ico{stroke:var(--paper)}
+.sp .end.q circle{fill:var(--paper);stroke:var(--red);stroke-width:1.6}
+.sp .ico{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sp .slow{fill:var(--mute-l)}
+.sp .fl{fill:none;stroke:var(--ink);stroke-opacity:.22;stroke-width:1}
+.sp .fn{fill:var(--paper);stroke:var(--ink);stroke-width:1.2}
+.sp .pulse{fill:var(--red)}
+.sp .sea{fill:none;stroke:var(--ink);stroke-width:1.2;stroke-dasharray:2 6;stroke-linecap:round}
+.sp .sea2{fill:none;stroke:var(--ink);stroke-opacity:.18;stroke-width:1;stroke-dasharray:14 10}
+.js .slide.seen .sp .sea2{animation:waves 3s linear infinite}
+@keyframes waves{to{stroke-dashoffset:-48}}
+.sp .lb{stroke:var(--ink);stroke-width:1.2}
+.sp .ship > *:not(animateMotion){transform:scale(1.3)}
+.sp .hull{fill:var(--ink)}
+.sp .ct1{fill:var(--red)}
+.sp .ct2{fill:var(--silver)}
+.sp .bridge{fill:var(--ink)}
+
+/* ---------- evidence film slides (cover treatment) ---------- */
+.films.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.filmslide .film span{top:calc(64px + env(safe-area-inset-top, 0px))}
+.filmslide .inner{gap:clamp(18px,3vh,28px)}
+.filmslide .top .idx::before{background:var(--red-hi)}
+.fs-h{color:#F3F3F0;max-width:14ch;font-size:clamp(36px,5vw,76px)}
+.filmslide .row{align-items:end}
+.fs-l{max-width:44ch;font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:#D4D5D2}
+@media (max-width:700px){.films.f5{grid-template-columns:repeat(2,minmax(0,1fr))}.films.f5 .film:nth-child(n+3){display:none}}
+
+/* ---------- numbers v2 ---------- */
+@media (max-width:640px){.cb-ours span{left:auto;right:10px}.cb-med span{display:none}}
+.cb-med{position:absolute;top:-30px;bottom:0;width:0;border-left:1px dashed var(--silver);pointer-events:none}
+.cb-med span{position:absolute;top:14px;right:8px;white-space:nowrap;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#B4B6BA}
+.ds-int{display:block;background:var(--red);border-radius:4px 4px 0 0}
+.ds-int + .ds-draw{border-radius:0}
+.land{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:start}
+.land > *{min-width:0;display:flex;flex-direction:column;gap:12px}
+.land-hero{border:1px solid var(--ink);padding:clamp(18px,2vw,28px)}
+.land-hero > b{font-family:var(--f-display);font-weight:300;font-size:clamp(24px,2.4vw,36px);letter-spacing:-.03em;line-height:1.1}
+.land-hero .hl{font-family:var(--f-display);font-weight:300;font-size:clamp(22px,2vw,30px);color:var(--red);letter-spacing:-.02em}
+@media (max-width:860px){.land{grid-template-columns:1fr}}
+.nc tr.me th,.nc tr.me td{color:var(--paper)}
+.nc tr.me th::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red-hi);margin-right:10px;vertical-align:middle}
+
+/* ---------- Lighthouse deal ---------- */
+.inv{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1.2fr);gap:clamp(12px,2vw,28px);align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:clamp(20px,3vh,36px)}
+.inv > div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.inv strong{font-family:var(--f-display);font-weight:200;font-size:clamp(30px,3.6vw,56px);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.inv .hi strong{color:var(--red)}
+.inv-op{font-family:var(--f-display);font-weight:200;font-size:clamp(28px,3vw,44px);color:var(--mute)}
+@media (max-width:860px){.inv{grid-template-columns:1fr}.inv-op{display:none}}
+.slide.paper .us-leg span{color:var(--mute-l)}
+.cmp2.dk{color:var(--paper)}
+.cmp2.dk td{color:#A3A5A9}
+.cmp2.dk td.us{color:var(--paper)}
+.cmp2.dk thead th.us,.cmp2.dk tr.hl td.us{color:var(--red-hi)}
+.cmp2.dk tr.hl th,.cmp2.dk tr.hl td{border-top-color:var(--paper)}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<header class="chrome">
+  <img src="/victoriapark/img/logo.png" alt="" aria-hidden="true">
+  <span class="mid" aria-hidden="true" id="mid">Home</span>
+  <nav class="nav" aria-label="Slide navigation">
+    <span class="ct" id="ct">01 / 26</span>
+    <button id="prev" aria-label="Previous slide">↑</button>
+    <button id="next" aria-label="Next slide">↓</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- 01 COVER -->
+<section class="slide cover" id="inicio" data-label="Home">
+  <div class="films" aria-hidden="true">
+    <div class="film"><video autoplay muted loop playsinline preload="auto" poster="/victoriapark/img/v-water.jpg"><source src="/victoriapark/img/v-water.mp4" type="video/mp4"></video><span><b>01</b>Waterfront</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="auto" poster="/victoriapark/img/v-villa.jpg"><source src="/victoriapark/img/v-villa.mp4" type="video/mp4"></video><span><b>02</b>Residence</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="auto" poster="/victoriapark/img/v-aerial.jpg"><source src="/victoriapark/img/v-aerial.mp4" type="video/mp4"></video><span><b>03</b>Community</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="auto" poster="/victoriapark/img/v-plans.jpg"><source src="/victoriapark/img/v-plans.mp4" type="video/mp4"></video><span><b>04</b>Project</span></div>
+  </div>
+  <div class="inner">
+    <img class="logo" src="/victoriapark/img/logo.png" alt="Sena Enterprises">
+    <div class="row">
+      <p class="sub">Integrated real estate development for South Florida's luxury residential market.</p>
+      <div class="tag"><span>South Florida</span><span>Luxury residential</span><span>Vertical integration</span></div>
+    </div>
+    <div class="rule"><span>Investor Pack · Confidential</span><span class="scroll" aria-hidden="true"></span></div>
+  </div>
+</section>
+
+<!-- 02 PLATFORM -->
+<section class="slide paper" id="modelo" data-label="Model">
+  <div class="inner">
+    <div class="top"><span class="idx">02 · Development model</span><span>Platform</span></div>
+    <div class="head rise">
+      <h2>One integrated platform, from land to keys.</h2>
+      <p class="lede">Sena Enterprises develops every project with a coordinated network of specialist partners. Every discipline needed to acquire, design, build and sell luxury homes works on one schedule, which compresses timelines and protects margin at each step.</p>
+    </div>
+    <div class="grid c4 rise pt">
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Acquire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span class="cy-ic sm" title="Sell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span></span><span class="who">Acquisition + brokerage</span><h3>Castellain Luxury Homes</h3><p class="small">Land sourcing with access to off-market opportunities. At exit, it leads the sale and eliminates buyer-agent fees.</p></div>
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Design"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span class="cy-ic sm" title="Furnish"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span></span><span class="who">Architecture + engineering</span><h3>ARQIA</h3><p class="small">Design built to maximize price per square foot, with finishes and layouts calibrated to the target buyer. ARQIA Studio leads interiors and staging.</p></div>
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Source"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span></span><span class="who">Global sourcing</span><h3>XGROUP</h3><p class="small">Direct relationships with more than 150 factories in 7 countries, with no middlemen.</p></div>
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Build"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span></span><span class="who">Construction</span><h3>Sena Enterprises</h3><p class="small">Specialized execution in high-end residential, with quality, schedule and budget under direct control.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PROCESS -->
+<section class="slide" id="processo" data-label="Process">
+  <div class="inner">
+    <div class="top"><span class="idx">03 · End-to-end execution</span><span>Acquire → Sell → Acquire</span></div>
+    <div class="cy-wrap">
+      <div class="col rise">
+        <h2>Six steps. <em>One continuous cycle.</em></h2>
+        <p class="lede">Every project runs through the same cycle, with a specialist partner at each step and a single schedule. When the home sells, the capital moves to the next lot.</p>
+        <ol class="cy-list">
+          <li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span><b>Acquire</b> · Castellain</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span><b>Design</b> · ARQIA</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span><span><b>Source</b> · XGROUP</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span><span><b>Build</b> · Sena Enterprises</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span><span><b>Furnish</b> · ARQIA Studio</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span><span><b>Sell</b> · Castellain</span></li>
+        </ol>
+      </div>
+      <div class="cy rise" role="img" aria-label="Six-step cycle: acquire, design, source, build, furnish and sell, then back to acquire">
+        <svg class="cy-ring" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <marker id="cyArrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8C8E92"/></marker>
+            <marker id="cyArrowR" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#C21A22"/></marker>
+          </defs>
+          <path class="cy-arc" d="M57.25,12.70 A38,38 0 0 1 78.68,25.07" marker-end="url(#cyArrow)"/><path class="cy-arc" d="M85.93,37.63 A38,38 0 0 1 85.93,62.37" marker-end="url(#cyArrow)"/><path class="cy-arc" d="M78.68,74.93 A38,38 0 0 1 57.25,87.30" marker-end="url(#cyArrow)"/><path class="cy-arc" d="M42.75,87.30 A38,38 0 0 1 21.32,74.93" marker-end="url(#cyArrow)"/><path class="cy-arc" d="M14.07,62.37 A38,38 0 0 1 14.07,37.63" marker-end="url(#cyArrow)"/><path class="cy-arc loop" d="M21.32,25.07 A38,38 0 0 1 42.75,12.70" marker-end="url(#cyArrowR)"/>
+        </svg>
+        <div class="cy-c"><span class="label">Integrated platform</span><b>Sena Enterprises</b><span class="small">Sale proceeds restart the cycle</span></div>
+        <ol class="cy-nodes">
+          <li class="cy-n c t" style="left:50.00%;top:12.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span>
+          <span class="cy-t"><span class="num">01 · Castellain</span><b>Acquire</b><em>Off-market land</em></span>
+        </li><li class="cy-n r m" style="left:82.91%;top:31.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span>
+          <span class="cy-t"><span class="num">02 · ARQIA</span><b>Design</b><em>Architecture and engineering</em></span>
+        </li><li class="cy-n r m" style="left:82.91%;top:69.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span>
+          <span class="cy-t"><span class="num">03 · XGROUP</span><b>Source</b><em>Materials direct from the factory</em></span>
+        </li><li class="cy-n c b" style="left:50.00%;top:88.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span>
+          <span class="cy-t"><span class="num">04 · Sena Enterprises</span><b>Build</b><em>Light steel construction</em></span>
+        </li><li class="cy-n l m" style="left:17.09%;top:69.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span>
+          <span class="cy-t"><span class="num">05 · ARQIA Studio</span><b>Furnish</b><em>Interiors and staging</em></span>
+        </li><li class="cy-n l t" style="left:17.09%;top:31.00%">
+          <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span>
+          <span class="cy-t"><span class="num">06 · Castellain</span><b>Sell</b><em>Listing and buyers</em></span>
+        </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 MARKET -->
+<section class="slide deep" id="mercado" data-label="Market">
+  <div class="inner">
+    <div class="top"><span class="idx">04 · Where we operate</span><span>Tri-County, FL</span></div>
+    <div class="market">
+      <div class="col rise">
+        <h2>High-end residential in South Florida.</h2>
+        <div>
+          <p class="label" style="margin-bottom:12px">Target segment</p>
+          <p class="fig">$2–10M</p>
+        </div>
+        <p class="lede">One of the most resilient and supply-constrained luxury markets in the United States. Domestic migration, driven by favorable tax policy, quality of life and remote work, keeps tightening inventory and pushing up price per square foot.</p>
+        <div class="counties" style="margin-top:auto">
+          <div><strong>Palm Beach</strong><span class="label">County</span></div>
+          <div><strong>Broward</strong><span class="label">County</span></div>
+          <div><strong>Miami-Dade</strong><span class="label">County</span></div>
+        </div>
+      </div>
+      <div class="img vid"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/v-water.jpg" aria-hidden="true"><source src="/victoriapark/img/v-water.mp4" type="video/mp4"></video><span class="tagl">Waterfront · South Florida</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FACTORY TO HOME -->
+<section class="slide paper" id="sourcing" data-label="Sourcing">
+  <div class="inner">
+    <div class="top"><span class="idx">05 · Global sourcing × design</span><span>No middlemen</span></div>
+    <div class="head rise">
+      <h2>From factory to site. No middlemen.</h2>
+      <p class="lede">In the traditional chain, every material passes through an exporter, importer, distributor and showroom, and each one adds margin and time. XGROUP buys direct from more than 150 factories in 7 countries, inspects at the source and ships straight to the job site.</p>
+    </div>
+    <div class="sp-wrap rise"><svg class="sp" viewBox="0 0 1200 470" role="img" aria-label="Traditional chain with four middlemen compared with direct purchasing from factories in seven countries, with inspection at the source and direct ocean shipping to the site">
+      <text x="0" y="24" class="sp-lane">Traditional chain</text>
+      <text x="1200" y="24" text-anchor="end" class="sp-lane mute">4 middlemen · 4 markups · longer lead times</text>
+      <line class="la" x1="90" y1="110" x2="1110" y2="110"/>
+      <g class="end"><circle cx="90" cy="110" r="24"/><g transform="translate(80,100) scale(.84)"><path class="ico" d="M3 21V10l5 3V10l5 3V6l8 4v11z"/></g><text x="90" y="156" text-anchor="middle" class="sp-n">Factory</text></g><g class="mm">
+        <rect x="230" y="89" width="140" height="42" rx="21"/>
+        <text x="300" y="115" text-anchor="middle" class="sp-n">Exporter</text>
+        <text x="300" y="76" text-anchor="middle" class="sp-m">+ markup</text>
+        <line class="strike" x1="238" y1="124" x2="362" y2="96" pathLength="1"/>
+      </g><g class="mm">
+        <rect x="430" y="89" width="140" height="42" rx="21"/>
+        <text x="500" y="115" text-anchor="middle" class="sp-n">Importer</text>
+        <text x="500" y="76" text-anchor="middle" class="sp-m">+ markup</text>
+        <line class="strike" x1="438" y1="124" x2="562" y2="96" pathLength="1"/>
+      </g><g class="mm">
+        <rect x="630" y="89" width="140" height="42" rx="21"/>
+        <text x="700" y="115" text-anchor="middle" class="sp-n">Distributor</text>
+        <text x="700" y="76" text-anchor="middle" class="sp-m">+ markup</text>
+        <line class="strike" x1="638" y1="124" x2="762" y2="96" pathLength="1"/>
+      </g><g class="mm">
+        <rect x="830" y="89" width="140" height="42" rx="21"/>
+        <text x="900" y="115" text-anchor="middle" class="sp-n">Showroom</text>
+        <text x="900" y="76" text-anchor="middle" class="sp-m">+ markup</text>
+        <line class="strike" x1="838" y1="124" x2="962" y2="96" pathLength="1"/>
+      </g><g class="end"><circle cx="1110" cy="110" r="24"/><g transform="translate(1100,100) scale(.84)"><path class="ico" d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5"/></g><text x="1110" y="156" text-anchor="middle" class="sp-n">Site</text></g>
+      <circle class="slow" r="6"><animateMotion dur="16s" repeatCount="indefinite" keyPoints="0.000;0.000;0.206;0.206;0.402;0.402;0.598;0.598;0.794;0.794;1.000;1.000" keyTimes="0.000;0.091;0.182;0.273;0.364;0.455;0.545;0.636;0.727;0.818;0.909;1.000" calcMode="linear" path="M90,110 H1110"/></circle>
+
+      <line class="sep" x1="0" y1="205" x2="1200" y2="205"/>
+      <text x="0" y="238" class="sp-lane red">Sena · XGROUP</text>
+      <text x="1200" y="238" text-anchor="end" class="sp-lane mute">Direct purchase · inspection at source · delivery to site</text>
+      <path class="fl" d="M150,262 C270,262 310,360 402,360"/><circle class="fn" cx="150" cy="262" r="5"/><text x="134" y="266" text-anchor="end" class="sp-c">China</text><path class="fl" d="M150,295 C270,295 310,360 402,360"/><circle class="fn" cx="150" cy="295" r="5"/><text x="134" y="299" text-anchor="end" class="sp-c">Vietnam</text><path class="fl" d="M150,328 C270,328 310,360 402,360"/><circle class="fn" cx="150" cy="328" r="5"/><text x="134" y="332" text-anchor="end" class="sp-c">India</text><path class="fl" d="M150,361 C270,361 310,360 402,360"/><circle class="fn" cx="150" cy="361" r="5"/><text x="134" y="365" text-anchor="end" class="sp-c">Thailand</text><path class="fl" d="M150,394 C270,394 310,360 402,360"/><circle class="fn" cx="150" cy="394" r="5"/><text x="134" y="398" text-anchor="end" class="sp-c">Europe</text><path class="fl" d="M150,427 C270,427 310,360 402,360"/><circle class="fn" cx="150" cy="427" r="5"/><text x="134" y="431" text-anchor="end" class="sp-c">Brazil</text><path class="fl" d="M150,460 C270,460 310,360 402,360"/><circle class="fn" cx="150" cy="460" r="5"/><text x="134" y="464" text-anchor="end" class="sp-c">Colombia</text>
+      <circle class="pulse" r="3"><animateMotion dur="2.6s" begin="0.00s" repeatCount="indefinite" path="M150,262 C270,262 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-0.37s" repeatCount="indefinite" path="M150,295 C270,295 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-0.74s" repeatCount="indefinite" path="M150,328 C270,328 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-1.11s" repeatCount="indefinite" path="M150,361 C270,361 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-1.48s" repeatCount="indefinite" path="M150,394 C270,394 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-1.85s" repeatCount="indefinite" path="M150,427 C270,427 310,360 402,360"/></circle><circle class="pulse" r="3"><animateMotion dur="2.6s" begin="-2.22s" repeatCount="indefinite" path="M150,460 C270,460 310,360 402,360"/></circle>
+      <g class="end q"><circle cx="430" cy="360" r="28"/><path class="ico" transform="translate(419,349) scale(.92)" d="M5 12l5 5 9-10"/><text x="430" y="410" text-anchor="middle" class="sp-n">QC inspection</text><text x="430" y="427" text-anchor="middle" class="sp-c">at the factory</text></g>
+      <path class="sea" d="M460,360 C540,326 620,390 690,360 S840,330 905,360"/>
+      <path class="sea2" d="M470,382 C560,368 640,400 720,382 S860,366 900,382"/>
+      <g class="ship"><animateMotion dur="8s" repeatCount="indefinite" path="M460,360 C540,326 620,390 690,360 S840,330 905,360"/>
+          <path class="hull" d="M-30,2 L30,2 L22,14 L-24,14 Z"/>
+          <rect class="ct1" x="-22" y="-10" width="11" height="11"/><rect class="ct2" x="-10" y="-10" width="11" height="11"/><rect class="ct1" x="2" y="-10" width="11" height="11"/>
+          <rect class="ct2" x="-16" y="-20" width="11" height="9"/><rect class="ct1" x="-4" y="-20" width="11" height="9"/>
+          <rect class="bridge" x="16" y="-18" width="8" height="19"/>
+        </g>
+      <text x="672" y="424" text-anchor="middle" class="sp-c">Consolidated container · direct shipping</text>
+      <g class="end"><circle cx="930" cy="360" r="22"/><path class="ico" transform="translate(920,350) scale(.84)" d="M12 3v15M7 8h10M4 14c1 4 4 6 8 6s7-2 8-6"/><text x="930" y="410" text-anchor="middle" class="sp-n">Port</text></g>
+      <line class="lb" x1="952" y1="360" x2="1084" y2="360"/>
+      <circle class="pulse" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" path="M952,360 H1084"/></circle>
+      <g class="end hi"><circle cx="1110" cy="360" r="26"/><path class="ico" transform="translate(1100,350) scale(.84)" d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5"/><text x="1110" y="410" text-anchor="middle" class="sp-n">Site</text></g>
+    </svg></div>
+    <div class="stats rise">
+      <div><strong>150+</strong><span class="small">Partner factories</span></div>
+      <div><strong>7</strong><span class="small">Countries of origin</span></div>
+      <div><strong>10–25%</strong><span class="small">Reduction in material costs</span></div>
+      <div><strong>0</strong><span class="small">Middlemen</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILMS auditoria -->
+<section class="slide cover filmslide" id="auditoria" data-label="Audit at the source">
+  <div class="films f5" role="img" aria-label="Factory visit videos: supplier meeting, production line, stone samples, CNC machining and inventory">
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-audit.jpg"><source src="/victoriapark/img/src/s-audit.mp4" type="video/mp4"></video><span><b>01</b>Factory visit</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-prod.jpg"><source src="/victoriapark/img/src/s-prod.mp4" type="video/mp4"></video><span><b>02</b>Production line</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-samples.jpg"><source src="/victoriapark/img/src/s-samples.mp4" type="video/mp4"></video><span><b>03</b>Samples</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-cnc.jpg"><source src="/victoriapark/img/src/s-cnc.mp4" type="video/mp4"></video><span><b>04</b>Machining</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-floor.jpg"><source src="/victoriapark/img/src/s-floor.mp4" type="video/mp4"></video><span><b>05</b>Inventory</span></div>
+  </div>
+  <div class="inner">
+    <div class="top" style="color:#9A9CA0"><span class="idx">06 · Audit at the source</span><span>senaenterprises.com/sourcing</span></div>
+    <div class="row">
+      <h2 class="fs-h">Every factory, audited in person.</h2>
+      <p class="sub fs-l">Before any order, we visit the factory, follow production and approve samples on site. Only what passes that inspection goes into the project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PROCUREMENT STRATEGY -->
+<section class="slide" id="compras" data-label="Procurement">
+  <div class="inner">
+    <div class="top"><span class="idx">07 · Procurement strategy</span><span>Quality first</span></div>
+    <div class="head rise">
+      <h2>Sourcing that elevates the product.</h2>
+      <blockquote>Cost efficiency is a byproduct. The goal is to raise the quality and value of every home.</blockquote>
+    </div>
+    <div class="grid c4 rise">
+      <div class="cell"><span class="num">A</span><h3>Process engineering</h3><p class="small">Procurement integrated with design and construction from day one. Early selection, aligned with the schedule.</p><p class="out">Precision from concept to construction.</p></div>
+      <div class="cell"><span class="num">B</span><h3>Global sourcing</h3><p class="small">High-performance finishes from Europe, Asia and the Americas, chosen for durability and design.</p><p class="out">A product above the market standard.</p></div>
+      <div class="cell"><span class="num">C</span><h3>Perceived value</h3><p class="small">Differentiated positioning, higher delivered quality and consistency across projects.</p><p class="out">Pricing power at exit.</p></div>
+      <div class="cell"><span class="num">D</span><h3>Cost efficiency</h3><p class="small">Direct relationships with manufacturers, fewer middlemen and strategic volume purchasing.</p><p class="out">Savings without compromising quality.</p></div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div>
+      <span>Natural stone</span><span>Porcelain tile</span><span>Flooring</span><span>Window systems</span><span>Doors</span><span>Electrical systems</span><span>Plumbing</span><span>Custom millwork</span><span>Architectural elements</span>
+      <span>Natural stone</span><span>Porcelain tile</span><span>Flooring</span><span>Window systems</span><span>Doors</span><span>Electrical systems</span><span>Plumbing</span><span>Custom millwork</span><span>Architectural elements</span>
+    </div></div>
+  </div>
+</section>
+
+<!-- 07 GLOBAL NETWORK -->
+<section class="slide deep" id="rede" data-label="Global network">
+  <div class="inner">
+    <div class="top"><span class="idx">08 · Global supply network</span><span>XGROUP</span></div>
+    <div class="head rise">
+      <h2>From port to site.</h2>
+      <div>
+        <p class="label" style="margin-bottom:12px">Reduction in material costs</p>
+        <p class="fig">10–25%</p>
+      </div>
+    </div>
+    <div class="diagram-wrap rise">
+      <svg class="routes" viewBox="0 0 1200 380" role="img" aria-label="Supply routes from seven origins to South Florida">
+        <g id="routes"></g>
+        <circle class="hubring" cx="1010" cy="190" r="22"/>
+        <circle class="hub" cx="1010" cy="190" r="6"/>
+        <text class="big" x="1048" y="178">South</text>
+        <text class="big" x="1048" y="216">Florida</text>
+      </svg>
+    </div>
+    <div class="grid c3 rise">
+      <div class="cell"><h3>Diversified supply</h3><p class="small">Seven origins reduce the risk of disruption and keep supply steady.</p></div>
+      <div class="cell"><h3>Direct from the manufacturer</h3><p class="small">Volume consolidated across projects and prices negotiated before construction starts.</p></div>
+      <div class="cell"><h3>More margin per project</h3><p class="small">Lower construction cost, protected timelines and higher quality on every project.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILMS logistica -->
+<section class="slide cover filmslide" id="logistica" data-label="Logistics">
+  <div class="films f5" role="img" aria-label="Logistics videos: container ship, container at port, truck on the road, delivery to site and installed kitchen">
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-ship.jpg"><source src="/victoriapark/img/src/s-ship.mp4" type="video/mp4"></video><span><b>01</b>Ship</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-port.jpg"><source src="/victoriapark/img/src/s-port.mp4" type="video/mp4"></video><span><b>02</b>Port</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-road.jpg"><source src="/victoriapark/img/src/s-road.mp4" type="video/mp4"></video><span><b>03</b>Road</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-site.jpg"><source src="/victoriapark/img/src/s-site.mp4" type="video/mp4"></video><span><b>04</b>Site</span></div>
+    <div class="film"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/src/s-done.jpg"><source src="/victoriapark/img/src/s-done.mp4" type="video/mp4"></video><span><b>05</b>Installed</span></div>
+  </div>
+  <div class="inner">
+    <div class="top" style="color:#9A9CA0"><span class="idx">09 · Shipping and logistics</span><span>senaenterprises.com/sourcing</span></div>
+    <div class="row">
+      <h2 class="fs-h">Tracked from port to site.</h2>
+      <p class="sub fs-l">From factory to port, from port to site. Every move is planned and tracked, and materials arrive in step with the construction schedule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 LSF -->
+<section class="slide paper" id="lsf" data-label="Construction">
+  <div class="inner">
+    <div class="top"><span class="idx">10 · Construction innovation</span><span>Light Steel Frame</span></div>
+    <div class="head rise">
+      <h2>Light steel framing.</h2>
+      <div>
+        <p class="label" style="margin-bottom:12px">Faster build vs. concrete and masonry</p>
+        <p class="fig">30–40%</p>
+      </div>
+    </div>
+    <div class="lsf-photos rise">
+      <div class="img"><img src="/victoriapark/img/lsf3.jpg" alt="LSF frame of a two-story home" loading="lazy"></div>
+      <div class="img"><img src="/victoriapark/img/lsf1.jpg" alt="LSF frame, front view" loading="lazy"></div>
+      <div class="img"><img src="/victoriapark/img/lsf4.jpg" alt="LSF frame, aerial view" loading="lazy"></div>
+      <div class="img"><img src="/victoriapark/img/lsf5.jpg" alt="Inside the LSF frame with staircase" loading="lazy"></div>
+      <div class="img"><img src="/victoriapark/img/lsf7.jpg" alt="LSF frame among palm trees" loading="lazy"></div>
+    </div>
+    <div class="grid c5 rise">
+      <div class="cell"><h3>Faster construction</h3><p class="small">Faster delivery, quicker capital turnover.</p></div>
+      <div class="cell"><h3>Cost efficiency</h3><p class="small">Less labor and optimized use of materials.</p></div>
+      <div class="cell"><h3>Precision</h3><p class="small">Factory-made components, minimal errors on site.</p></div>
+      <div class="cell"><h3>Sustainability</h3><p class="small">100% recyclable steel and less waste. ESG-aligned.</p></div>
+      <div class="cell"><h3>Flexibility</h3><p class="small">Future changes with minimal structural work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 PORTFOLIO -->
+<section class="slide" id="portfolio" data-label="Portfolio">
+  <div class="inner">
+    <div class="top"><span class="idx">11 · Portfolio</span><span>ARQIA projects</span></div>
+    <div class="head rise">
+      <h2>Architecture built for the top-tier buyer.</h2>
+      <p class="lede">Homes designed by ARQIA, from the facade to the spec sheet for every room. The first four projects are detailed on the following pages.</p>
+    </div>
+    <div class="pidx rise">
+      <a class="pcard" href="#arq-2411"><div class="img"><img src="/victoriapark/img/arq/i-2411.jpg" alt="2411 NE 46th St, front facade" loading="lazy"></div><div class="pc-t"><b>2411 NE 46th St</b><span class="label">Lighthouse Point, FL</span></div><span class="pc-go">View project ↓</span></a>
+      <a class="pcard" href="#arq-146"><div class="img"><img src="/victoriapark/img/arq/i-146.jpg" alt="146 Georgetown Rd, facade lit at dusk" loading="lazy"></div><div class="pc-t"><b>146 Georgetown Rd</b><span class="label">Boxford, MA</span></div><span class="pc-go">View project ↓</span></a>
+      <a class="pcard" href="#arq-boca"><div class="img"><img src="/victoriapark/img/arq/i-boca.jpg" alt="Residence in Boca Raton, outdoor lounge at sunset" loading="lazy"></div><div class="pc-t"><b>Residence</b><span class="label">Boca Raton, FL</span></div><span class="pc-go">View project ↓</span></a>
+      <a class="pcard" href="#arq-gourmet"><div class="img"><img src="/victoriapark/img/arq/rg-aerial.jpg" alt="Outdoor gourmet area, aerial view" loading="lazy"></div><div class="pc-t"><b>Outdoor gourmet area</b><span class="label">Boca Raton, FL</span></div><span class="pc-go">View project ↓</span></a>
+      <div class="pcard"><div class="img"><img src="/victoriapark/img/p2a.jpg" alt="4270 NE 23rd Ave, facade" loading="lazy"></div><div class="pc-t"><b>4270 NE 23rd Ave</b><span class="label">Lighthouse Point, FL</span></div></div>
+      <div class="pcard"><div class="img"><img src="/victoriapark/img/p3a.jpg" alt="2610 NE 48th St, facade" loading="lazy"></div><div class="pc-t"><b>2610 NE 48th St</b><span class="label">Lighthouse Point, FL</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARQ 2411 -->
+<section class="slide paper" id="arq-2411" data-label="2411 · Lighthouse Point">
+  <div class="inner">
+    <div class="top"><span class="idx">12 · Project 2411</span><span>Lighthouse Point · Broward, FL</span></div>
+    <div class="pj">
+      <div class="col rise">
+        <h2>Waterfront residence in Lighthouse Point.</h2>
+        <p class="lede">A contemporary home on an Intracoastal lot, designed end to end by a single studio: architecture, engineering and interiors, with a spec sheet for every room.</p>
+        <dl class="pj-spec"><div><dt>Lot</dt><dd>Intracoastal, waterfront</dd></div><div><dt>Rooms documented</dt><dd>22</dd></div><div><dt>Renders</dt><dd>107</dd></div><div><dt>Spec sheets</dt><dd>134</dd></div><div><dt>Scope</dt><dd>Architecture · engineering · interiors</dd></div></dl>
+        <div class="chips"><span>Taj Mahal quartzite</span><span>Guatemala Green marble</span><span>Munique Oak</span><span>Mashrabiya</span><span>Gray marble</span><span>Bronze</span></div>
+        <p class="src">arqiaai.com/2411</p>
+      </div>
+      <div class="bands rise">
+        <div class="bd"><img src="/victoriapark/img/arq/a-facade.jpg" alt="Facade at dusk" loading="lazy"><span class="bd-l"><b>01</b>Facade</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/a-pool.jpg" alt="Pool and terrace facing the water" loading="lazy"><span class="bd-l"><b>02</b>Outdoor area</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/a-kitchen.jpg" alt="Kitchen with green marble wall" loading="lazy"><span class="bd-l"><b>03</b>Living & kitchen</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARQ 146 -->
+<section class="slide" id="arq-146" data-label="146 Georgetown">
+  <div class="inner">
+    <div class="top"><span class="idx">13 · 146 Georgetown Rd</span><span>Boxford · Massachusetts</span></div>
+    <div class="pj">
+      <div class="col rise">
+        <h2>A modern New England home, made of light.</h2>
+        <p class="lede">Living, library, dining and kitchen in a single double-height volume, on one continuous polished stone floor. Fluted wood, backlit stone and brass carry from room to room.</p>
+        <dl class="pj-spec"><div><dt>Lot</dt><dd>3.16 acres (≈ 1.28 ha), on Stevens Pond</dd></div><div><dt>Floors</dt><dd>Three, with double-height living areas</dd></div><div><dt>Rooms</dt><dd>11 designed</dd></div><div><dt>Structure</dt><dd>Structural steel · shell enclosed, windows and doors installed</dd></div><div><dt>Site</dt><dd>Finish materials on site, millwork being installed</dd></div></dl>
+        <div class="chips"><span>Backlit translucent onyx</span><span>Fluted walnut</span><span>Natural oak</span><span>Polished marble</span><span>Brushed brass</span><span>Linear fireplace</span></div>
+        <p class="src">arqiaai.com/146georgetownportfolio</p>
+      </div>
+      <div class="bands rise">
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/g-aerial.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/g-aerial.mp4" type="video/mp4"></video><span class="bd-l"><b>01</b>Drone · the site today</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/g-front.jpg" alt="Front facade" loading="lazy"><span class="bd-l"><b>02</b>Facade</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/g-living.jpg" alt="Living room with backlit onyx panel" loading="lazy"><span class="bd-l"><b>03</b>Living</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARQ BOCA -->
+<section class="slide" id="arq-boca" data-label="Boca Raton">
+  <div class="inner">
+    <div class="top"><span class="idx">14 · Residence</span><span>Boca Raton · Florida</span></div>
+    <div class="pj">
+      <div class="col rise">
+        <h2>Natural at heart. Refined in the details.</h2>
+        <p class="lede">A two-story residence that pairs neutral and warm tones with natural materials and fine finishes. Textures and details repeat through every room, creating a single identity.</p>
+        <dl class="pj-spec"><div><dt>Floors</dt><dd>Ground and upper</dd></div><div><dt>Rooms documented</dt><dd>27</dd></div><div><dt>Rendered images</dt><dd>243</dd></div><div><dt>Highlights</dt><dd>Double-height foyer, open kitchen with stone island, outdoor area with pool and spa</dd></div></dl>
+        <div class="chips"><span>Calacatta Viola</span><span>Macadamia wood</span><span>Brass</span><span>Linen</span><span>Mashrabiya</span><span>Marble</span></div>
+      </div>
+      <div class="bands rise">
+        <div class="bd"><img src="/victoriapark/img/arq/cm-pool.jpg" alt="Outdoor area with pool and cabana at sunset" loading="lazy"><span class="bd-l"><b>01</b>Outdoor area</span></div>
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/cm-spa.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/cm-spa.mp4" type="video/mp4"></video><span class="bd-l"><b>02</b>Pool & spa</span></div>
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/cm-cozinha.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/cm-cozinha.mp4" type="video/mp4"></video><span class="bd-l"><b>03</b>Kitchen</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARQ GOURMET -->
+<section class="slide deep" id="arq-gourmet" data-label="Gourmet area">
+  <div class="inner">
+    <div class="top"><span class="idx">15 · Outdoor gourmet area</span><span>Boca Raton · Florida</span></div>
+    <div class="pj">
+      <div class="col rise">
+        <h2>Made for hosting. Designed for staying.</h2>
+        <p class="lede">Bar, kitchen, veranda, deck and pool tied together in a single design language. Wood, natural stone and light tones blend with the tropical landscaping.</p>
+        <dl class="pj-spec"><div><dt>Pool</dt><dd>233″ × 591″ (≈ 5.9 × 15.0 m)</dd></div><div><dt>Built-in spa</dt><dd>72″ × 72″ (≈ 1.8 × 1.8 m)</dd></div><div><dt>Sun shelf</dt><dd>88″ × 233″ (≈ 2.2 × 5.9 m)</dd></div><div><dt>Spaces</dt><dd>Bar, outdoor kitchen, veranda, deck, court</dd></div><div><dt>Rendered images</dt><dd>46</dd></div></dl>
+        <div class="chips"><span>Cipollino Green Marble</span><span>Taj Mahal marble</span><span>Atena Stone</span><span>Macadamia MDF</span><span>Wood mashrabiya</span><span>Hijau</span></div>
+      </div>
+      <div class="bands rise">
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/rg-hero.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/rg-hero.mp4" type="video/mp4"></video><span class="bd-l"><b>01</b>Walkthrough</span></div>
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/rg-deck.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/rg-deck.mp4" type="video/mp4"></video><span class="bd-l"><b>02</b>Deck & pool</span></div>
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/arq/rg-bar.jpg" aria-hidden="true"><source src="/victoriapark/img/arq/rg-bar.mp4" type="video/mp4"></video><span class="bd-l"><b>03</b>Bar & pergola</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 INVESTMENT STRUCTURE -->
+<section class="slide" id="estrutura" data-label="Structure">
+  <div class="inner">
+    <div class="top"><span class="idx">16 · Investment structure</span><span>How it works</span></div>
+    <div class="split rev">
+      <div class="col rise">
+        <h2>One LLC per project. Clear roles.</h2>
+        <div class="deal">
+          <div class="node"><span class="label">Limited partners</span><h3>Investors</h3><p class="small">Contribute capital. Receive equity and profit, with no active management.</p></div>
+          <div class="arrow"><span>Capital</span></div>
+          <div class="node core"><span class="label" style="color:var(--red-hi)">Vehicle</span><h3>Project LLC</h3><p class="small">Dedicated entity. Ownership in proportion to capital, with defined governance and distributions.</p></div>
+          <div class="arrow up"><span>Institutional debt</span></div>
+          <div class="node"><span class="label">Lender</span><h3>Bank</h3><p class="small">Finances part of the cost basis with independent underwriting.</p></div>
+          <div class="arrow up"><span>Originates and executes</span></div>
+          <div class="node"><span class="label">Sponsor</span><h3>Developer</h3><p class="small">Originates, structures and executes the plan from start to finish.</p></div>
+        </div>
+      </div>
+      <div class="col rise">
+        <div class="img vid" style="aspect-ratio:4/3"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/v-plans.jpg" aria-hidden="true"><source src="/victoriapark/img/v-plans.mp4" type="video/mp4"></video></div>
+        <div class="grid" style="grid-template-columns:1fr">
+          <div class="cell" style="flex-direction:row;gap:16px"><span class="num" style="min-width:24px">01</span><p class="small"><b style="font-weight:400;color:var(--paper)">Premium access.</b> High-value projects with a lower barrier to entry.</p></div>
+          <div class="cell" style="flex-direction:row;gap:16px"><span class="num" style="min-width:24px">02</span><p class="small"><b style="font-weight:400;color:var(--paper)">Passive investment.</b> Professional execution, with no operational involvement.</p></div>
+          <div class="cell" style="flex-direction:row;gap:16px"><span class="num" style="min-width:24px">03</span><p class="small"><b style="font-weight:400;color:var(--paper)">Diversification.</b> Capital spread across multiple projects and assets.</p></div>
+          <div class="cell" style="flex-direction:row;gap:16px"><span class="num" style="min-width:24px">04</span><p class="small"><b style="font-weight:400;color:var(--paper)">Tax efficiency.</b> Pass-through structure with potential depreciation benefits.</p></div>
+          <div class="cell" style="flex-direction:row;gap:16px"><span class="num" style="min-width:24px">05</span><p class="small"><b style="font-weight:400;color:var(--paper)">Defined governance.</b> Operating Agreement with transparency and aligned incentives.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 FRAMEWORK -->
+<section class="slide" id="framework" data-label="Framework">
+  <div class="inner">
+    <div class="top"><span class="idx">17 · 4-point framework</span><span>Security and alignment</span></div>
+    <div class="head rise">
+      <h2>Capital, execution and governance in alignment.</h2>
+      <p class="lede">A structure designed for security, transparency and alignment between investor and developer.</p>
+    </div>
+    <div class="grid c4 rise">
+      <div class="cell"><span class="num">01</span><h3>LLC vehicle</h3><p class="small">Asset protection, tax efficiency and clear ownership.</p><p class="out">The industry's institutional standard.</p></div>
+      <div class="cell"><span class="num">02</span><h3>Equity ownership</h3><p class="small">Units in proportion to capital, and profit per the agreed structure.</p><p class="out">Capital and return directly linked.</p></div>
+      <div class="cell"><span class="num">03</span><h3>Governance and execution</h3><p class="small">Decision rules, defined roles and controlled execution.</p><p class="out">Professional, accountable management.</p></div>
+      <div class="cell"><span class="num">04</span><h3>Legal protection</h3><p class="small">Legal clarity, defined rights and obligations, flexible participation.</p><p class="out">Confidence for long-term relationships.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 LH LOCATION -->
+<section class="slide paper" id="lh-local" data-label="Lighthouse Point">
+  <div class="inner">
+    <div class="top"><span class="idx">18 · The opportunity</span><span>Lighthouse Point · Venetian Isles</span></div>
+    <div class="pj">
+      <div class="col rise">
+        <h2>Waterfront in Venetian Isles.</h2>
+        <p class="lede">3850 NE 24th Avenue, just off the Grand Canal, with direct ocean access and no fixed bridges. The existing house will be demolished to make way for a modern waterfront residence of about 6,000 sf.</p>
+        <dl class="pj-spec">
+          <div><dt>Address</dt><dd>3850 NE 24th Avenue · Lighthouse Point, FL</dd></div>
+          <div><dt>Waterfrontage</dt><dd>90′</dd></div>
+          <div><dt>Ocean access</dt><dd>Direct, no fixed bridges</dd></div>
+          <div><dt>Location</dt><dd>Just off the Grand Canal · premier waterfront neighborhood</dd></div>
+          <div><dt>Project</dt><dd>Demolish the existing house, build a new ~6,000 sf home</dd></div>
+        </dl>
+      </div>
+      <div class="bands rise">
+        <div class="bd"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/v-aerial.jpg" aria-hidden="true"><source src="/victoriapark/img/v-aerial.mp4" type="video/mp4"></video><span class="bd-l"><b>01</b>Canals and ocean access</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/a-pool.jpg" alt="Illustrative · ARQIA project in Lighthouse Point" loading="lazy"><span class="bd-l"><b>02</b>Modern waterfront residence</span></div>
+        <div class="bd"><img src="/victoriapark/img/arq/a-facade.jpg" alt="Illustrative · ARQIA project in Lighthouse Point" loading="lazy"><span class="bd-l"><b>03</b>ARQIA architecture</span></div>
+      </div>
+    </div>
+    <p class="src">Illustrative images from an ARQIA project in Lighthouse Point.</p>
+  </div>
+</section>
+
+<!-- 19 LH COMPS -->
+<section class="slide deep" id="lh-comps" data-label="Comparables">
+  <div class="inner">
+    <div class="top"><span class="idx">19 · Comparable sales</span><span>Lighthouse Point</span></div>
+    <div class="head rise">
+      <h2>Three 2026 sales, all above $1,240/sf.</h2>
+      <p class="lede">Waterfront homes in Lighthouse Point closed between $6,800,000 and $6,883,000 in 2026. The project assumes $1,150/sf, below all three.</p>
+    </div>
+    <div class="rise">
+      <div class="cb-wrap">
+        <div class="cb">
+          <div class="cb-row" data-tip="3129 NE 31st Ave · $6,800,000 · 5,021 sf · $1,354/sf">
+          <span class="cb-a">3129 NE 31st Ave</span>
+          <span class="cb-track"><span class="cb-bar" style="width:90.27%"></span></span>
+          <span class="cb-v">$1,354<small>/sf</small></span>
+          <span class="cb-m">$6.80M · 5,021 sf · sold May 27, 2026</span>
+        </div><div class="cb-row" data-tip="3181 NE 31st Ave · $6,883,000 · 5,036 sf · $1,367/sf">
+          <span class="cb-a">3181 NE 31st Ave</span>
+          <span class="cb-track"><span class="cb-bar" style="width:91.13%"></span></span>
+          <span class="cb-v">$1,367<small>/sf</small></span>
+          <span class="cb-m">$6.88M · 5,036 sf · sold Aug 14, 2026</span>
+        </div><div class="cb-row" data-tip="2801 NE 36th St · $6,830,000 · 5,484 sf · $1,245/sf">
+          <span class="cb-a">2801 NE 36th St</span>
+          <span class="cb-track"><span class="cb-bar" style="width:83.00%"></span></span>
+          <span class="cb-v">$1,245<small>/sf</small></span>
+          <span class="cb-m">$6.83M · 5,484 sf · sold Sep 29, 2026</span>
+        </div><div class="cb-row out" data-tip="3831 NE 24th Ave · $5,500,000 · 5,105 sf · $1,077/sf">
+          <span class="cb-a">3831 NE 24th Ave<em>same street</em></span>
+          <span class="cb-track"><span class="cb-bar" style="width:71.80%"></span></span>
+          <span class="cb-v">$1,077<small>/sf</small></span>
+          <span class="cb-m">$5.50M · 5,105 sf · sold Sep 2023</span>
+        </div>
+        </div>
+        <div class="cb-overlay"><span class="cb-ours" style="left:76.67%"><span>Assumption · $1,150/sf</span></span></div>
+      </div>
+      <div class="cb-axis"><div><span style="left:0%">0</span><span style="left:33.333%">500</span><span style="left:66.667%">1,000</span><span style="left:100%">1,500</span></div></div>
+    </div>
+    <div class="kpis rise">
+      <div><span class="label">2026 sales</span><strong>3</strong></div>
+      <div><span class="label">$/sf range · 2026</span><strong>1,245–1,367</strong></div>
+      <div><span class="label">Same street · Sep 2023</span><strong>$1,077</strong></div>
+      <div><span class="label">Sale assumption</span><strong class="hi">$1,150</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 20 LH PROJECT -->
+<section class="slide paper" id="lh-premissas" data-label="Assumptions">
+  <div class="inner">
+    <div class="top"><span class="idx">20 · The project</span><span>3850 NE 24th Ave</span></div>
+    <div class="split rev">
+      <div class="col rise">
+        <h2>A new 6,000 sf home, resold for $6.9M.</h2>
+        <p class="lede">Buy the lot, demolish, build new and resell in an 18-month cycle.</p>
+      </div>
+      <div class="img vid" style="min-height:300px"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/v-villa.jpg" aria-hidden="true"><source src="/victoriapark/img/v-villa.mp4" type="video/mp4"></video><span class="tagl">Illustrative residence</span></div>
+    </div>
+    <div class="spec rise">
+      <div><span class="label">Living area</span><strong>6,000 sf</strong></div>
+      <div><span class="label">Land</span><strong>$1.75M</strong></div>
+      <div><span class="label">Construction + mgmt.</span><strong>$2.875M</strong></div>
+      <div><span class="label">Projected resale</span><strong>$6.9M</strong></div>
+      <div><span class="label">Term</span><strong>18 months</strong></div>
+    </div>
+    <div class="psf rise">
+      <div><span class="label">Construction + mgmt. / sf</span><b>$479</b></div>
+      <div><span class="label">Projected sale / sf</span><b>$1,150</b></div>
+      <div><span class="label">Total project cost</span><b>$5,557,500</b></div>
+      <div><span class="label">Projected profit</span><b>$1,342,500</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 21 LH COSTS -->
+<section class="slide" id="lh-custos" data-label="Costs">
+  <div class="inner">
+    <div class="top"><span class="idx">21 · Total project cost</span><span>$5,557,500</span></div>
+    <div class="head rise">
+      <h2>$5,557,500 from land to sale.</h2>
+      <p class="lede">Land and transaction costs, construction with management, and a financing allowance covering interest, origination and carrying for the full 18 months.</p>
+    </div>
+    <div class="us rise">
+      <div class="us-row">
+        <div class="us-tot"><span class="label">Project costs</span><b>$5,557,500</b></div>
+        <div class="us-bar"><span class="us-seg u1" style="flex:314.9" data-tip="Land · $1,750,000 · 31.5%"></span><span class="us-seg u4" style="flex:15.7" data-tip="Closing (5%) · $87,500 · 1.6%"></span><span class="us-seg u2" style="flex:517.3" data-tip="Construction + management · $2,875,000 · 51.7%"></span><span class="us-seg u3" style="flex:90.0" data-tip="Financing and carrying · $500,000 · 9.0%"></span><span class="us-seg u5" style="flex:62.1" data-tip="Selling costs (5%) · $345,000 · 6.2%"></span></div>
+        <ul class="us-leg"><li><i class="u1"></i><span>Land</span><b>$1,750,000</b><em>31.5%</em></li><li><i class="u4"></i><span>Closing (5%)</span><b>$87,500</b><em>1.6%</em></li><li><i class="u2"></i><span>Construction + management</span><b>$2,875,000</b><em>51.7%</em></li><li><i class="u3"></i><span>Financing and carrying</span><b>$500,000</b><em>9.0%</em></li><li><i class="u5"></i><span>Selling costs (5%)</span><b>$345,000</b><em>6.2%</em></li></ul>
+      </div>
+    </div>
+    <div class="grid c3 rise">
+      <div class="cell"><span class="label">Land acquisition and sales costs</span><ul class="plain">
+        <li>Property acquisition · $1,750,000</li><li>Closing costs (5%) · $87,500</li><li>Selling costs and commissions (5%) · $345,000</li></ul>
+        <p class="out">Total · $2,182,500</p></div>
+      <div class="cell"><span class="label">Construction and management</span><ul class="plain">
+        <li>Construction + construction management · $2,875,000</li><li>Average cost · $479/sf (6,000 sf)</li></ul>
+        <p class="out">Total · $2,875,000</p></div>
+      <div class="cell"><span class="label">Financing, interest and carrying</span><ul class="plain">
+        <li>Estimated interest (18 months) · $409,688</li><li>Loan origination (1.3 points) · $37,375</li><li>Additional carrying costs · $52,937</li></ul>
+        <p class="out">Total allowance · $500,000</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 22 LH FINANCING -->
+<section class="slide paper" id="lh-financiamento" data-label="Financing">
+  <div class="inner">
+    <div class="top"><span class="idx">22 · Construction financing</span><span>18 months</span></div>
+    <div class="head rise">
+      <h2>The bank funds 100% of construction.</h2>
+      <p class="lede">A $2,875,000 construction loan covers the entire build. The $500,000 allowance already assumes interest on the full amount for all 18 months, a conservative assumption.</p>
+    </div>
+    <div class="us rise">
+      <div class="us-row">
+        <div class="us-tot"><span class="label">Financing allowance</span><b>$500,000</b></div>
+        <div class="us-bar"><span class="us-seg s1" style="flex:819.4" data-tip="Interest (18 months) · $409,688 · 81.9%"></span><span class="us-seg s2" style="flex:74.8" data-tip="Origination (1.3 points) · $37,375 · 7.5%"></span><span class="us-seg s3" style="flex:105.9" data-tip="Additional carrying · $52,937 · 10.6%"></span></div>
+        <ul class="us-leg lgt"><li><i class="s1"></i><span>Interest (18 months)</span><b>$409,688</b><em>81.9%</em></li><li><i class="s2"></i><span>Origination (1.3 points)</span><b>$37,375</b><em>7.5%</em></li><li><i class="s3"></i><span>Additional carrying</span><b>$52,937</b><em>10.6%</em></li></ul>
+      </div>
+    </div>
+    <div class="kpis rise">
+      <div><span class="label">Construction loan</span><strong>$2.875M</strong></div>
+      <div><span class="label">Annual interest rate</span><strong>9.5%</strong></div>
+      <div><span class="label">Loan term</span><strong>18 months</strong></div>
+      <div><span class="label">Origination</span><strong>1.3 points</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 23 LH RESULT -->
+<section class="slide" id="lh-resultado" data-label="Returns">
+  <div class="inner">
+    <div class="top"><span class="idx">23 · Project returns</span><span>Projected resale · $6.9M</span></div>
+    <div class="head rise">
+      <h2><span class="nw">$1,342,500</span> projected profit.</h2>
+      <p class="lede">From the $6,900,000 resale come selling costs, land, closing, construction and financing. Project profit is $1,342,500.</p>
+    </div>
+    <div class="wf rise">
+      <div class="wf-row start" data-tip="Resale value · $6,900,000">
+          <span class="wf-l">Resale value</span>
+          <span class="wf-t"><span class="wf-b" style="left:0.000%;width:100.000%"></span></span>
+          <span class="wf-v">$6,900,000</span>
+        </div><div class="wf-row neg" data-tip="Selling costs and commissions (5%) · −$345,000">
+          <span class="wf-l">Selling costs and commissions (5%)</span>
+          <span class="wf-t"><span class="wf-b" style="left:95.000%;width:5.000%"></span></span>
+          <span class="wf-v">−$345,000</span>
+        </div><div class="wf-row neg" data-tip="Land · −$1,750,000">
+          <span class="wf-l">Land</span>
+          <span class="wf-t"><span class="wf-b" style="left:69.638%;width:25.362%"></span></span>
+          <span class="wf-v">−$1,750,000</span>
+        </div><div class="wf-row neg" data-tip="Closing costs (5%) · −$87,500">
+          <span class="wf-l">Closing costs (5%)</span>
+          <span class="wf-t"><span class="wf-b" style="left:68.370%;width:1.268%"></span></span>
+          <span class="wf-v">−$87,500</span>
+        </div><div class="wf-row neg" data-tip="Construction + management · −$2,875,000">
+          <span class="wf-l">Construction + management</span>
+          <span class="wf-t"><span class="wf-b" style="left:26.703%;width:41.667%"></span></span>
+          <span class="wf-v">−$2,875,000</span>
+        </div><div class="wf-row neg" data-tip="Financing, interest and carrying · −$500,000">
+          <span class="wf-l">Financing, interest and carrying</span>
+          <span class="wf-t"><span class="wf-b" style="left:19.457%;width:7.246%"></span></span>
+          <span class="wf-v">−$500,000</span>
+        </div><div class="wf-row end" data-tip="Project profit · $1,342,500">
+          <span class="wf-l">Project profit</span>
+          <span class="wf-t"><span class="wf-b" style="left:0.000%;width:19.457%"></span></span>
+          <span class="wf-v">$1,342,500</span>
+        </div>
+    </div>
+    <div class="kpis rise">
+      <div><span class="label">Total project cost</span><strong>$5.56M</strong></div>
+      <div><span class="label">Projected resale</span><strong>$6.9M</strong></div>
+      <div><span class="label">Projected profit</span><strong class="hi">$1.34M</strong></div>
+      <div><span class="label">Sale / build per sf</span><strong>1,150 / 479</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 24 LH INVESTOR -->
+<section class="slide paper" id="lh-investidor" data-label="Investor return">
+  <div class="inner">
+    <div class="top"><span class="idx">24 · Investor return</span><span>50% partnership</span></div>
+    <div class="head rise">
+      <h2>The investor buys the land and takes half the profit.</h2>
+      <p class="lede">The $1,750,000 initial investment is the land purchase. At sale, the investor receives the capital back plus 50% of the profit: $2,421,250 in total.</p>
+    </div>
+    <div class="inv rise">
+      <div><span class="label">Initial investment · land</span><strong>$1,750,000</strong></div>
+      <span class="inv-op">+</span>
+      <div><span class="label">50% of profit</span><strong>$671,250</strong></div>
+      <span class="inv-op">=</span>
+      <div class="hi"><span class="label">Total capital + profit returned</span><strong>$2,421,250</strong></div>
+    </div>
+    <div class="kpis rise">
+      <div><span class="label">Return on initial investment</span><strong class="hi">38.4%</strong></div>
+      <div><span class="label">Term</span><strong>18 months</strong></div>
+      <div><span class="label">Project profit</span><strong>$1,342,500</strong></div>
+      <div><span class="label">Split</span><strong>50 / 50</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 25 LH FINANCED VS CASH -->
+<section class="slide" id="lh-com-sem" data-label="Financed vs all-cash">
+  <div class="inner">
+    <div class="top"><span class="idx">25 · Financed vs. all-cash</span><span>Capital efficiency</span></div>
+    <div class="head rise">
+      <h2>37% of the capital. Twice the return.</h2>
+      <p class="lede">All-cash, the investor would fund land, closing and construction, $4,712,500, to earn 19.5%. With the bank funding the build, the investor funds only the land and earns 38.4%.</p>
+    </div>
+    <div class="table-wrap rise">
+      <table class="cmp2 dk">
+        <thead><tr><th>Metric</th><th class="num">All-cash</th><th class="num us">Financed</th></tr></thead>
+        <tbody>
+          <tr><th>Investor capital</th><td class="num">$4,712,500</td><td class="num us">$1,750,000</td></tr>
+          <tr><th>Financing, interest and carrying</th><td class="num">—</td><td class="num us">−$500,000</td></tr>
+          <tr><th>Project profit</th><td class="num">$1,842,500</td><td class="num us">$1,342,500</td></tr>
+          <tr><th>Investor share (50%)</th><td class="num">$921,250</td><td class="num us">$671,250</td></tr>
+          <tr class="hl"><th>Return on capital</th><td class="num">19.5%</td><td class="num us">38.4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">All-cash scenario derived from the same costs, without the financing allowance and with the same 50/50 split.</p>
+  </div>
+</section>
+
+<!-- 26 CONTACT -->
+<section class="slide" id="contato" data-label="Contact">
+  <div class="inner">
+    <div class="top"><span class="idx">26 · Contact</span><span>Boynton Beach, FL</span></div>
+    <div class="contact-wrap">
+      <div class="col rise">
+        <img src="/victoriapark/img/logo.png" alt="Sena Enterprises" style="width:min(380px,70vw);height:auto">
+        <h2 style="max-width:16ch;margin-top:auto">Let's talk about the next project.</h2>
+        <div class="contact">
+          <div><span class="label">Office</span><span class="v">2900 High Ridge Road, Suite 3<br>Boynton Beach, FL 33426</span></div>
+          <div><span class="label">Phone</span><span class="v">+1 (339) 927-7803</span></div>
+          <div><span class="label">Email</span><span class="v">info@senaenterprises.com</span></div>
+          <div><span class="label">Website</span><span class="v"><a href="https://www.senaenterprises.com" target="_blank" rel="noopener">senaenterprises.com</a></span></div>
+        </div>
+      </div>
+      <div class="img vid"><video autoplay muted loop playsinline preload="metadata" poster="/victoriapark/img/v-villa.jpg" aria-hidden="true"><source src="/victoriapark/img/v-villa.mp4" type="video/mp4"></video><span class="tagl">Sena Enterprises</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(() => {
+  document.documentElement.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // supply routes
+  const g = document.getElementById('routes'), NS = 'http://www.w3.org/2000/svg';
+  const origins = ['China', 'Vietnam', 'India', 'Thailand', 'Europe', 'Brazil', 'Colombia'];
+  const hx = 1010, hy = 190;
+  origins.forEach((name, i) => {
+    const y = 30 + i * 53, x = 150;
+    const d = `M${x},${y} C${x + 380},${y} ${hx - 360},${hy} ${hx - 8},${hy}`;
+    const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); p.setAttribute('class', 'path'); g.appendChild(p);
+    const q = document.createElementNS(NS, 'path'); q.setAttribute('d', d); q.setAttribute('class', 'pulse'); q.style.animationDelay = (-i * .62) + 's'; g.appendChild(q);
+    const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 4); c.setAttribute('class', 'o'); g.appendChild(c);
+    const t = document.createElementNS(NS, 'text'); t.setAttribute('x', x - 16); t.setAttribute('y', y + 4); t.setAttribute('text-anchor', 'end'); t.textContent = name; g.appendChild(t);
+  });
+
+  // slide tracking
+  const slides = [...document.querySelectorAll('.slide')];
+  const ct = document.getElementById('ct'), bar = document.getElementById('bar'), mid = document.getElementById('mid');
+  const total = String(slides.length).padStart(2, '0');
+  let cur = 0;
+  const set = i => {
+    cur = i; ct.textContent = String(i + 1).padStart(2, '0') + ' / ' + total;
+    mid.textContent = slides[i].dataset.label || '';
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    document.body.classList.toggle('on-cover', i === 0);
+  };
+  set(0);
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) set(slides.indexOf(e.target)); }), { rootMargin: '-50% 0px -50% 0px' });
+  slides.forEach(s => io.observe(s));
+  const seen = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('seen'); seen.unobserve(e.target); } }), { threshold: .12 });
+  slides.forEach(s => seen.observe(s));
+  slides[0].classList.add('seen');
+
+  const go = d => { const n = Math.max(0, Math.min(slides.length - 1, cur + d)); slides[n].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+  document.getElementById('prev').onclick = () => go(-1);
+  document.getElementById('next').onclick = () => go(1);
+  addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('input,textarea')) return;
+    if (['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key) || (e.key === ' ' && !e.shiftKey)) { e.preventDefault(); go(1); }
+    else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key) || (e.key === ' ' && e.shiftKey)) { e.preventDefault(); go(-1); }
+  });
+
+  // play videos only when visible
+  const vids = [...document.querySelectorAll('video')];
+  if (reduce) { vids.forEach(v => { v.removeAttribute('autoplay'); v.pause(); }); document.querySelectorAll('svg').forEach(x => x.pauseAnimations && x.pauseAnimations()); }
+  else {
+    const vo = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause(); }), { threshold: .05 });
+    vids.forEach(v => vo.observe(v));
+  }
+})();
+</script>
+</body>
+</html>

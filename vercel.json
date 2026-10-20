@@ -2,9 +2,45 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "redirects": [
-    { "source": "/villatulumen", "destination": "/villatulum", "permanent": false },
-    { "source": "/villatulumEN", "destination": "/villatulum", "permanent": false },
-    { "source": "/villatulumpt", "destination": "/villatulumPT", "permanent": false },
-    { "source": "/villatulumes", "destination": "/villatulumES", "permanent": false }
+    {
+      "source": "/villatulumen",
+      "destination": "/villatulum",
+      "permanent": false
+    },
+    {
+      "source": "/villatulumEN",
+      "destination": "/villatulum",
+      "permanent": false
+    },
+    {
+      "source": "/villatulumpt",
+      "destination": "/villatulumPT",
+      "permanent": false
+    },
+    {
+      "source": "/villatulumes",
+      "destination": "/villatulumES",
+      "permanent": false
+    },
+    {
+      "source": "/victoriaparkpt",
+      "destination": "/victoriaparkPT",
+      "permanent": false
+    },
+    {
+      "source": "/victoriaparken",
+      "destination": "/victoriaparkEN",
+      "permanent": false
+    },
+    {
+      "source": "/lighthousept",
+      "destination": "/lighthousePT",
+      "permanent": false
+    },
+    {
+      "source": "/lighthouseen",
+      "destination": "/lighthouseEN",
+      "permanent": false
+    }
   ]
 }
