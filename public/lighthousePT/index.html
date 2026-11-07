@@ -719,15 +719,18 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 .cmp2.dk tr.hl th,.cmp2.dk tr.hl td{border-top-color:var(--paper)}
 </style>
 <style>
-/* contents index */
-.toc-list{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:clamp(16px,2.4vh,28px);max-width:540px}
-.toc-list a{padding:9px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:clamp(15px,1.35vw,18px);font-weight:300;transition:color .3s var(--ease),padding .3s var(--ease)}
-.toc-list a:hover,.toc-list a:focus-visible{color:var(--red-hi);padding-left:10px;outline:none}
+/* contents index — thin nav strip */
+.slide.toc-slim{min-height:0;scroll-snap-align:none;padding-block:clamp(28px,4.5vh,52px);border-bottom:1px solid var(--line-d)}
+.slide.toc-slim .inner{gap:0}
+.toc-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px 22px}
+.toc-row .toc-eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-hi);margin-right:6px}
+.toc-row a{color:inherit;text-decoration:none;font-size:clamp(13px,1.1vw,15px);font-weight:300;white-space:nowrap;transition:color .25s var(--ease)}
+.toc-row a:hover,.toc-row a:focus-visible{color:var(--red-hi);outline:none}
 /* back to top */
 .totop{position:fixed;right:clamp(16px,2.4vw,28px);bottom:clamp(16px,2.4vw,28px);z-index:30;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--red-hi);color:#fff;text-decoration:none;font-size:17px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .3s,transform .3s,visibility .3s}
 .totop.show{opacity:1;visibility:visible;transform:none}
 .totop:hover{background:var(--red)}
-@media (prefers-reduced-motion:reduce){.totop,.toc-list a{transition:none}}
+@media (prefers-reduced-motion:reduce){.totop,.toc-row a{transition:none}}
 </style>
 </head>
 <body>
@@ -763,13 +766,10 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 </section>
 
 <!-- INDEX -->
-<section class="slide" id="indice" data-label="Índice">
+<section class="slide toc-slim" id="indice" data-label="Índice">
   <div class="inner">
-    <div class="top"><span class="idx">Índice</span><span>Ir para qualquer seção</span></div>
-    <div class="head rise">
-      <h2>Conteúdo.</h2>
-    </div>
-    <nav class="toc-list rise" aria-label="Índice">
+    <nav class="toc-row" aria-label="Índice">
+      <span class="toc-eyebrow">Índice</span>
       <a href="#processo">Modelo de desenvolvimento</a>
       <a href="#mercado">Onde atuamos</a>
       <a href="#sourcing">Sourcing global</a>
