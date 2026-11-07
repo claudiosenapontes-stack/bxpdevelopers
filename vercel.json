@@ -56,6 +56,11 @@
       "source": "/staging",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/build",
+      "destination": "/invest",
+      "permanent": false
     }
   ]
 }
