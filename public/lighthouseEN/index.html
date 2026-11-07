@@ -718,6 +718,20 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 .cmp2.dk thead th.us,.cmp2.dk tr.hl td.us{color:var(--red-hi)}
 .cmp2.dk tr.hl th,.cmp2.dk tr.hl td{border-top-color:var(--paper)}
 </style>
+<style>
+/* contents index */
+.toc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,72px);border-top:1px solid var(--line);margin-top:clamp(18px,3vh,34px)}
+.toc-list a{display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:color .3s var(--ease),padding .3s var(--ease)}
+.toc-list a:hover,.toc-list a:focus-visible{color:var(--red-hi);padding-left:8px;outline:none}
+.toc-list .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--red-hi);min-width:22px}
+.toc-list .t{font-size:clamp(14.5px,1.3vw,17px);font-weight:300}
+@media (max-width:720px){.toc-list{grid-template-columns:1fr}}
+/* back to top */
+.totop{position:fixed;right:clamp(16px,2.4vw,28px);bottom:clamp(16px,2.4vw,28px);z-index:30;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--red-hi);color:#fff;text-decoration:none;font-size:17px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .3s,transform .3s,visibility .3s}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--red)}
+@media (prefers-reduced-motion:reduce){.totop,.toc-list a{transition:none}}
+</style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
@@ -751,6 +765,44 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
   </div>
 </section>
 
+<!-- INDEX -->
+<section class="slide" id="indice" data-label="Index">
+  <div class="inner">
+    <div class="top"><span class="idx">Index</span><span>Jump to any section</span></div>
+    <div class="head rise">
+      <h2>Contents.</h2>
+    </div>
+    <nav class="toc-list rise" aria-label="Index">
+      <a href="#modelo"><span class="n">02</span><span class="t">Development model</span></a>
+      <a href="#processo"><span class="n">03</span><span class="t">End-to-end execution</span></a>
+      <a href="#mercado"><span class="n">04</span><span class="t">Where we operate</span></a>
+      <a href="#sourcing"><span class="n">05</span><span class="t">Global sourcing × design</span></a>
+      <a href="#auditoria"><span class="n">06</span><span class="t">Audit at the source</span></a>
+      <a href="#compras"><span class="n">07</span><span class="t">Procurement strategy</span></a>
+      <a href="#rede"><span class="n">08</span><span class="t">Global supply network</span></a>
+      <a href="#logistica"><span class="n">09</span><span class="t">Shipping and logistics</span></a>
+      <a href="#lsf"><span class="n">10</span><span class="t">Construction innovation</span></a>
+      <a href="#portfolio"><span class="n">11</span><span class="t">Portfolio</span></a>
+      <a href="#arq-2411"><span class="n">12</span><span class="t">Project 2411</span></a>
+      <a href="#arq-146"><span class="n">13</span><span class="t">146 Georgetown Rd</span></a>
+      <a href="#arq-boca"><span class="n">14</span><span class="t">Residence</span></a>
+      <a href="#arq-gourmet"><span class="n">15</span><span class="t">Outdoor gourmet area</span></a>
+      <a href="#estrutura"><span class="n">16</span><span class="t">Investment structure</span></a>
+      <a href="#framework"><span class="n">17</span><span class="t">4-point framework</span></a>
+      <a href="#lh-local"><span class="n">18</span><span class="t">The opportunity</span></a>
+      <a href="#lh-comps"><span class="n">19</span><span class="t">Comparable sales</span></a>
+      <a href="#lh-premissas"><span class="n">20</span><span class="t">The project</span></a>
+      <a href="#lh-custos"><span class="n">21</span><span class="t">Total project cost</span></a>
+      <a href="#lh-financiamento"><span class="n">22</span><span class="t">Construction financing</span></a>
+      <a href="#lh-resultado"><span class="n">23</span><span class="t">Project returns</span></a>
+      <a href="#lh-investidor"><span class="n">24</span><span class="t">Investor return</span></a>
+      <a href="#lh-com-sem"><span class="n">25</span><span class="t">Financed vs. all-cash</span></a>
+      <a href="#contato"><span class="n">26</span><span class="t">Contact</span></a>
+    </nav>
+  </div>
+</section>
+
+
 <!-- 02 PLATFORM -->
 <section class="slide paper" id="modelo" data-label="Model">
   <div class="inner">
@@ -760,7 +812,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
       <p class="lede">Sena Enterprises develops every project with a coordinated network of specialist partners. Every discipline needed to acquire, design, build and sell luxury homes works on one schedule, which compresses timelines and protects margin at each step.</p>
     </div>
     <div class="grid c4 rise pt">
-      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Acquire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span class="cy-ic sm" title="Sell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span></span><span class="who">Acquisition + brokerage</span><h3>Blackstone Realty</h3><p class="small">Land sourcing with access to off-market opportunities. At exit, it leads the sale.</p></div>
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Acquire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span class="cy-ic sm" title="Sell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span></span><span class="who">Acquisition + brokerage</span><h3>Sena Realty Group</h3><p class="small">Land sourcing with access to off-market opportunities. At exit, it leads the sale.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Design"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span class="cy-ic sm" title="Furnish"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span></span><span class="who">Architecture + engineering</span><h3>ARQIA</h3><p class="small">Design built to maximize price per square foot, with finishes and layouts calibrated to the target buyer. ARQIA Studio leads interiors and staging.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Source"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span></span><span class="who">Global sourcing</span><h3>XGROUP</h3><p class="small">Direct relationships with more than 150 factories in 7 countries, with no middlemen.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Build"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span></span><span class="who">Construction</span><h3>Sena Enterprises</h3><p class="small">Specialized execution in high-end residential, with quality, schedule and budget under direct control.</p></div>
@@ -777,7 +829,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
         <h2>Six steps. <em>One continuous cycle.</em></h2>
         <p class="lede">Every project runs through the same cycle, with a specialist partner at each step and a single schedule. When the home sells, the capital moves to the next lot.</p>
         <ol class="cy-list">
-          <li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span><b>Acquire</b> · Blackstone Realty</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span><b>Design</b> · ARQIA</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span><span><b>Source</b> · XGROUP</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span><span><b>Build</b> · Sena Enterprises</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span><span><b>Furnish</b> · ARQIA Studio</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span><span><b>Sell</b> · Blackstone Realty</span></li>
+          <li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span><b>Acquire</b> · Sena Realty Group</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span><b>Design</b> · ARQIA</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span><span><b>Source</b> · XGROUP</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span><span><b>Build</b> · Sena Enterprises</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span><span><b>Furnish</b> · ARQIA Studio</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span><span><b>Sell</b> · Sena Realty Group</span></li>
         </ol>
       </div>
       <div class="cy rise" role="img" aria-label="Six-step cycle: acquire, design, source, build, furnish and sell, then back to acquire">
@@ -792,7 +844,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
         <ol class="cy-nodes">
           <li class="cy-n c t" style="left:50.00%;top:12.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span>
-          <span class="cy-t"><span class="num">01 · Blackstone Realty</span><b>Acquire</b><em>Off-market land</em></span>
+          <span class="cy-t"><span class="num">01 · Sena Realty Group</span><b>Acquire</b><em>Off-market land</em></span>
         </li><li class="cy-n r m" style="left:82.91%;top:31.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span>
           <span class="cy-t"><span class="num">02 · ARQIA</span><b>Design</b><em>Architecture and engineering</em></span>
@@ -807,7 +859,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
           <span class="cy-t"><span class="num">05 · ARQIA Studio</span><b>Furnish</b><em>Interiors and staging</em></span>
         </li><li class="cy-n l t" style="left:17.09%;top:31.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span>
-          <span class="cy-t"><span class="num">06 · Blackstone Realty</span><b>Sell</b><em>Listing and buyers</em></span>
+          <span class="cy-t"><span class="num">06 · Sena Realty Group</span><b>Sell</b><em>Listing and buyers</em></span>
         </li>
         </ol>
       </div>
@@ -1513,5 +1565,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
   }
 })();
 </script>
+<a href="#inicio" class="totop" aria-label="Back to top">↑</a>
+<script>(function(){var t=document.querySelector(".totop");if(!t)return;function f(){window.scrollY>window.innerHeight*0.9?t.classList.add("show"):t.classList.remove("show");}window.addEventListener("scroll",f,{passive:true});f();})();</script>
 </body>
 </html>

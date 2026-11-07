@@ -718,6 +718,20 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 .cmp2.dk thead th.us,.cmp2.dk tr.hl td.us{color:var(--red-hi)}
 .cmp2.dk tr.hl th,.cmp2.dk tr.hl td{border-top-color:var(--paper)}
 </style>
+<style>
+/* contents index */
+.toc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,72px);border-top:1px solid var(--line);margin-top:clamp(18px,3vh,34px)}
+.toc-list a{display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:color .3s var(--ease),padding .3s var(--ease)}
+.toc-list a:hover,.toc-list a:focus-visible{color:var(--red-hi);padding-left:8px;outline:none}
+.toc-list .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--red-hi);min-width:22px}
+.toc-list .t{font-size:clamp(14.5px,1.3vw,17px);font-weight:300}
+@media (max-width:720px){.toc-list{grid-template-columns:1fr}}
+/* back to top */
+.totop{position:fixed;right:clamp(16px,2.4vw,28px);bottom:clamp(16px,2.4vw,28px);z-index:30;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--red-hi);color:#fff;text-decoration:none;font-size:17px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .3s,transform .3s,visibility .3s}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--red)}
+@media (prefers-reduced-motion:reduce){.totop,.toc-list a{transition:none}}
+</style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
@@ -751,6 +765,44 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
   </div>
 </section>
 
+<!-- INDEX -->
+<section class="slide" id="indice" data-label="Índice">
+  <div class="inner">
+    <div class="top"><span class="idx">Índice</span><span>Ir para qualquer seção</span></div>
+    <div class="head rise">
+      <h2>Conteúdo.</h2>
+    </div>
+    <nav class="toc-list rise" aria-label="Índice">
+      <a href="#modelo"><span class="n">02</span><span class="t">Modelo de desenvolvimento</span></a>
+      <a href="#processo"><span class="n">03</span><span class="t">Execução de ponta a ponta</span></a>
+      <a href="#mercado"><span class="n">04</span><span class="t">Onde atuamos</span></a>
+      <a href="#sourcing"><span class="n">05</span><span class="t">Sourcing global × design</span></a>
+      <a href="#auditoria"><span class="n">06</span><span class="t">Auditoria na origem</span></a>
+      <a href="#compras"><span class="n">07</span><span class="t">Estratégia de compras</span></a>
+      <a href="#rede"><span class="n">08</span><span class="t">Rede global de fornecimento</span></a>
+      <a href="#logistica"><span class="n">09</span><span class="t">Transporte e logística</span></a>
+      <a href="#lsf"><span class="n">10</span><span class="t">Inovação na construção</span></a>
+      <a href="#portfolio"><span class="n">11</span><span class="t">Portfólio</span></a>
+      <a href="#arq-2411"><span class="n">12</span><span class="t">Projeto 2411</span></a>
+      <a href="#arq-146"><span class="n">13</span><span class="t">146 Georgetown Rd</span></a>
+      <a href="#arq-boca"><span class="n">14</span><span class="t">Residência</span></a>
+      <a href="#arq-gourmet"><span class="n">15</span><span class="t">Área gourmet externa</span></a>
+      <a href="#estrutura"><span class="n">16</span><span class="t">Estrutura de investimento</span></a>
+      <a href="#framework"><span class="n">17</span><span class="t">Framework de 4 pontos</span></a>
+      <a href="#lh-local"><span class="n">18</span><span class="t">A oportunidade</span></a>
+      <a href="#lh-comps"><span class="n">19</span><span class="t">Vendas comparáveis</span></a>
+      <a href="#lh-premissas"><span class="n">20</span><span class="t">O projeto</span></a>
+      <a href="#lh-custos"><span class="n">21</span><span class="t">Custo total do projeto</span></a>
+      <a href="#lh-financiamento"><span class="n">22</span><span class="t">Financiamento da obra</span></a>
+      <a href="#lh-resultado"><span class="n">23</span><span class="t">Resultado do projeto</span></a>
+      <a href="#lh-investidor"><span class="n">24</span><span class="t">Retorno do investidor</span></a>
+      <a href="#lh-com-sem"><span class="n">25</span><span class="t">Com vs. sem financiamento</span></a>
+      <a href="#contato"><span class="n">26</span><span class="t">Contato</span></a>
+    </nav>
+  </div>
+</section>
+
+
 <!-- 02 PLATFORM -->
 <section class="slide paper" id="modelo" data-label="Modelo">
   <div class="inner">
@@ -760,7 +812,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
       <p class="lede">A Sena Enterprises desenvolve cada empreendimento com uma rede coordenada de parceiros especializados. Todas as disciplinas para adquirir, projetar, construir e vender residências de luxo trabalham no mesmo cronograma, o que comprime prazos e protege a margem em cada etapa.</p>
     </div>
     <div class="grid c4 rise pt">
-      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Adquirir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span class="cy-ic sm" title="Vender"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span></span><span class="who">Aquisição + corretagem</span><h3>Castellain Luxury Homes</h3><p class="small">Sourcing de terrenos com acesso a oportunidades fora do mercado. Na saída, conduz a venda e elimina taxas de agente comprador.</p></div>
+      <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Adquirir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span class="cy-ic sm" title="Vender"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span></span><span class="who">Aquisição + corretagem</span><h3>Sena Realty Group</h3><p class="small">Sourcing de terrenos com acesso a oportunidades fora do mercado. Na venda, conduz a comercialização.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Projetar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span class="cy-ic sm" title="Decorar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span></span><span class="who">Arquitetura + engenharia</span><h3>ARQIA</h3><p class="small">Projeto desenhado para maximizar o preço por pé quadrado, com acabamentos e layouts calibrados ao comprador-alvo. ARQIA Studio assina interiores e staging.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Suprir"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span></span><span class="who">Sourcing global</span><h3>XGROUP</h3><p class="small">Relacionamento direto com mais de 150 fábricas em 7 países, sem intermediários.</p></div>
       <div class="cell"><span class="pt-ic"><span class="cy-ic sm" title="Construir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span></span><span class="who">Construção</span><h3>Sena Enterprises</h3><p class="small">Execução especializada em residencial de alto padrão, com qualidade, prazo e orçamento sob controle direto.</p></div>
@@ -777,7 +829,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
         <h2>Seis etapas. <em>Um ciclo contínuo.</em></h2>
         <p class="lede">Cada projeto percorre o mesmo ciclo, com um parceiro especializado em cada etapa e um único cronograma. Quando a casa é vendida, o capital volta para o próximo terreno.</p>
         <ol class="cy-list">
-          <li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span><b>Adquirir</b> · Castellain</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span><b>Projetar</b> · ARQIA</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span><span><b>Suprir</b> · XGROUP</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span><span><b>Construir</b> · Sena Enterprises</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span><span><b>Decorar</b> · ARQIA Studio</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span><span><b>Vender</b> · Castellain</span></li>
+          <li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span><span><b>Adquirir</b> · Sena Realty Group</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span><span><b>Projetar</b> · ARQIA</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="11" rx="1"/><path d="M7 8v11M11 8v11M15 8v11M19 8v11"/><path d="M8 8l2-4h4l2 4"/></svg></span><span><b>Suprir</b> · XGROUP</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V4h3v17"/><path d="M7 6h13l-3 3"/><path d="M7 4l13 2"/><path d="M15 9v5"/><rect x="13" y="14" width="4" height="3"/><path d="M2 21h20"/></svg></span><span><b>Construir</b> · Sena Enterprises</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l3 7H6z"/><path d="M12 10v8"/><path d="M8 21h8"/></svg></span><span><b>Decorar</b> · ARQIA Studio</span></li><li><span class="cy-ic sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span><span><b>Vender</b> · Sena Realty Group</span></li>
         </ol>
       </div>
       <div class="cy rise" role="img" aria-label="Ciclo de seis etapas: adquirir, projetar, suprir, construir, decorar e vender, voltando a adquirir">
@@ -792,7 +844,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
         <ol class="cy-nodes">
           <li class="cy-n c t" style="left:50.00%;top:12.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span>
-          <span class="cy-t"><span class="num">01 · Castellain</span><b>Adquirir</b><em>Terreno fora do mercado</em></span>
+          <span class="cy-t"><span class="num">01 · Sena Realty Group</span><b>Adquirir</b><em>Terreno fora do mercado</em></span>
         </li><li class="cy-n r m" style="left:82.91%;top:31.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 8h18" stroke-dasharray="2 2"/></svg></span>
           <span class="cy-t"><span class="num">02 · ARQIA</span><b>Projetar</b><em>Arquitetura e engenharia</em></span>
@@ -807,7 +859,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
           <span class="cy-t"><span class="num">05 · ARQIA Studio</span><b>Decorar</b><em>Interiores e staging</em></span>
         </li><li class="cy-n l t" style="left:17.09%;top:31.00%">
           <span class="cy-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 6l3 3"/><path d="M15 8l2 2"/></svg></span>
-          <span class="cy-t"><span class="num">06 · Castellain</span><b>Vender</b><em>Listagem e compradores</em></span>
+          <span class="cy-t"><span class="num">06 · Sena Realty Group</span><b>Vender</b><em>Listagem e compradores</em></span>
         </li>
         </ol>
       </div>
@@ -1272,15 +1324,15 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
     <div class="spec rise">
       <div><span class="label">Área construída</span><strong>6.000 sf</strong></div>
       <div><span class="label">Terreno</span><strong>US$ 1,75M</strong></div>
-      <div><span class="label">Construção + gestão</span><strong>US$ 2,875M</strong></div>
+      <div><span class="label">Construção</span><strong>US$ 2,5M</strong></div>
       <div><span class="label">Revenda projetada</span><strong>US$ 6,9M</strong></div>
       <div><span class="label">Prazo</span><strong>18 meses</strong></div>
     </div>
     <div class="psf rise">
-      <div><span class="label">Construção + gestão / sf</span><b>US$ 479</b></div>
+      <div><span class="label">Construção / sf</span><b>US$ 417</b></div>
       <div><span class="label">Venda projetada / sf</span><b>US$ 1.150</b></div>
-      <div><span class="label">Custo total do projeto</span><b>US$ 5.557.500</b></div>
-      <div><span class="label">Lucro projetado</span><b>US$ 1.342.500</b></div>
+      <div><span class="label">Custo total do projeto</span><b>US$ 5.521.575</b></div>
+      <div><span class="label">Lucro projetado</span><b>US$ 1.378.425</b></div>
     </div>
   </div>
 </section>
@@ -1288,28 +1340,31 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 <!-- 21 LH COSTS -->
 <section class="slide" id="lh-custos" data-label="Custos">
   <div class="inner">
-    <div class="top"><span class="idx">21 · Custo total do projeto</span><span>US$ 5.557.500</span></div>
+    <div class="top"><span class="idx">21 · Custo total do projeto</span><span>US$ 5.521.575</span></div>
     <div class="head rise">
-      <h2>US$ 5.557.500 do terreno à venda.</h2>
-      <p class="lede">Terreno e custos de transação, construção com gestão, e uma verba de financiamento que cobre juros, originação e carregamento durante os 18 meses.</p>
+      <h2>US$ 5.521.575 do terreno à venda.</h2>
+      <p class="lede">Cada linha detalhada — terreno com seus custos de transação, construção e sua taxa de gestão de 18%, financiamento liberado em etapas ao longo de 18 meses, e custos de venda incluindo documentary stamp, property tax e seguro de título.</p>
     </div>
     <div class="us rise">
       <div class="us-row">
-        <div class="us-tot"><span class="label">Custos do projeto</span><b>US$ 5.557.500</b></div>
-        <div class="us-bar"><span class="us-seg u1" style="flex:314.9" data-tip="Terreno · US$ 1.750.000 · 31,5%"></span><span class="us-seg u4" style="flex:15.7" data-tip="Fechamento (5%) · US$ 87.500 · 1,6%"></span><span class="us-seg u2" style="flex:517.3" data-tip="Construção + gestão · US$ 2.875.000 · 51,7%"></span><span class="us-seg u3" style="flex:90.0" data-tip="Financiamento e carregamento · US$ 500.000 · 9,0%"></span><span class="us-seg u5" style="flex:62.1" data-tip="Custos de venda (5%) · US$ 345.000 · 6,2%"></span></div>
-        <ul class="us-leg"><li><i class="u1"></i><span>Terreno</span><b>US$ 1.750.000</b><em>31,5%</em></li><li><i class="u4"></i><span>Fechamento (5%)</span><b>US$ 87.500</b><em>1,6%</em></li><li><i class="u2"></i><span>Construção + gestão</span><b>US$ 2.875.000</b><em>51,7%</em></li><li><i class="u3"></i><span>Financiamento e carregamento</span><b>US$ 500.000</b><em>9,0%</em></li><li><i class="u5"></i><span>Custos de venda (5%)</span><b>US$ 345.000</b><em>6,2%</em></li></ul>
+        <div class="us-tot"><span class="label">Custos do projeto</span><b>US$ 5.521.575</b></div>
+        <div class="us-bar"><span class="us-seg u1" style="flex:318.6" data-tip="Aquisição do terreno · US$ 1.759.200 · 31,9%"></span><span class="us-seg u2" style="flex:452.8" data-tip="Construção · US$ 2.500.000 · 45,3%"></span><span class="us-seg u4" style="flex:81.5" data-tip="Gestão de obra (18%) · US$ 450.000 · 8,1%"></span><span class="us-seg u3" style="flex:62.5" data-tip="Custos de financiamento · US$ 345.225 · 6,3%"></span><span class="us-seg u5" style="flex:84.6" data-tip="Custos de venda · US$ 467.150 · 8,5%"></span></div>
+        <ul class="us-leg"><li><i class="u1"></i><span>Aquisição do terreno</span><b>US$ 1.759.200</b><em>31,9%</em></li><li><i class="u2"></i><span>Construção</span><b>US$ 2.500.000</b><em>45,3%</em></li><li><i class="u4"></i><span>Gestão de obra (18%)</span><b>US$ 450.000</b><em>8,1%</em></li><li><i class="u3"></i><span>Custos de financiamento</span><b>US$ 345.225</b><em>6,3%</em></li><li><i class="u5"></i><span>Custos de venda</span><b>US$ 467.150</b><em>8,5%</em></li></ul>
       </div>
     </div>
-    <div class="grid c3 rise">
-      <div class="cell"><span class="label">Aquisição e custos de venda</span><ul class="plain">
-        <li>Compra do imóvel · US$ 1.750.000</li><li>Custos de fechamento (5%) · US$ 87.500</li><li>Custos de venda e comissões (5%) · US$ 345.000</li></ul>
-        <p class="out">Total · US$ 2.182.500</p></div>
-      <div class="cell"><span class="label">Construção e gestão</span><ul class="plain">
-        <li>Construção + gestão de obra · US$ 2.875.000</li><li>Custo médio · US$ 479/sf (6.000 sf)</li></ul>
-        <p class="out">Total · US$ 2.875.000</p></div>
-      <div class="cell"><span class="label">Financiamento, juros e carregamento</span><ul class="plain">
-        <li>Juros estimados (18 meses) · US$ 409.688</li><li>Originação (1,3 ponto) · US$ 37.375</li><li>Carregamento adicional · US$ 52.937</li></ul>
-        <p class="out">Verba total · US$ 500.000</p></div>
+    <div class="grid c4 rise">
+      <div class="cell"><span class="label">Aquisição do terreno</span><ul class="plain">
+        <li>Compra do terreno · US$ 1.750.000</li><li>Seguro de título (owner’s) · US$ 6.950</li><li>Título / taxa de fechamento · US$ 1.000</li><li>Taxas de registro · US$ 150</li><li>Levantamento (survey) · US$ 800</li><li>Taxas administrativas · US$ 300</li></ul>
+        <p class="out">Total · US$ 1.759.200</p></div>
+      <div class="cell"><span class="label">Construção + gestão</span><ul class="plain">
+        <li>Construção (custo direto) · US$ 2.500.000</li><li>Gestão de obra (18%) · US$ 450.000</li><li>Custo de construção · US$ 417/sf (6.000 sf)</li></ul>
+        <p class="out">Total · US$ 2.950.000</p></div>
+      <div class="cell"><span class="label">Financiamento da obra</span><ul class="plain">
+        <li>Juros, meses 1–12 · US$ 161.500</li><li>Juros, meses 13–18 · US$ 140.125</li><li>Originação do empréstimo (1,3 ponto) · US$ 38.350</li><li>Taxas do credor — análise, servicing, saques · US$ 5.250</li></ul>
+        <p class="out">Total · US$ 345.225</p></div>
+      <div class="cell"><span class="label">Custos de venda</span><ul class="plain">
+        <li>Comissão de corretagem (5%) · US$ 345.000</li><li>Documentary stamp (0,70%) · US$ 48.300</li><li>Property tax, período (est.) · US$ 52.500</li><li>Seguro de título (owner’s, FL) · US$ 19.350</li><li>Título, pesquisa e registro · US$ 2.000</li></ul>
+        <p class="out">Total · US$ 467.150</p></div>
     </div>
   </div>
 </section>
@@ -1320,20 +1375,20 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
     <div class="top"><span class="idx">22 · Financiamento da obra</span><span>18 meses</span></div>
     <div class="head rise">
       <h2>O banco financia 100% da construção.</h2>
-      <p class="lede">Um empréstimo de construção de US$ 2.875.000 cobre a obra inteira. A verba de US$ 500.000 já inclui juros sobre o valor total por 18 meses, uma premissa conservadora.</p>
+      <p class="lede">Um empréstimo de construção de US$ 2.950.000 cobre a obra inteira, começando com uma liberação de US$ 450.000 e financiado em etapas. Os juros são calculados sobre o saldo devedor — a liberação crescente até o mês 12, depois o principal total do mês 13 ao 18.</p>
     </div>
     <div class="us rise">
       <div class="us-row">
-        <div class="us-tot"><span class="label">Verba de financiamento</span><b>US$ 500.000</b></div>
-        <div class="us-bar"><span class="us-seg s1" style="flex:819.4" data-tip="Juros (18 meses) · US$ 409.688 · 81,9%"></span><span class="us-seg s2" style="flex:74.8" data-tip="Originação (1,3 ponto) · US$ 37.375 · 7,5%"></span><span class="us-seg s3" style="flex:105.9" data-tip="Carregamento adicional · US$ 52.937 · 10,6%"></span></div>
-        <ul class="us-leg lgt"><li><i class="s1"></i><span>Juros (18 meses)</span><b>US$ 409.688</b><em>81,9%</em></li><li><i class="s2"></i><span>Originação (1,3 ponto)</span><b>US$ 37.375</b><em>7,5%</em></li><li><i class="s3"></i><span>Carregamento adicional</span><b>US$ 52.937</b><em>10,6%</em></li></ul>
+        <div class="us-tot"><span class="label">Custos de financiamento</span><b>US$ 345.225</b></div>
+        <div class="us-bar"><span class="us-seg s1" style="flex:873.7" data-tip="Juros (18 meses) · US$ 301.625 · 87,4%"></span><span class="us-seg s2" style="flex:111.1" data-tip="Originação (1,3 ponto) · US$ 38.350 · 11,1%"></span><span class="us-seg s3" style="flex:15.2" data-tip="Taxas do credor · US$ 5.250 · 1,5%"></span></div>
+        <ul class="us-leg lgt"><li><i class="s1"></i><span>Juros (18 meses)</span><b>US$ 301.625</b><em>87,4%</em></li><li><i class="s2"></i><span>Originação (1,3 ponto)</span><b>US$ 38.350</b><em>11,1%</em></li><li><i class="s3"></i><span>Taxas do credor</span><b>US$ 5.250</b><em>1,5%</em></li></ul>
       </div>
     </div>
     <div class="kpis rise">
-      <div><span class="label">Empréstimo de construção</span><strong>US$ 2,875M</strong></div>
+      <div><span class="label">Empréstimo de construção</span><strong>US$ 2,95M</strong></div>
       <div><span class="label">Juros anuais</span><strong>9,5%</strong></div>
-      <div><span class="label">Prazo</span><strong>18 meses</strong></div>
-      <div><span class="label">Originação</span><strong>1,3 ponto</strong></div>
+      <div><span class="label">Liberação inicial</span><strong>US$ 450.000</strong></div>
+      <div><span class="label">Financiamento total</span><strong>US$ 345.225</strong></div>
     </div>
   </div>
 </section>
@@ -1343,45 +1398,45 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
   <div class="inner">
     <div class="top"><span class="idx">23 · Resultado do projeto</span><span>Revenda projetada · US$ 6,9M</span></div>
     <div class="head rise">
-      <h2><span class="nw">US$ 1.342.500</span> de lucro projetado.</h2>
-      <p class="lede">Da revenda de US$ 6.900.000 saem custos de venda, terreno, fechamento, construção e financiamento. O lucro do projeto é US$ 1.342.500.</p>
+      <h2><span class="nw">US$ 1.378.425</span> de lucro projetado.</h2>
+      <p class="lede">Da revenda de US$ 6.900.000 saem custos de venda, aquisição do terreno, construção e financiamento. O lucro do projeto é US$ 1.378.425.</p>
     </div>
     <div class="wf rise">
       <div class="wf-row start" data-tip="Valor de revenda · US$ 6.900.000">
           <span class="wf-l">Valor de revenda</span>
           <span class="wf-t"><span class="wf-b" style="left:0.000%;width:100.000%"></span></span>
           <span class="wf-v">US$ 6.900.000</span>
-        </div><div class="wf-row neg" data-tip="Custos de venda e comissões (5%) · −US$ 345.000">
-          <span class="wf-l">Custos de venda e comissões (5%)</span>
-          <span class="wf-t"><span class="wf-b" style="left:95.000%;width:5.000%"></span></span>
-          <span class="wf-v">−US$ 345.000</span>
-        </div><div class="wf-row neg" data-tip="Terreno · −US$ 1.750.000">
-          <span class="wf-l">Terreno</span>
-          <span class="wf-t"><span class="wf-b" style="left:69.638%;width:25.362%"></span></span>
-          <span class="wf-v">−US$ 1.750.000</span>
-        </div><div class="wf-row neg" data-tip="Custos de fechamento (5%) · −US$ 87.500">
-          <span class="wf-l">Custos de fechamento (5%)</span>
-          <span class="wf-t"><span class="wf-b" style="left:68.370%;width:1.268%"></span></span>
-          <span class="wf-v">−US$ 87.500</span>
-        </div><div class="wf-row neg" data-tip="Construção + gestão · −US$ 2.875.000">
-          <span class="wf-l">Construção + gestão</span>
-          <span class="wf-t"><span class="wf-b" style="left:26.703%;width:41.667%"></span></span>
-          <span class="wf-v">−US$ 2.875.000</span>
-        </div><div class="wf-row neg" data-tip="Financiamento, juros e carregamento · −US$ 500.000">
-          <span class="wf-l">Financiamento, juros e carregamento</span>
-          <span class="wf-t"><span class="wf-b" style="left:19.457%;width:7.246%"></span></span>
-          <span class="wf-v">−US$ 500.000</span>
-        </div><div class="wf-row end" data-tip="Lucro do projeto · US$ 1.342.500">
+        </div><div class="wf-row neg" data-tip="Custos de venda · −US$ 467.150">
+          <span class="wf-l">Custos de venda</span>
+          <span class="wf-t"><span class="wf-b" style="left:93.230%;width:6.770%"></span></span>
+          <span class="wf-v">−US$ 467.150</span>
+        </div><div class="wf-row neg" data-tip="Aquisição do terreno · −US$ 1.759.200">
+          <span class="wf-l">Aquisição do terreno</span>
+          <span class="wf-t"><span class="wf-b" style="left:67.734%;width:25.496%"></span></span>
+          <span class="wf-v">−US$ 1.759.200</span>
+        </div><div class="wf-row neg" data-tip="Construção · −US$ 2.500.000">
+          <span class="wf-l">Construção</span>
+          <span class="wf-t"><span class="wf-b" style="left:31.502%;width:36.232%"></span></span>
+          <span class="wf-v">−US$ 2.500.000</span>
+        </div><div class="wf-row neg" data-tip="Gestão de obra (18%) · −US$ 450.000">
+          <span class="wf-l">Gestão de obra (18%)</span>
+          <span class="wf-t"><span class="wf-b" style="left:24.980%;width:6.522%"></span></span>
+          <span class="wf-v">−US$ 450.000</span>
+        </div><div class="wf-row neg" data-tip="Custos de financiamento · −US$ 345.225">
+          <span class="wf-l">Custos de financiamento</span>
+          <span class="wf-t"><span class="wf-b" style="left:19.977%;width:5.003%"></span></span>
+          <span class="wf-v">−US$ 345.225</span>
+        </div><div class="wf-row end" data-tip="Lucro do projeto · US$ 1.378.425">
           <span class="wf-l">Lucro do projeto</span>
-          <span class="wf-t"><span class="wf-b" style="left:0.000%;width:19.457%"></span></span>
-          <span class="wf-v">US$ 1.342.500</span>
+          <span class="wf-t"><span class="wf-b" style="left:0.000%;width:19.977%"></span></span>
+          <span class="wf-v">US$ 1.378.425</span>
         </div>
     </div>
     <div class="kpis rise">
-      <div><span class="label">Custo total do projeto</span><strong>US$ 5,56M</strong></div>
+      <div><span class="label">Custo total do projeto</span><strong>US$ 5,52M</strong></div>
       <div><span class="label">Revenda projetada</span><strong>US$ 6,9M</strong></div>
-      <div><span class="label">Lucro projetado</span><strong class="hi">US$ 1,34M</strong></div>
-      <div><span class="label">Venda / construção por sf</span><strong>1.150 / 479</strong></div>
+      <div><span class="label">Lucro projetado</span><strong class="hi">US$ 1,38M</strong></div>
+      <div><span class="label">Venda / construção por sf</span><strong>1.150 / 417</strong></div>
     </div>
   </div>
 </section>
@@ -1392,20 +1447,20 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
     <div class="top"><span class="idx">24 · Retorno do investidor</span><span>Parceria 50%</span></div>
     <div class="head rise">
       <h2>O investidor compra o terreno e leva metade do lucro.</h2>
-      <p class="lede">O aporte inicial de US$ 1.750.000 é a compra do terreno. Na venda, o investidor recebe o capital de volta mais 50% do lucro: US$ 2.421.250 no total.</p>
+      <p class="lede">O aporte inicial de US$ 1.759.200 é a aquisição completa do terreno. O banco financia a obra, então esse é o único capital do investidor — e na venda ele recebe de volta mais 50% do lucro: US$ 2.448.412 no total.</p>
     </div>
     <div class="inv rise">
-      <div><span class="label">Investimento inicial · terreno</span><strong>US$ 1.750.000</strong></div>
+      <div><span class="label">Investimento inicial · aquisição do terreno</span><strong>US$ 1.759.200</strong></div>
       <span class="inv-op">+</span>
-      <div><span class="label">50% do lucro</span><strong>US$ 671.250</strong></div>
+      <div><span class="label">50% do lucro</span><strong>US$ 689.212</strong></div>
       <span class="inv-op">=</span>
-      <div class="hi"><span class="label">Capital + lucro devolvidos</span><strong>US$ 2.421.250</strong></div>
+      <div class="hi"><span class="label">Capital + lucro devolvidos</span><strong>US$ 2.448.412</strong></div>
     </div>
     <div class="kpis rise">
-      <div><span class="label">Retorno sobre o investimento inicial</span><strong class="hi">38,4%</strong></div>
+      <div><span class="label">Retorno sobre o investimento inicial</span><strong class="hi">39,2%</strong></div>
+      <div><span class="label">Equity multiple</span><strong>1,39×</strong></div>
+      <div><span class="label">Anualizado (18 meses)</span><strong>24,7%</strong></div>
       <div><span class="label">Prazo</span><strong>18 meses</strong></div>
-      <div><span class="label">Lucro do projeto</span><strong>US$ 1.342.500</strong></div>
-      <div><span class="label">Divisão</span><strong>50 / 50</strong></div>
     </div>
   </div>
 </section>
@@ -1416,21 +1471,21 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
     <div class="top"><span class="idx">25 · Com vs. sem financiamento</span><span>Eficiência de capital</span></div>
     <div class="head rise">
       <h2>37% do capital. O dobro do retorno.</h2>
-      <p class="lede">Sem financiamento, o investidor teria de aportar terreno, fechamento e construção, US$ 4.712.500, para receber 19,5%. Com o banco financiando a obra, aporta só o terreno e recebe 38,4%.</p>
+      <p class="lede">Sem financiamento, o investidor teria de aportar terreno e construção, US$ 4.709.200, para receber 18,3%. Com o banco financiando a obra, aporta só o terreno e recebe 39,2%.</p>
     </div>
     <div class="table-wrap rise">
       <table class="cmp2 dk">
         <thead><tr><th>Métrica</th><th class="num">Sem financiamento</th><th class="num us">Com financiamento</th></tr></thead>
         <tbody>
-          <tr><th>Capital do investidor</th><td data-l="Sem financiamento" class="num">US$ 4.712.500</td><td data-l="Com financiamento" class="num us">US$ 1.750.000</td></tr>
-          <tr><th>Financiamento, juros e carregamento</th><td data-l="Sem financiamento" class="num">—</td><td data-l="Com financiamento" class="num us">−US$ 500.000</td></tr>
-          <tr><th>Lucro do projeto</th><td data-l="Sem financiamento" class="num">US$ 1.842.500</td><td data-l="Com financiamento" class="num us">US$ 1.342.500</td></tr>
-          <tr><th>Parte do investidor (50%)</th><td data-l="Sem financiamento" class="num">US$ 921.250</td><td data-l="Com financiamento" class="num us">US$ 671.250</td></tr>
-          <tr class="hl"><th>Retorno sobre o capital</th><td data-l="Sem financiamento" class="num">19,5%</td><td data-l="Com financiamento" class="num us">38,4%</td></tr>
+          <tr><th>Capital do investidor</th><td data-l="Sem financiamento" class="num">US$ 4.709.200</td><td data-l="Com financiamento" class="num us">US$ 1.759.200</td></tr>
+          <tr><th>Financiamento, juros e carregamento</th><td data-l="Sem financiamento" class="num">—</td><td data-l="Com financiamento" class="num us">−US$ 345.225</td></tr>
+          <tr><th>Lucro do projeto</th><td data-l="Sem financiamento" class="num">US$ 1.723.650</td><td data-l="Com financiamento" class="num us">US$ 1.378.425</td></tr>
+          <tr><th>Parte do investidor (50%)</th><td data-l="Sem financiamento" class="num">US$ 861.825</td><td data-l="Com financiamento" class="num us">US$ 689.212</td></tr>
+          <tr class="hl"><th>Retorno sobre o capital</th><td data-l="Sem financiamento" class="num">18,3%</td><td data-l="Com financiamento" class="num us">39,2%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="src">Cenário sem financiamento derivado dos mesmos custos, sem a verba de financiamento e com a mesma divisão 50/50.</p>
+    <p class="src">Cenário sem financiamento derivado dos mesmos custos, sem os custos de financiamento e com a mesma divisão 50/50.</p>
   </div>
 </section>
 
@@ -1510,5 +1565,7 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
   }
 })();
 </script>
+<a href="#inicio" class="totop" aria-label="Voltar ao topo">↑</a>
+<script>(function(){var t=document.querySelector(".totop");if(!t)return;function f(){window.scrollY>window.innerHeight*0.9?t.classList.add("show"):t.classList.remove("show");}window.addEventListener("scroll",f,{passive:true});f();})();</script>
 </body>
 </html>
