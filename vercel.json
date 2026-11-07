@@ -41,6 +41,21 @@
       "source": "/lighthouseen",
       "destination": "/lighthouseEN",
       "permanent": false
+    },
+    {
+      "source": "/remodel",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/design",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/staging",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }

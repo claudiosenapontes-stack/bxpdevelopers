@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const topics = ["Investing", "Designing", "Building", "Remodeling", "Sourcing", "Staging"];
+const topics = ["Investing", "Sourcing", "Building"];
 
 const topicCopy: Record<string, { intro: string; followUp: string; confirm: string }> = {
   Investing: {
@@ -10,29 +10,14 @@ const topicCopy: Record<string, { intro: string; followUp: string; confirm: stri
     followUp: "Tell us a bit more about your investing goals.",
     confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
   },
-  Designing: {
-    intro: "I need help with designing.",
-    followUp: "Tell us a bit more about your designing needs.",
-    confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
-  },
   Building: {
     intro: "I need help with building.",
     followUp: "Tell us a bit more about your building needs.",
     confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
   },
-  Remodeling: {
-    intro: "I need help with remodeling.",
-    followUp: "Tell us a bit more about your remodeling needs.",
-    confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
-  },
   Sourcing: {
     intro: "I need help with sourcing.",
     followUp: "Tell us a bit more about your sourcing needs.",
-    confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
-  },
-  Staging: {
-    intro: "I need help with staging.",
-    followUp: "Tell us a bit more about your staging needs.",
     confirm: "Perfect — we got your message. Let me fetch someone right away for you.",
   },
 };
