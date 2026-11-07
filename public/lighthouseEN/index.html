@@ -720,12 +720,9 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
 </style>
 <style>
 /* contents index */
-.toc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,72px);border-top:1px solid var(--line);margin-top:clamp(18px,3vh,34px)}
-.toc-list a{display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:color .3s var(--ease),padding .3s var(--ease)}
-.toc-list a:hover,.toc-list a:focus-visible{color:var(--red-hi);padding-left:8px;outline:none}
-.toc-list .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--red-hi);min-width:22px}
-.toc-list .t{font-size:clamp(14.5px,1.3vw,17px);font-weight:300}
-@media (max-width:720px){.toc-list{grid-template-columns:1fr}}
+.toc-list{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:clamp(16px,2.4vh,28px);max-width:540px}
+.toc-list a{padding:9px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:clamp(15px,1.35vw,18px);font-weight:300;transition:color .3s var(--ease),padding .3s var(--ease)}
+.toc-list a:hover,.toc-list a:focus-visible{color:var(--red-hi);padding-left:10px;outline:none}
 /* back to top */
 .totop{position:fixed;right:clamp(16px,2.4vw,28px);bottom:clamp(16px,2.4vw,28px);z-index:30;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--red-hi);color:#fff;text-decoration:none;font-size:17px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .3s,transform .3s,visibility .3s}
 .totop.show{opacity:1;visibility:visible;transform:none}
@@ -773,13 +770,13 @@ a.pcard:focus-visible{outline:2px solid var(--red-hi);outline-offset:4px}
       <h2>Contents.</h2>
     </div>
     <nav class="toc-list rise" aria-label="Index">
-      <a href="#modelo"><span class="n">02</span><span class="t">Development model</span></a>
-      <a href="#lh-local"><span class="n">18</span><span class="t">The opportunity</span></a>
-      <a href="#lh-custos"><span class="n">21</span><span class="t">Total project cost</span></a>
-      <a href="#lh-financiamento"><span class="n">22</span><span class="t">Construction financing</span></a>
-      <a href="#lh-resultado"><span class="n">23</span><span class="t">Project returns</span></a>
-      <a href="#lh-investidor"><span class="n">24</span><span class="t">Investor return</span></a>
-      <a href="#contato"><span class="n">26</span><span class="t">Contact</span></a>
+      <a href="#processo">Development model</a>
+      <a href="#mercado">Where we operate</a>
+      <a href="#sourcing">Global sourcing</a>
+      <a href="#portfolio">Architecture portfolio</a>
+      <a href="#estrutura">Investment structure</a>
+      <a href="#lh-comps">Comparable sales</a>
+      <a href="#lh-premissas">The project</a>
     </nav>
   </div>
 </section>
