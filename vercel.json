@@ -61,6 +61,11 @@
       "source": "/build",
       "destination": "/invest",
       "permanent": false
+    },
+    {
+      "source": "/r&dpt",
+      "destination": "/r&dPT",
+      "permanent": false
     }
   ]
 }

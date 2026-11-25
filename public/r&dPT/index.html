@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sena Enterprises · P&amp;D</title>
+<meta name="description" content="Vendas de casas de luxo no Sul da Flórida por faixa de preço: unidades, crescimento, melhores cidades, compradores à vista e sensibilidade a juros.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Sena Enterprises · P&amp;D · Mercado de Luxo do Sul da Flórida">
+<meta property="og:description" content="Vendas de casas unifamiliares acima de $3M em Miami-Dade, Broward e Palm Beach por faixa de $2M.">
+<meta property="og:image" content="https://www.senaenterprises.com/victoriapark/img/v-water.jpg">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ink:#0B0B0C; --ink-2:#111214; --ink-3:#17181B; --card:#131416; --paper:#F3F3F0;
+  --silver:#BDBFC4; --mute:#8C8E92; --soft:#B4B6BA; --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.16);
+  --red:#8B0E14; --red-hi:#D0222B; --pos:#7FC8A0; --neg:#E5484D;
+  --s25:#5E6168; --s26:#D0222B;
+  --c-md:#F3F3F0; --c-bw:#BDBFC4; --c-pb:#D0222B;
+  --f:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --pad:clamp(16px,4vw,56px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--f);font-weight:300;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-weight:300;margin:0;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.num{font-variant-numeric:tabular-nums}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(11,11,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.bar img{height:26px;width:auto;display:block}
+.bar nav{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-decoration:none;white-space:nowrap;transition:color .2s}
+.bar nav a:hover{color:var(--paper)}
+@media (max-width:900px){.bar nav{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,8vh,96px) 0 clamp(32px,5vh,56px);border-bottom:1px solid var(--line)}
+.hero .tag{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .tag::before{content:"";width:28px;height:1px;background:var(--red-hi)}
+.hero h1{font-size:clamp(34px,5.2vw,72px);line-height:1.04;max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--mute)}
+.hero .lede{margin-top:22px;max-width:62ch;color:var(--soft);font-size:clamp(15px,1.25vw,18px)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:28px}
+
+/* KPI strip */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.kpi{padding:28px clamp(14px,2vw,28px) 30px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.kpi + .kpi{padding-left:clamp(14px,2vw,28px);border-left:1px solid var(--line)}
+.kpi .v{font-size:clamp(34px,4vw,58px);line-height:1;letter-spacing:-.04em;font-weight:200}
+.kpi .v small{font-size:.42em;letter-spacing:0;color:var(--mute);margin-left:4px}
+.kpi .d{font-size:13px;color:var(--soft);line-height:1.45}
+.up{color:var(--pos)} .down{color:var(--neg)}
+@media (max-width:860px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi:nth-child(3){padding-left:0;border-left:0}.kpi:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* sections */
+section{padding:clamp(48px,8vh,88px) 0;border-bottom:1px solid var(--line);scroll-margin-top:64px}
+.sh{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:clamp(24px,4vh,40px)}
+.sh h2{font-size:clamp(26px,3.2vw,44px);line-height:1.08}
+.sh .idx{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh .idx::before{content:"";width:22px;height:1px;background:var(--red-hi)}
+.sh p{color:var(--soft);font-size:14.5px;max-width:54ch}
+@media (max-width:860px){.sh{grid-template-columns:1fr}}
+
+/* controls */
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{all:unset;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:999px;color:var(--mute);transition:background .2s,color .2s}
+.seg button:hover{color:var(--paper)}
+.seg button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.seg button:focus-visible{outline:1px solid var(--red-hi);outline-offset:2px}
+.ctrl{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--soft);text-transform:uppercase}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:980px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(16px,2vw,24px);min-width:0}
+.card h3{font-size:16px;font-weight:400;letter-spacing:-.01em;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3 span{font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.card .note{margin-top:14px;font-size:12.5px;color:var(--mute);line-height:1.5}
+.chart{width:100%;margin-top:14px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--mono);font-size:10.5px;fill:var(--mute)}
+.chart .vl{fill:var(--soft);font-size:10px}
+.chart rect.b{transition:opacity .2s}
+.chart g.grp:hover rect.b{opacity:.75}
+
+/* insight */
+.insight{margin-top:20px;border-left:2px solid var(--red-hi);padding:4px 0 4px 18px;color:var(--soft);font-size:14.5px;max-width:90ch}
+.insight b{color:var(--paper);font-weight:400}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin-top:16px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th,td{padding:11px 16px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:400;background:var(--ink-2)}
+th:first-child,td:first-child{text-align:left}
+td.l{text-align:left;white-space:normal}
+tr:last-child td{border-bottom:0}
+#tierTable th:last-child{text-align:left}
+tr.tot td{color:var(--paper);font-weight:400;background:rgba(255,255,255,.025)}
+tbody tr:hover td{background:rgba(255,255,255,.03)}
+.pill{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line-2);color:var(--soft)}
+.pill.r{border-color:rgba(229,72,77,.5);color:#F08A8D}
+.pill.g{border-color:rgba(127,200,160,.45);color:var(--pos)}
+.sm{color:var(--mute);font-size:11px;margin-left:4px}
+
+/* city bars */
+.cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:16px}
+.city{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.city .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.city .n{font-size:15px;font-weight:400}
+.city .chg{font-family:var(--mono);font-size:12px}
+.hb{display:grid;grid-template-columns:44px 1fr 34px;gap:8px;align-items:center;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.hb .t{height:8px;border-radius:2px;background:rgba(255,255,255,.05);overflow:hidden}
+.hb .f{height:100%;border-radius:2px}
+.hb .c{text-align:right;color:var(--soft)}
+.mix{display:flex;height:6px;border-radius:3px;overflow:hidden;gap:2px}
+.mix span{display:block;height:100%}
+
+/* lenders */
+.lend{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.lr{display:grid;grid-template-columns:minmax(0,1fr) 30px;gap:12px;align-items:center}
+.lr .nm{font-size:13px;color:var(--soft);line-height:1.35}
+.lr .nm b{display:block;color:var(--paper);font-weight:400;font-size:13.5px}
+.lr .ct{font-family:var(--mono);font-size:13px;text-align:right}
+.lr .t{grid-column:1/-1;height:4px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.lr .t i{display:block;height:100%;background:var(--silver)}
+
+/* method */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.cols p{color:var(--soft);font-size:14px;margin-bottom:14px}
+.cols h3{font-size:18px;margin-bottom:14px;font-weight:400}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+
+footer{padding:36px 0 48px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer img{height:20px;opacity:.75}
+
+/* tooltip */
+#tip{position:fixed;pointer-events:none;z-index:50;background:#1E2023;border:1px solid var(--line-2);border-radius:8px;padding:8px 11px;font-family:var(--mono);font-size:11.5px;color:var(--paper);opacity:0;transition:opacity .12s;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+#tip b{font-weight:500}
+#tip .m{color:var(--mute)}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.7,.1,1),transform .7s cubic-bezier(.2,.7,.1,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+@media print{.bar{position:static}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="/" aria-label="Sena Enterprises – início"><img src="/victoriapark/img/logo.png" alt="Sena Enterprises"></a>
+    <nav aria-label="Seções">
+      <a href="#units">Unidades</a>
+      <a href="#growth">Crescimento</a>
+      <a href="#cities">Cidades</a>
+      <a href="#cash">Compradores à vista</a>
+      <a href="#rates">Sensibilidade a juros</a>
+      <a href="#method">Metodologia</a>
+    </nav>
+    <span class="label">P&amp;D</span>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag label">Sena Enterprises · P&amp;D · Inteligência de mercado</div>
+    <h1>Luxo no Sul da Flórida, <em>vendas por faixa de preço.</em></h1>
+    <p class="lede">Vendas fechadas de casas unifamiliares acima de $3M em Miami-Dade, Broward e Palm Beach, divididas em faixas de $2M a partir de registros estaduais de escrituras, além de quem paga à vista em cada faixa e quais faixas se movem com as taxas de juros.</p>
+    <div class="meta">
+      <span class="label">Período · Jan–Jun 2026 vs Jan–Jun 2025</span>
+      <span class="label">Fonte · FL Dept. of Revenue NAL tax rolls · Registros oficiais dos condados · MLS</span>
+      <span class="label">Atualizado · Nov 2026</span>
+    </div>
+  </div>
+
+  <div class="kpis reveal" id="kpis"></div>
+
+  <!-- 01 UNIDADES -->
+  <section id="units">
+    <div class="sh reveal">
+      <div><div class="idx label">01 · Volume</div><h2>Unidades vendidas por faixa de $2M</h2></div>
+      <p>Escrituras qualificadas arm's-length, unifamiliares (DOR use code 001), primeiro semestre de cada ano. A faixa $3–5M concentra a maior parte do volume em todos os condados.</p>
+    </div>
+    <div class="ctrl reveal">
+      <div class="seg" data-group="county" role="group" aria-label="Condado"></div>
+      <div class="legend"><span><i style="background:var(--s25)"></i>Jan–Jun 2025</span><span><i style="background:var(--s26)"></i>Jan–Jun 2026</span></div>
+    </div>
+    <div class="grid2 reveal">
+      <div class="card"><h3 id="unitsTitle">Unidades</h3><div class="chart" id="unitsChart"></div><p class="note">As faixas são inclusivas pelo limite inferior. $11–15M e $15M+ substituem faixas adicionais de $2M porque cada faixa acima de $11M tem menos de 10 vendas por ano na maioria dos condados.</p></div>
+      <div class="card"><h3 id="yoyTitle">Variação ano a ano</h3><div class="chart" id="yoyChart"></div><p class="note">Barras hachuradas indicam faixas pequenas (menos de 10 vendas) onde uma única transação altera muito a porcentagem.</p></div>
+    </div>
+    <p class="insight reveal" id="unitsInsight"><b>A faixa $3M+ cresceu em todos os condados no 1S 2026:</b> Miami-Dade 343 → 451 vendas (+31,5%), Broward 162 → 186 (+14,8%), Palm Beach 452 → 617 (+36,5%). Os maiores saltos foram acima de $9M em Miami-Dade e $5–7M em Palm Beach.</p>
+  </section>
+
+  <!-- 02 TABELA DE CRESCIMENTO -->
+  <section id="growth">
+    <div class="sh reveal">
+      <div><div class="idx label">02 · Detalhe</div><h2>Todas as faixas, todos os condados</h2></div>
+      <p>O ano completo de 2025 é exibido para escala junto com a comparação semestral. Clique no cabeçalho de uma coluna para ordenar.</p>
+    </div>
+    <div class="tw reveal"><table id="bandTable"><thead><tr>
+      <th data-k="name">Condado e faixa</th><th data-k="fy">2025 ano inteiro</th><th data-k="h25">Jan–Jun 2025</th><th data-k="h26">Jan–Jun 2026</th><th data-k="yoy">Var. anual</th><th data-k="share">Participação no condado 1S 2026</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- 03 CIDADES -->
+  <section id="cities">
+    <div class="sh reveal">
+      <div><div class="idx label">03 · Geografia</div><h2>Melhores cidades</h2></div>
+      <p>Principais cidades por unidades unifamiliares $3M+ em 2025, pela cidade situs no tax roll. Faixas acima de $9M são agrupadas no nível da cidade porque os volumes são pequenos.</p>
+    </div>
+    <div class="ctrl reveal">
+      <div class="seg" data-group="county" role="group" aria-label="Condado"></div>
+      <div class="legend"><span><i style="background:var(--s25)"></i>Jan–Jun 2025</span><span><i style="background:var(--s26)"></i>Jan–Jun 2026</span><span style="margin-left:6px">Barra de mix: 2025 $3–5M · $5–7M · $7–9M · $9M+</span></div>
+    </div>
+    <div class="cities reveal" id="cityGrid"></div>
+    <p class="insight reveal">Miami-Dade não incorporado teve <b>90 vendas $3M+ em 2025</b>, mas não é uma cidade, então fica fora da visão por cidade. Boca Raton e outros nomes de Palm Beach seguem a cidade situs do property appraiser, que pode incluir áreas não incorporadas com esse nome postal.</p>
+  </section>
+
+  <!-- 04 À VISTA -->
+  <section id="cash">
+    <div class="sh reveal">
+      <div><div class="idx label">04 · Compradores</div><h2>Quem paga à vista</h2></div>
+      <p>Amostra aleatória de 15 vendas arm's-length $3M+ por faixa em cada condado, 2025 a 2026 YTD, verificada nos registros de escrituras e hipotecas do condado.</p>
+    </div>
+    <div class="ctrl reveal">
+      <div class="legend"><span><i style="background:var(--c-pb)"></i>Palm Beach</span><span><i style="background:var(--c-bw)"></i>Broward</span><span><i style="background:var(--c-md)"></i>Miami-Dade</span></div>
+    </div>
+    <div class="card reveal"><h3>Participação à vista por faixa de preço <span class="label">Amostra de escrituras · ±25 pts por faixa</span></h3><div class="chart" id="cashChart"></div></div>
+    <div class="grid3 reveal" style="margin-top:16px" id="cashAll"></div>
+    <p class="insight reveal"><b>Cerca de 6 em cada 10 compradores $3M+ pagam à vista</b> (Palm Beach 66%, Broward 68%, Miami-Dade 55%), e a participação não sobe de forma constante com o preço. As faixas mais financiadas são $3–5M (Miami-Dade apenas 27% à vista) e $9–11M (Miami-Dade 29%). As faixas com mais pagamentos à vista são $7–9M (77% combinado) e $11–15M (73%).</p>
+
+    <div class="grid3 reveal" style="margin-top:28px" id="lenders"></div>
+    <p class="insight reveal">A maioria dos tomadores de empréstimo usa bancos em vez de financiadoras sensíveis a taxas. <b>Compradores de Miami-Dade financiam mais; Broward usa mais empréstimos privados, hard-money e financiamento pelo vendedor.</b></p>
+
+    <div class="tw reveal" style="margin-top:28px"><table id="allSfTable"><thead><tr>
+      <th>Unifamiliares, todos os preços</th><th>Vendas à vista</th><th>Total vendas SF</th><th>% à vista</th><th>Vendas à vista var. anual</th><th>Total vendas SF var. anual</th>
+    </tr></thead><tbody></tbody></table></div>
+    <p class="card note" style="background:none;border:0;padding:12px 0 0">As linhas de 2023 foram recalculadas a partir de variações percentuais publicadas nos relatórios de dezembro de 2024, portanto são estimativas. A variação anual de 2026 compara janeiro–outubro com os mesmos meses de 2025.</p>
+  </section>
+
+  <!-- 05 JUROS -->
+  <section id="rates">
+    <div class="sh reveal">
+      <div><div class="idx label">05 · Juros</div><h2>Faixas sensíveis vs isoladas dos juros</h2></div>
+      <p>Cada ponto é uma faixa: participação à vista versus variação de vendas em 2026 YTD. As bases diferem, então leia a direção, não os decimais.</p>
+    </div>
+    <div class="grid2 reveal">
+      <div class="card"><h3>% à vista vs crescimento de vendas</h3><div class="chart" id="scatter"></div>
+        <div class="legend" style="margin-top:12px"><span><i style="background:var(--silver);border-radius:50%"></i>Unifamiliares, todos os preços (condado)</span><span><i style="background:var(--red-hi);border-radius:50%"></i>Faixas de luxo (região)</span></div></div>
+      <div class="card"><h3>Taxa de hipoteca fixa de 30 anos <span class="label">Freddie Mac</span></h3><div class="chart" id="rateChart"></div>
+        <p class="note">Última semana, 19 nov 2026: <b style="color:var(--paper);font-weight:400">7,28%</b>, contra 6,26% um ano antes.</p></div>
+    </div>
+    <div class="tw reveal"><table id="tierTable"><thead><tr>
+      <th>Faixa</th><th>% à vista</th><th>Vendas var. anual, 2026 YTD</th><th>Outubro 2026 isolado</th><th>Leitura</th>
+    </tr></thead><tbody></tbody></table></div>
+    <p class="insight reveal"><b>Quanto mais uma faixa paga à vista, menos ela se move com os juros.</b> Abaixo de $1M, três em cada quatro compradores financiam, e quando os juros subiram para a faixa de 7% em outubro as vendas caíram 12–14%. Acima de $1M, a maioria paga à vista e as vendas caíram apenas 5%. Acima de $10M, quase 9 em 10 pagam à vista e as vendas estão a caminho de um recorde. As faixas $3M+ cresceram 15–37% no primeiro semestre mesmo com juros acima de 6,5%.</p>
+  </section>
+
+  <!-- 06 METODOLOGIA -->
+  <section id="method">
+    <div class="sh reveal">
+      <div><div class="idx label">06 · Notas</div><h2>Metodologia, fontes e lacunas</h2></div>
+    </div>
+    <div class="cols reveal">
+      <div>
+        <h3>Metodologia e fontes</h3>
+        <p>As contagens de unidades usam os tax rolls finais NAL de 2026 do Florida Department of Revenue para Broward (16), Miami-Dade (23) e Palm Beach (60), publicados em outubro de 2026. As duas vendas mais recentes de cada parcela foram mantidas quando a parcela é unifamiliar (use code 001), a venda foi de imóvel construído, o preço foi de $3M ou mais, e o qualification code foi 01, 02 ou 03 (arm's length). Seis escrituras de 2026 ainda em revisão (98/99) foram incluídas. Escrituras multi-parcela foram contadas uma vez.</p>
+        <p>As participações à vista por faixa vêm de amostras dos Official Records dos condados: uma venda é considerada à vista quando nenhuma hipoteca de compra pelo comprador foi registrada em aproximadamente 30 a 65 dias após a escritura. Cada faixa por condado tem precisão de cerca de ±25 pontos e faixas combinadas de cerca de ±15 pontos; as linhas combinadas ponderam cada condado igualmente. As participações à vista de todos os preços vêm dos relatórios MLS da Florida Realtors e MIAMI Realtors.</p>
+      </div>
+      <div>
+        <h3>Lacunas</h3>
+        <p>A comparação 2024 vs 2023 por faixa de $2M está ausente: o estado publica apenas o tax roll atual, que cobre escrituras de 2025 e 2026, então a visão por faixa compara Jan–Jun 2026 com Jan–Jun 2025.</p>
+        <p>2026 é cortado em junho porque o arquivo de Miami-Dade cobre completamente apenas escrituras até junho. Broward e Palm Beach vão até agosto: Jan–Ago, Broward $3M+ subiu 15,9% (208 → 241) e Palm Beach subiu 40,7% (543 → 764).</p>
+        <p>As contagens de escrituras excluem transferências desqualificadas como algumas escrituras de LLC ou entre partes relacionadas e transações multi-parcela, então algumas vendas de alto valor estão ausentes (a venda de $170M em Indian Creek não aparece como escritura unifamiliar qualificada) e as contagens não batem com os totais do MLS.</p>
+        <p>O método de identificação de pagamento à vista pode superestimar ligeiramente, já que alguns compradores tomam empréstimo depois, por meio de uma entidade, ou de financiadores que não registram na Flórida.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="/victoriapark/img/logo.png" alt="Sena Enterprises">
+    <span class="label">P&amp;D · Para discussão interna e com investidores · Não constitui recomendação de investimento</span>
+  </div>
+</footer>
+
+<div id="tip" role="tooltip"></div>
+
+<script>
+(function(){
+"use strict";
+var BANDS=["$3–5M","$5–7M","$7–9M","$9–11M","$11–15M","$15M+"];
+var C={
+  md:{name:"Miami-Dade",fy:[344,129,54,41,39,63],h25:[171,74,32,17,20,29],h26:[204,84,42,30,32,59]},
+  bw:{name:"Broward",   fy:[175,52,24,10,13,11],h25:[101,29,11,7,7,7],h26:[107,38,15,10,9,7]},
+  pb:{name:"Palm Beach",fy:[411,163,76,35,54,78],h25:[226,78,45,20,39,44],h26:[299,123,60,33,37,65]}
+};
+var CITIES={
+  md:[["Miami Beach",132,[40,20,17,55],74,100],["Coral Gables",128,[62,31,11,24],73,85],["Miami (city)",105,[53,26,6,20],55,80],["Pinecrest",91,[54,18,8,11],40,46],["Key Biscayne",34,[22,6,0,6],18,22],["Golden Beach",10,[3,1,1,5],6,11]],
+  bw:[["Fort Lauderdale",157,[88,27,18,24],89,103],["Lighthouse Point",29,[21,7,0,1],18,22],["Weston",17,[13,3,0,1],8,7],["Southwest Ranches",15,[10,3,1,1],10,12],["Parkland",11,[8,2,1,0],6,5],["Pompano Beach",11,[9,1,1,0],8,10]],
+  pb:[["Boca Raton",204,[122,39,18,25],101,153],["Palm Beach Gardens",109,[60,34,10,5],61,78],["Delray Beach",109,[70,20,5,14],65,86],["Palm Beach (town)",88,[2,8,9,69],56,85],["West Palm Beach",75,[49,11,9,6],37,46],["Jupiter",64,[29,10,5,20],42,47],["North Palm Beach",48,[18,15,8,7],24,29]]
+};
+var CASH={ // [checked, cash] per band
+  pb:[[15,9],[15,11],[15,11],[15,10],[15,10],[15,8]],
+  bw:[[15,11],[15,8],[15,13],[15,9],[15,12],[15,8]],
+  md:[[15,4],[15,10],[14,10],[14,4],[14,10],[14,9]]
+};
+var CASH_ALL={pb:[90,59,31],bw:[90,61,29],md:[86,47,39]};
+var LENDERS={
+  pb:{n:31,rows:[["Grandes bancos","JPMorgan Chase 6, Morgan Stanley Private Bank 3",9],["Citibank, Bank of America, PNC, City National","2 cada",8],["Outros bancos, 1 cada","Goldman Sachs, Northern Trust, CIBC, US Bank, Valley National, First-Citizens, Columbia, Luminate, Banesco, Needham",10],["Financiadoras não bancárias","CrossCountry, PFN Lending, Lendsure, Bay Area Lending (todos abaixo de $10M)",4]]},
+  bw:{n:29,rows:[["Grandes bancos","JPMorgan Chase 4, Wells Fargo 2, Bank of America 2, PNC 1, Truist 1",10],["Privados, hard-money e pessoa física","Taylor Made Lending, Trye Group, Reliable Holdings, Vaster Management, um indivíduo",5],["Bancos regionais e comerciais","Unity, S&T, United Bank, Toyota Financial Savings Bank",4],["Credor não identificado (MERS)","incl. um empréstimo de $9,26M em venda de $9,75M",4],["Financiadoras não bancárias","UMC, Citadel Servicing, New Wave Loans",3],["Bancos privados ou de patrimônio","Goldman Sachs Bank, Peapack Private Bank",2],["Financiamento pelo vendedor","$20,45M em venda de $26M",1]]},
+  md:{n:39,rows:[["Bancos regionais e comerciais","City National 3, M&T 2, Truist, Citizens, TD, Flagstar, US Century, Triad, Stifel, Teachers FCU, Wintrust",14],["Grandes bancos","Citibank 4, JPMorgan Chase 3, Bank of America 2, UBS 2, Northern Trust 1",12],["Financiadoras não bancárias e privadas","Rocket, CrossCountry, Arixa, Taylor Made Lending, Nexera, Mathon, Brazilian Travel Service, um empréstimo entre partes relacionadas",8],["Bancos privados ou de patrimônio","Morgan Stanley Private Bank",2],["Financiamento pelo vendedor","",2],["Credor não identificado (MERS)","",1]]}
+};
+var ALLSF=[
+  ["Miami-Dade 2023 (est.)",2780,10538,"26,4%",null,null],["Miami-Dade 2024",2688,10738,"25,0%",-3.3,1.9],["Miami-Dade 2025",2547,10210,"24,9%",-5.2,-4.9],["Miami-Dade 2026 YTD out",2371,8953,"26,5%",11.1,4.2],
+  ["Broward 2023 (est.)",3105,12340,"25,2%",null,null],["Broward 2024",3003,12180,"24,7%",-3.3,-1.3],["Broward 2025",2733,11947,"22,9%",-9.0,-1.9],["Broward 2026 YTD out",2427,10264,"23,6%",5.8,2.9],
+  ["Palm Beach 2023 (est.)",6229,13872,"44,9%",null,null],["Palm Beach 2024",5855,13317,"44,0%",-6.0,-4.0],["Palm Beach 2025",5876,13969,"42,1%",0.4,4.9],["Palm Beach 2026 YTD out",5563,12415,"44,8%",12.7,6.1]
+];
+var TIERS=[
+  ["Unifamiliares, Broward","23,6%","+2,9%","−14,0%","Sensível a juros","r",23.6,2.9,0],
+  ["Unifamiliares, Miami-Dade","26,5%","+4,2%","−11,8%","Sensível a juros","r",26.5,4.2,0],
+  ["Unifamiliares, Palm Beach","44,8%","+6,1%","−13,8%","Misto","",44.8,6.1,0],
+  ["Unifamiliares $1M+, Sul da Flórida","59%","+18,9%","−5,0%","Majoritariamente isolado","g",59,18.9,1],
+  ["Unifamiliares $3M+, Palm Beach (amostra)","66% (53–73% por faixa)","+36,5% (Jan–Jun)","—","Isolado; empréstimos top-end via bancos privados","g"],
+  ["Unifamiliares $3M+, Broward (amostra)","68% (53–87% por faixa)","+14,8% (Jan–Jun)","—","Majoritariamente isolado; mais empréstimos privados e não bancários","g"],
+  ["Unifamiliares $3M+, Miami-Dade (amostra)","55% (27–71% por faixa)","+31,5% (Jan–Jun)","—","Parcialmente financiado, majoritariamente via bancos; vendas ainda crescendo",""],
+  ["$10M+ todos os tipos, Sul da Flórida","87%","+40% (YTD set)","—","Isolado dos juros","g",87,40,1]
+];
+var RATES=[["2023",6.81],["2024",6.72],["2025",6.60],["2026 YTD",6.56],["19 nov '26",7.28]];
+
+var NS="http://www.w3.org/2000/svg";
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function sum(a){return a.reduce(function(s,v){return s+v},0)}
+function pct(a,b){return (b-a)/a*100}
+function fp(v,d){d=d==null?1:d;return (v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(d)+"%"}
+function nf(v){return v.toLocaleString("pt-BR")}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+var tip=document.getElementById("tip");
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;var x=e.clientX+14,y=e.clientY-12,w=tip.offsetWidth;if(x+w>innerWidth-8)x=e.clientX-w-14;tip.style.left=x+"px";tip.style.top=Math.max(8,y-tip.offsetHeight)+"px"}
+function hideTip(){tip.style.opacity=0}
+function bindTip(node,html){node.addEventListener("mousemove",function(e){showTip(e,html)});node.addEventListener("mouseleave",hideTip);node.addEventListener("touchstart",function(e){var t=e.touches[0];showTip(t,html)},{passive:true})}
+function niceMax(v){var p=Math.pow(10,Math.floor(Math.log10(v))),n=v/p;return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p}
+
+/* KPIs */
+(function(){
+  var h25=0,h26=0;["md","bw","pb"].forEach(function(k){h25+=sum(C[k].h25);h26+=sum(C[k].h26)});
+  var top25=C.md.h25[5]+C.bw.h25[5]+C.pb.h25[5],top26=C.md.h26[5]+C.bw.h26[5]+C.pb.h26[5];
+  var k=[
+    [nf(h26),"","vendas unifamiliares $3M+, 1S 2026, três condados",'<span class="up">'+fp(pct(h25,h26))+"</span> vs "+nf(h25)+" no 1S 2025"],
+    [top26,"","vendas $15M+, 1S 2026",'<span class="up">'+fp(pct(top25,top26))+"</span> vs "+top25+" um ano antes"],
+    ["63","%","dos compradores $3M+ pagaram à vista","Amostra combinada de escrituras, 266 vendas · $7–9M o maior com 77%"],
+    ["7,28","%","taxa fixa 30 anos, semana de 19 nov 2026","6,26% um ano antes · faixas $3M+ ainda cresceram 15–37%"]
+  ];
+  var h="";k.forEach(function(r){h+='<div class="kpi"><span class="label">'+r[2]+'</span><div class="v num">'+r[0]+(r[1]?"<small>"+r[1]+"</small>":"")+'</div><div class="d">'+r[3]+"</div></div>"});
+  document.getElementById("kpis").innerHTML=h;
+})();
+
+/* county toggle */
+var county="pb";
+var segs=document.querySelectorAll('.seg[data-group="county"]');
+function drawSegs(){segs.forEach(function(s){s.innerHTML="";["md","bw","pb"].forEach(function(k){var b=document.createElement("button");b.type="button";b.textContent=C[k].name;b.setAttribute("aria-pressed",k===county);b.onclick=function(){county=k;renderCounty()};s.appendChild(b)})})}
+
+/* grouped bars */
+function groupBars(host,cats,series,opts){
+  host.innerHTML="";var W=opts.w||560,H=opts.h||250,ml=36,mr=6,mt=14,mb=28;
+  var max=niceMax(Math.max.apply(null,series.map(function(s){return Math.max.apply(null,s.v)}))*1.05);
+  if(opts.max)max=opts.max;
+  var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":opts.label||""},host);
+  var iw=W-ml-mr,ih=H-mt-mb,gw=iw/cats.length,n=series.length,bw=Math.min(26,(gw*0.72)/n),gap=3;
+  for(var t=0;t<=4;t++){var v=max*t/4,y=mt+ih-ih*t/4;el("line",{x1:ml,x2:W-mr,y1:y,y2:y,stroke:t?"rgba(255,255,255,.06)":"rgba(255,255,255,.18)"},svg);var tx=el("text",{x:ml-8,y:y+3.5,"text-anchor":"end"},svg);tx.textContent=(opts.fmt?opts.fmt(v):Math.round(v))}
+  cats.forEach(function(c,i){
+    var g=el("g",{"class":"grp"},svg),gx=ml+gw*i+(gw-(n*bw+(n-1)*gap))/2;
+    series.forEach(function(s,j){var v=s.v[i];if(v==null)return;var h=ih*v/max,x=gx+j*(bw+gap),y=mt+ih-h;
+      var r=el("rect",{"class":"b",x:x,y:mt+ih,width:bw,height:0,rx:2,fill:s.c},g);
+      requestAnimationFrame(function(){r.style.transition="y .7s cubic-bezier(.2,.7,.1,1),height .7s cubic-bezier(.2,.7,.1,1)";r.setAttribute("y",y);r.setAttribute("height",Math.max(h,v?1:0))});
+      if(opts.vals){var vt=el("text",{"class":"vl",x:x+bw/2,y:y-5,"text-anchor":"middle"},g);vt.textContent=opts.vfmt?opts.vfmt(v):v}
+    });
+    var hit=el("rect",{x:ml+gw*i,y:mt,width:gw,height:ih,fill:"transparent"},g);
+    bindTip(hit,"<b>"+c+"</b><br>"+series.map(function(s){return '<span class="m">'+s.n+"</span> "+(s.v[i]==null?"—":(opts.vfmt?opts.vfmt(s.v[i]):s.v[i]))+(s.x?s.x[i]:"")}).join("<br>"));
+    var lt=el("text",{x:ml+gw*i+gw/2,y:H-8,"text-anchor":"middle"},svg);lt.textContent=c;
+  });
+}
+
+/* diverging yoy bars */
+function yoyBars(host,cats,vals,thin){
+  host.innerHTML="";var W=560,H=250,ml=36,mr=6,mt=22,mb=28;
+  var mx=Math.max(20,Math.max.apply(null,vals.map(Math.abs))),top=niceMax(mx*1.1),bot=Math.min(0,Math.min.apply(null,vals))<0?-20:0;
+  var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Variação ano a ano por faixa"},host);
+  var defs=el("defs",{},svg),pat=el("pattern",{id:"hatch"+host.id,width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},defs);
+  el("rect",{width:6,height:6,fill:"rgba(208,34,43,.35)"},pat);el("line",{x1:0,y1:0,x2:0,y2:6,stroke:"#D0222B","stroke-width":2.4},pat);
+  var ih=H-mt-mb,sc=function(v){return mt+ih*(top-v)/(top-bot)},y0=sc(0),gw=(W-ml-mr)/cats.length,bw=Math.min(40,gw*.5);
+  [bot,0,top/2,top].forEach(function(v,i){if(i===0&&bot===0)return;var y=sc(v);el("line",{x1:ml,x2:W-mr,y1:y,y2:y,stroke:v===0?"rgba(255,255,255,.22)":"rgba(255,255,255,.06)"},svg);var t=el("text",{x:ml-8,y:y+3.5,"text-anchor":"end"},svg);t.textContent=Math.round(v)+"%"});
+  cats.forEach(function(c,i){var v=vals[i],x=ml+gw*i+(gw-bw)/2,y=v>=0?sc(v):y0,h=Math.abs(sc(v)-y0),neg=v<0;
+    var r=el("rect",{"class":"b",x:x,y:y0,width:bw,height:0,rx:2,fill:thin[i]?"url(#hatch"+host.id+")":(neg?css("--neg"):css("--s26"))},svg);
+    requestAnimationFrame(function(){r.style.transition="y .7s cubic-bezier(.2,.7,.1,1),height .7s cubic-bezier(.2,.7,.1,1)";r.setAttribute("y",y);r.setAttribute("height",Math.max(h,1))});
+    var vt=el("text",{"class":"vl",x:x+bw/2,y:neg?y0+h+13:y-6,"text-anchor":"middle"},svg);vt.textContent=fp(v);
+    var lt=el("text",{x:x+bw/2,y:H-8,"text-anchor":"middle"},svg);lt.textContent=c;
+    var hit=el("rect",{x:ml+gw*i,y:mt,width:gw,height:ih,fill:"transparent"},svg);bindTip(hit,"<b>"+c+"</b><br>"+fp(v)+(thin[i]?' <span class="m">(base pequena)</span>':""));
+  });
+}
+
+function renderCounty(){
+  drawSegs();var d=C[county];
+  document.getElementById("unitsTitle").innerHTML=d.name+" · unidades <span class='label num'>"+sum(d.h25)+" → "+sum(d.h26)+"</span>";
+  groupBars(document.getElementById("unitsChart"),BANDS,[{n:"Jan–Jun 2025",v:d.h25,c:css("--s25")},{n:"Jan–Jun 2026",v:d.h26,c:css("--s26")}],{vals:true,label:"Unidades por faixa"});
+  var y=d.h25.map(function(a,i){return pct(a,d.h26[i])}),thin=d.h26.map(function(v,i){return v<10||d.h25[i]<10});
+  var tot=pct(sum(d.h25),sum(d.h26));
+  document.getElementById("yoyTitle").innerHTML=d.name+" · % variação <span class='"+(tot>=0?"up":"down")+"'>"+fp(tot)+" total</span>";
+  yoyBars(document.getElementById("yoyChart"),BANDS,y,thin);
+  renderCities();
+}
+
+/* band table */
+var rows=[];["md","bw","pb"].forEach(function(k){var d=C[k],t26=sum(d.h26);BANDS.forEach(function(b,i){rows.push({k:k,name:d.name+" "+b,fy:d.fy[i],h25:d.h25[i],h26:d.h26[i],yoy:pct(d.h25[i],d.h26[i]),share:d.h26[i]/t26*100,thin:d.h26[i]<10||d.h25[i]<10})});rows.push({k:k,tot:1,name:d.name+" total",fy:sum(d.fy),h25:sum(d.h25),h26:t26,yoy:pct(sum(d.h25),t26),share:100})});
+var sortK=null,sortD=1;
+function renderBand(){
+  var r=rows.slice();
+  if(sortK){r=r.filter(function(x){return !x.tot});r.sort(function(a,b){return (a[sortK]>b[sortK]?1:a[sortK]<b[sortK]?-1:0)*sortD})}
+  var h="";r.forEach(function(x){h+="<tr"+(x.tot?' class="tot"':"")+"><td>"+x.name+'</td><td class="num">'+nf(x.fy)+'</td><td class="num">'+x.h25+'</td><td class="num">'+x.h26+'</td><td class="num '+(x.yoy>=0?"up":"down")+'">'+fp(x.yoy)+(x.thin?'<span class="sm">peq.</span>':"")+'</td><td class="num">'+(x.tot?"100%":x.share.toFixed(1)+"%")+"</td></tr>"});
+  document.querySelector("#bandTable tbody").innerHTML=h;
+}
+document.querySelectorAll("#bandTable th").forEach(function(th){th.style.cursor="pointer";th.onclick=function(){var k=th.dataset.k;if(sortK===k){sortD=-sortD;if(sortD===1){sortK=null}}else{sortK=k;sortD=k==="name"?1:-1}renderBand()}});
+renderBand();
+
+/* cities */
+function renderCities(){
+  var list=CITIES[county],mx=Math.max.apply(null,list.map(function(c){return Math.max(c[3],c[4])})),mixC=["#5E6168","#8C8E92","#BDBFC4","#D0222B"];
+  var h="";list.forEach(function(c){var ch=pct(c[3],c[4]),thin=c[4]<10||c[3]<10;
+    h+='<div class="city"><div class="top"><span class="n">'+c[0]+'</span><span class="chg '+(ch>=0?"up":"down")+'">'+fp(ch)+(thin?'<span class="sm">peq.</span>':"")+"</span></div>"+
+      '<div class="hb"><span>1S 25</span><div class="t"><div class="f" style="width:'+(c[3]/mx*100)+'%;background:var(--s25)"></div></div><span class="c">'+c[3]+"</span></div>"+
+      '<div class="hb"><span>1S 26</span><div class="t"><div class="f" style="width:'+(c[4]/mx*100)+'%;background:var(--s26)"></div></div><span class="c">'+c[4]+"</span></div>"+
+      '<div><div class="label" style="margin-bottom:6px;font-size:10px">2025 · '+c[1]+' unidades · '+c[2].join(" / ")+'</div><div class="mix">'+c[2].map(function(v,i){return v?'<span style="flex:'+v+';background:'+mixC[i]+'" title="'+["$3–5M","$5–7M","$7–9M","$9M+"][i]+": "+v+'"></span>':""}).join("")+"</div></div></div>"});
+  document.getElementById("cityGrid").innerHTML=h;
+}
+
+/* cash */
+(function(){
+  var ser=[["pb","Palm Beach","--c-pb"],["bw","Broward","--c-bw"],["md","Miami-Dade","--c-md"]].map(function(s){return {n:s[1],c:css(s[2]),v:CASH[s[0]].map(function(r){return Math.round(r[1]/r[0]*100)}),x:CASH[s[0]].map(function(r){return ' <span class="m">('+r[1]+" de "+r[0]+")</span>"})}});
+  groupBars(document.getElementById("cashChart"),BANDS,ser,{max:100,w:1100,h:300,fmt:function(v){return v+"%"},vfmt:function(v){return v+"%"},vals:false,label:"% à vista por faixa"});
+  var h="";[["pb","Palm Beach"],["bw","Broward"],["md","Miami-Dade"]].forEach(function(k){var a=CASH_ALL[k[0]];h+='<div class="card"><span class="label">'+k[1]+' · total $3M+</span><div class="kpi" style="padding:10px 0 0;border:0"><div class="v num">'+Math.round(a[1]/a[0]*100)+'<small>% à vista</small></div><div class="d">'+a[1]+" à vista · "+a[2]+" financiadas · "+a[0]+" vendas verificadas</div></div></div>"});
+  document.getElementById("cashAll").innerHTML=h;
+  var lh="";[["pb","Palm Beach"],["bw","Broward"],["md","Miami-Dade"]].forEach(function(k){var L=LENDERS[k[0]],mx=Math.max.apply(null,L.rows.map(function(r){return r[2]}));
+    lh+='<div class="card"><h3>'+k[1]+' credores <span class="label">'+L.n+' negócios financiados</span></h3><div class="lend">'+L.rows.map(function(r){return '<div class="lr"><div class="nm"><b>'+r[0]+"</b>"+r[1]+'</div><div class="ct num">'+r[2]+'</div><div class="t"><i style="width:'+(r[2]/mx*100)+'%"></i></div></div>'}).join("")+"</div></div>"});
+  document.getElementById("lenders").innerHTML=lh;
+  var th="";ALLSF.forEach(function(r){var yc=function(v){return v==null?"—":'<span class="'+(v>=0?"up":"down")+'">'+fp(v)+"</span>"};th+="<tr><td>"+r[0]+'</td><td class="num">'+nf(r[1])+'</td><td class="num">'+nf(r[2])+'</td><td class="num">'+r[3]+'</td><td class="num">'+yc(r[4])+'</td><td class="num">'+yc(r[5])+"</td></tr>"});
+  document.querySelector("#allSfTable tbody").innerHTML=th;
+})();
+
+/* rates */
+(function(){
+  var host=document.getElementById("scatter"),W=560,H=260,ml=40,mr=12,mt=14,mb=30,iw=W-ml-mr,ih=H-mt-mb;
+  var svg=el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"% à vista vs crescimento de vendas"},host);
+  var X=function(v){return ml+iw*v/100},Y=function(v){return mt+ih*(45-v)/50};
+  for(var t=0;t<=4;t++){var x=X(t*25);el("line",{x1:x,x2:x,y1:mt,y2:mt+ih,stroke:"rgba(255,255,255,.05)"},svg);var tx=el("text",{x:x,y:H-10,"text-anchor":"middle"},svg);tx.textContent=t*25+"%"}
+  [-5,0,10,20,30,40].forEach(function(v){var y=Y(v);el("line",{x1:ml,x2:W-mr,y1:y,y2:y,stroke:v===0?"rgba(255,255,255,.22)":"rgba(255,255,255,.05)"},svg);var tx=el("text",{x:ml-8,y:y+3.5,"text-anchor":"end"},svg);tx.textContent=(v>0?"+":"")+v+"%"});
+  var xl=el("text",{x:W-mr,y:mt+ih-6,"text-anchor":"end"},svg);xl.textContent="% à vista →";
+  var yl=el("text",{x:ml+40,y:mt+10},svg);yl.textContent="↑ vendas var. anual, 2026 YTD";
+  var pts=TIERS.filter(function(t){return t[6]!=null});
+  var pl=pts.map(function(p){return X(p[6])+","+Y(p[7])}).join(" ");
+  pts.forEach(function(p){var c=p[8]?css("--red-hi"):css("--silver"),cx=X(p[6]),cy=Y(p[7]);
+    el("circle",{cx:cx,cy:cy,r:14,fill:c,opacity:.12},svg);var d=el("circle",{cx:cx,cy:cy,r:6,fill:c},svg);
+    var off=p[0].indexOf("Broward")>0?[-10,16,"end"]:p[0].indexOf("Miami")>0?[-10,-12,"end"]:p[6]>80?[-12,-10,"end"]:[12,-10,"start"];var lb=el("text",{x:cx+off[0],y:cy+off[1],"text-anchor":off[2],"class":"vl"},svg);lb.textContent=p[0].replace("Unifamiliares, ","SF · ").replace(" unifamiliares, Sul da Flórida"," SF").replace(" todos os tipos, Sul da Flórida"," todos tipos");
+    var hit=el("circle",{cx:cx,cy:cy,r:16,fill:"transparent"},svg);bindTip(hit,"<b>"+p[0]+"</b><br><span class='m'>À vista</span> "+p[1]+"<br><span class='m'>Vendas var. anual</span> "+p[2]+"<br><span class='m'>Out 2026</span> "+p[3]);
+  });
+  // rate chart
+  var rh=document.getElementById("rateChart");
+  groupBars(rh,RATES.map(function(r){return r[0]}),[{n:"Taxa média",c:css("--silver"),v:RATES.map(function(r){return r[1]})}],{max:8,h:260,fmt:function(v){return v.toFixed(0)+"%"},vfmt:function(v){return v.toFixed(2)+"%"},vals:true,label:"Taxa fixa 30 anos"});
+  var last=rh.querySelectorAll("rect.b");if(last.length)last[last.length-1].setAttribute("fill",css("--red-hi"));
+  var h="";TIERS.forEach(function(t){h+='<tr><td class="l">'+t[0]+'</td><td class="num">'+t[1]+'</td><td class="num">'+t[2]+'</td><td class="num'+(t[3].indexOf("−")===0?" down":"")+'">'+t[3]+'</td><td class="l"><span class="pill '+t[5]+'">'+t[4]+"</span></td></tr>"});
+  document.querySelector("#tierTable tbody").innerHTML=h;
+})();
+
+renderCounty();
+
+/* reveal */
+var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"}):null;
+document.querySelectorAll(".reveal").forEach(function(n){io?io.observe(n):n.classList.add("in")});
+})();
+</script>
+</body>
+</html>
